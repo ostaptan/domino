@@ -1,0 +1,20 @@
+%html
+  %head
+    %title
+      Domino
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+  %body
+    %br
+    %div{:class=>"container-fluid"}
+      %div{:class=>"row-fluid"}
+        %div{:class=>"span2"}
+          = render :partial => 'navigation/sidebar'
+
+        %div{:class=>"span10"}
+          = render :template => 'navigation/header'
+          = yield
+          = render :template => 'navigation/footer'
+
