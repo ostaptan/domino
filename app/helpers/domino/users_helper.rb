@@ -1,0 +1,2 @@
+module Domino::UsersHelper
+end

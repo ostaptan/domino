@@ -1,8 +1,37 @@
 Domino::Application.routes.draw do
-  root :to => "domino#welcome"
+  get "users/index"
+
+  get "users/show"
+
+  root :to => "visitor#welcome"
+
+  match '/login' => 'visitor#login', :as => :login
+  match '/register' => 'visitor#register', :as => :register
+  match '/logout' => 'domino#logout', :as => :logout
+
+  match '/domino' => 'domino#index', :as => :domino_index
+
+  resources :visitor do
+    collection do
+      get :login
+      get :about
+      post :do_login
+      post :process_register
+    end
+  end
 
   namespace :domino do
-    get :login
+    resources :users do
+      collection do
+        get :index
+        get :show
+      end
+    end
+  end
+
+  match '/admin' => 'admin#index', :as => :admin_index
+  namespace :admin do
+
   end
 
 

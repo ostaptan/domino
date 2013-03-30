@@ -1,6 +1,6 @@
 %p{:class=>"text-center"}
- = link_to t(:about), '#'
- = current_user ? link_to(t(:log_out), '#') : link_to(t(:log_in), )
+ = link_to t(:about), about_visitor_index_path
+ = current_user ? link_to(t(:log_out), logout_path) : link_to(t(:log_in), login_path)
 
 
 %p{:class=>"text-center copyright"}

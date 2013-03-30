@@ -1,19 +1,16 @@
 class DominoController < ApplicationController
+
+  before_filter :authorize_access, :except => [:logout]
+
   def index
-    @user = user
+    redirect_to(domino_user_path(current_user.id))
   end
 
-  def welcome
-    @user = current_user
-  end
-
-  def login
-    @user = current_user
-  end
-
-  protected
-
-  def user
-    @user ||= current_user
+  def authorize_access
+    if logged_in?
+      redirect_to admin_index_path if current_user.is_admin?
+    else
+      redirect_to_with_notice login_path, :authorization_required
+    end
   end
 end

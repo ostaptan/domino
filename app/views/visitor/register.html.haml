@@ -1,0 +1,16 @@
+%div{:class=>"edit-form"}
+  = form_for @user, :url => {:action => :process_register} do |form|
+    %p
+      = form.email_field :email, :placeholder => "Email"
+    %p
+      = form.text_field :surname, :placeholder => "Surname"
+    %p
+      = form.text_field :name, :placeholder => "Name"
+    %p
+      = form.select :gender, options_for_select([[:male, 'm'], [:female, 'f']])
+    %p
+      = form.password_field :password_digest, :placeholder => "Password"
+    %p
+      = form.password_field :confirm_password, :placeholder => "Confirm Password"
+
+      = form.submit :sign_up, :class => 'btn btn-success'
