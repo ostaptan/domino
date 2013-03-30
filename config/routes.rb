@@ -1,7 +1,4 @@
 Domino::Application.routes.draw do
-  get "users/index"
-
-  get "users/show"
 
   root :to => "visitor#welcome"
 
@@ -13,7 +10,6 @@ Domino::Application.routes.draw do
 
   resources :visitor do
     collection do
-      get :login
       get :about
       post :do_login
       post :process_register

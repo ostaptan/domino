@@ -3,3 +3,5 @@
 
 en:
   hello: "Hello world"
+  register: "Register"
+  domino_description: "Magnificent game for playing simple domino of spider domino!"

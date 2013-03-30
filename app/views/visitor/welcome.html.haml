@@ -1,3 +1,7 @@
-%h1
-  %welcome
-    = current_user ? @user.welcome_phrase : t(:welcome) + '!'
+%div{:class=>'page-header'}
+  %h1
+    %welcome
+      = current_user ? current_user.welcome_phrase : t(:welcome) + '!'
+    %br
+    %small
+      = t(:domino_description)
