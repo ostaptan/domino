@@ -3,6 +3,6 @@
 Welcome to Ruby On Rails game Domino!
 
 This game is on its first steps of developing.
-It will be a magnicent Ajax game where you will be able t oplay online with your
+It will be a magnicent Ajax game where you will be able to play online with your
 friends. The will be statistic, tournaments and other powerful and interesting
 features!
