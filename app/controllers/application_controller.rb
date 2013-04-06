@@ -44,8 +44,8 @@ class ApplicationController < ActionController::Base
     session[:user_id] = nil
   end
 
-  def redirect_to_with_notice(options = { }, notice = nil)
-    redirect_to options, :alert => notice
+  def redirect_to_with_notice(options = { }, notice = nil, type = :notice)
+    redirect_to options, :flash => { type => notice }
   end
 
   # we redirect only first time

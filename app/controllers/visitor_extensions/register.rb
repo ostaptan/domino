@@ -11,11 +11,12 @@ module VisitorExtensions
 
     def process_register
       attr = params[:user]
-      redirect_to :register if attr[:password_digest] != attr[:confirm_password]
-      if @user.register(attr)
-        redirect_to domino_index_path
+      redirect_to_with_notice :register, t(:psswd_not_match), :error if attr[:password_digest] != attr[:confirm_password]
+      notice = @user.register(attr)
+      if notice
+        redirect_to_with_notice register_path, t(notice), :error
       else
-        render :register
+        redirect_to_with_notice domino_index_path, t(:success_register), :success
       end
 
     end

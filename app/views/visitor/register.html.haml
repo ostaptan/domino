@@ -12,5 +12,5 @@
       = form.password_field :password_digest, :placeholder => "Password"
     %p
       = form.password_field :confirm_password, :placeholder => "Confirm Password"
-
-      = form.submit :sign_up, :class => 'btn btn-success'
+    %p
+      = form.submit t(:sign_up), :class => 'btn btn-success btn-large'

@@ -1,7 +1,7 @@
 %p
   %sidebar
-    = link_to t(:my_statistic), '#', :class => "btn btn-large btn-block btn-primary disabled"
+    = link_to t(:my_games), domino_games_path, :class => "btn btn-large btn-block btn-primary disabled"
+    %div{:class=>"frame-header"}
+      = link_to t(:statistic), domino_user_path(current_user.id)
+    = render :partial => 'domino/users/statistic'
 
-    = link_to t(:my_games), '#', :class => "btn btn-large btn-block btn-primary disabled"
-
-    = link_to t(:my_rank), '#', :class => "btn btn-large btn-block btn-primary disabled"

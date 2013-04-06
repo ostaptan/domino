@@ -1,6 +1,6 @@
 %div{:class => 'navbar navbar-inverse'}
   %div{:class => 'navbar-inner'}
-    = link_to t(:domino), '#', :class => 'brand'
+    = link_to t(:domino), root_path, :class => 'brand'
     %div{:class=>'nav-collapse collapse'}
       %p{:class=>'navbar-text pull-right'}
         - if current_user
@@ -8,7 +8,7 @@
 
     %ul{:class=>'nav'}
       %li
-        = link_to t(:new_game), '#'
+        = link_to t(:new_game), new_domino_game_path
       %li
         = link_to t(:tournament), '#'
       %li

@@ -1,0 +1,3 @@
+class Domino::Player
+
+end

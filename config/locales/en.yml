@@ -5,3 +5,7 @@ en:
   hello: "Hello world"
   register: "Register"
   domino_description: "Magnificent game for playing simple domino of spider domino!"
+  invalid_login_or_password: "Cannot login! Maybe your email or password are incorrect."
+  authorization_required: "You need to authorize!"
+  attributes_incorrect: "Some of attributes you provided are incorrect!"
+  sign_up: "Sign Up"

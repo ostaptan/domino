@@ -3,25 +3,36 @@ module Rules
 
     include Rules::BaseRules
 
-    def valid_phone?
+    def can_register_user?(attr)
+      return false unless valid_email?(attr[:email])
+      return false unless valid_password?(attr[:password_digest])
+      false unless valid_names?(attr[:name], attr[:surname])
+    end
 
-      if self.phone.blank? || !(self.phone =~ /^([0-9]{8,14})+$/)
-        self.errors[:base] << t_error(:phone)
+    def valid_email?(email)
+
+      if email.blank? || !(email =~ /^([0-9]{8,14})+$/)
         return false
       end
 
-      if User.exists_phone?(self.phone)
-        self.errors[:base] << t_error(:phone, :unique)
+      if User.exists_mail?(email)
         return false
       end
 
       true
     end
 
-    def valid_password(password)
+    def valid_names?(name, surname)
+      if name.blank? || surname.blank?
+        return false
+      end
 
-      if self.password.blank? || self.password != password
-        self.errors[:base] << t_error(:password)
+      true
+    end
+
+    def valid_password?(password)
+
+      if password.blank? || password.size < 4
         return false
       end
 

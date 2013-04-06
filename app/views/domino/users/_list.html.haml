@@ -1,0 +1,11 @@
+%ul
+  %li
+    Highest:
+    = current_user.max_rating(type)
+  %li
+    Avg. Opp.:
+  %li
+    Best Win:
+  %li
+    Total:
+    = "#{current_user.all_games_count(type)} (#{current_user.won_games_count(type)} W/ #{current_user.lost_games_count(type)} L)"

@@ -1,0 +1,2 @@
+module Domino::GamesHelper
+end

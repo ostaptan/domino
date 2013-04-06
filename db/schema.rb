@@ -11,16 +11,32 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130330091543) do
+ActiveRecord::Schema.define(:version => 20130330091547) do
 
   create_table "games", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.text     "bones"
+    t.string   "type"
+    t.integer  "time_per_move", :default => 1
+    t.integer  "winner_id"
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
   end
 
   create_table "histories", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "user_id"
+    t.integer  "g_max_rating"
+    t.integer  "s_max_rating"
+    t.integer  "g_min_rating"
+    t.integer  "g_best_won_from_player_id"
+    t.integer  "s_best_won_from_player_id"
+    t.integer  "g_worst_lost_from_player_id"
+    t.integer  "s_worst_lost_from_player_id"
+    t.integer  "g_a_lost",                    :default => 0
+    t.integer  "s_a_lost",                    :default => 0
+    t.integer  "g_a_won",                     :default => 0
+    t.integer  "s_a_won",                     :default => 0
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
   end
 
   create_table "messages", :force => true do |t|
@@ -46,11 +62,15 @@ ActiveRecord::Schema.define(:version => 20130330091543) do
     t.integer  "portal_id"
     t.datetime "created_at",                                    :null => false
     t.datetime "updated_at",                                    :null => false
-    t.boolean  "active",                     :default => false
-    t.string   "gender",        :limit => 1
     t.boolean  "is_admin",                   :default => false
     t.string   "avatar"
     t.string   "settings"
+    t.boolean  "active",                     :default => false
+    t.string   "gender",        :limit => 1
+    t.integer  "a_lost",                     :default => 0
+    t.integer  "a_won",                      :default => 0
+    t.integer  "g_raiting",                  :default => 1200
+    t.integer  "s_raiting",                  :default => 1200
   end
 
 end

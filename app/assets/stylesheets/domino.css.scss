@@ -1,19 +1,65 @@
-// Place all the styles related to the domino controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@mixin gradient($from, $to) {
+/* fallback/image non-cover color */
+  background-color: $from;
 
+/* Firefox 3.6+ */
+  background-image: -moz-linear-gradient($from, $to);
+
+/* Safari 4+, Chrome 1+ */
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
+
+/* Safari 5.1+, Chrome 10+ */
+  background-image: -webkit-linear-gradient($from, $to);
+
+/* Opera 11.10+ */
+  background-image: -o-linear-gradient($from, $to);
+  height: 100%;
+}
 
 h1 {
-  color: #0caa1d;
+  color: #04b31c;
   position: center;
   margin-top: 10px;
 }
 
-welcome {
+.welcome {
   margin-left: 250px;
 }
 
-body {
-  background:  image-url('background_domino.jpg')
-
+.separator {
+  border-bottom: 1px solid #EEEEEE;
 }
+
+body {
+  //background:  image-url('background_domino.jpg') no-repeat;
+  //background-size:100%;
+  @include gradient(#77767b, #28272c);
+}
+
+.framed {
+  background-color: #F2F1ED;
+  border-radius: 5px 5px 5px 5px;
+  padding: 15px;
+  margin-bottom: 16px;
+}
+
+.frame-header {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.grey {
+  border: 2px solid #6683db;
+  background-color: #363738;
+}
+
+.left {
+  float: left;
+  display: inline;
+}
+
+.right {
+  float: right;
+  display: inline;
+}
+

@@ -10,7 +10,7 @@ class VisitorController < ApplicationController
   end
 
   def login
-    redirect_to gold_dust_index_path if logged_in?
+    redirect_to domino_index_path if logged_in?
     @user = User.new
   end
 
@@ -27,17 +27,17 @@ class VisitorController < ApplicationController
         return if login_user(user, url)
       end
     end
-    redirect_to_with_notice login_path, t(:invalid_login_or_password)
+    redirect_to_with_notice login_path, t(:invalid_login_or_password), :error
   end
 
   private
 
   def login_user(user, redirect_url = nil)
-    redirect_url ||= { :controller => 'massive' }
+    redirect_url ||= { :controller => 'domino' }
 
     return false unless user.first.active?
 
-    raise "Admin cant be active" if user.first.is_admin?
+    raise "Admin can't be active" if user.first.is_admin?
 
     session[:user_id] = user.first.id
 

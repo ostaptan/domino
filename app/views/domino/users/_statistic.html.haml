@@ -1,0 +1,18 @@
+%div{:class=>'framed grey'}
+  %h4
+    %div{:class=>'left'}
+      Goat domino
+    %div{:class=>'right'}
+      = current_user.g_raiting
+  %br
+  %br
+  = render :partial => 'domino/users/list', :locals => {:type => :goat}
+%div{:class=>'framed grey'}
+  %h4
+    %div{:class=>'left'}
+      Spider domino
+    %div{:class=>'right'}
+      = current_user.s_raiting
+  %br
+  %br
+  = render :partial => 'domino/users/list', :locals => {:type => :spider}

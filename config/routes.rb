@@ -23,6 +23,13 @@ Domino::Application.routes.draw do
         get :show
       end
     end
+
+    resources :games do
+      collection do
+        get :index
+        get :show
+      end
+    end
   end
 
   match '/admin' => 'admin#index', :as => :admin_index
