@@ -1,0 +1,28 @@
+%p
+  %table{:class=>"table table-striped"}
+    %caption
+      %h5{:class=>'pull-left'}
+        Current Games
+    %thead
+      %tr
+        %th
+          id
+        %th
+          Type
+        %th
+          Time per move
+        %th
+          Status
+    %tbody
+      - @my_current_games.each do |game|
+        %tr
+          %td
+            = game.id
+          %td
+            = game.game_type
+          %td
+            = game.time_per_move
+          %td
+            = game.available_sits == 0 ? 'Playing' : "Waiting for opponents available sits: #{game.available_sits}"
+          %td
+            = link_to t(:view), domino_game_path(game.id)

@@ -11,24 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130409013327) do
+ActiveRecord::Schema.define(:version => 20130409013330) do
 
   create_table "games", :force => true do |t|
     t.text     "bones"
+    t.string   "game_type"
     t.integer  "time_per_move", :default => 1
     t.integer  "winner_id"
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
     t.integer  "players_count", :default => 2
-    t.string   "game_type"
     t.datetime "finished_at"
+    t.datetime "started_at"
+    t.integer  "min_rating",    :default => 10
+    t.integer  "max_rating",    :default => 10
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
   create_table "games_users", :id => false, :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "game_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer "user_id"
+    t.integer "game_id"
   end
 
   create_table "histories", :force => true do |t|
@@ -59,6 +60,7 @@ ActiveRecord::Schema.define(:version => 20130409013327) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "surname"
+    t.integer  "game_id"
     t.string   "login"
     t.string   "password"
     t.string   "email"
@@ -73,13 +75,6 @@ ActiveRecord::Schema.define(:version => 20130409013327) do
     t.string   "settings"
     t.integer  "g_rating",                   :default => 1200
     t.integer  "s_rating",                   :default => 1200
-  end
-
-  create_table "users_games", :id => false, :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "game_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
 end

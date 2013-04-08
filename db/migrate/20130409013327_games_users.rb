@@ -3,7 +3,6 @@ class GamesUsers < ActiveRecord::Migration
     create_table :games_users, :id => false do |t|
       t.references :user
       t.references :game
-      t.timestamps
     end
   end
 

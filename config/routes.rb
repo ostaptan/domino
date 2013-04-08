@@ -30,6 +30,7 @@ Domino::Application.routes.draw do
       collection do
         get :index
         get :show
+        get :update
       end
     end
 

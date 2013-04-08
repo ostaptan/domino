@@ -1,6 +1,11 @@
 class Game < ActiveRecord::Base
   # attr_accessible :title, :body
 
+  serialize :bones
+
+  include GamesExt::Table
+  include Rules::GameRules
+
   has_and_belongs_to_many :players, :class_name => User
 
   GAME_TYPES = %w(goat spider)
@@ -8,19 +13,45 @@ class Game < ActiveRecord::Base
   PLAYERS_COUNT = 2..4
 
   def create_one!(attr, user)
-    self.game_type = attr[:game_type]
-    self.time_per_move = attr[:time_per_move]
-    self.players_count = attr[:players_count]
-    self.players << user
-    self.save!
+    if can_create_game?(self, user)
+      self.game_type = attr[:game_type]
+      self.time_per_move = attr[:time_per_move]
+      self.players_count = attr[:players_count]
+      self.players << user
+      self.save!
+    end
+  end
+
+  def join_one!(user)
+    if can_join_game?(self, user)
+      self.players << user
+    else
+      return nil
+    end
+
+    if can_start_game?(self)
+      case self.game_type
+        when :goat
+          DominoGame::Goat::Game.new(self)
+        when :spider
+          DominoGame::Spider::Game.new(self)
+        else
+          #TODO remove
+          raise "undentified game!"
+      end
+      self.started_at = Time.now
+      :game_started
+    else
+      :wait
+    end
   end
 
   def players_count_select
-    Game::PLAYERS_COUNT.map { |val| "#{val} players"}
+    PLAYERS_COUNT.map { |val| "#{val} players"}
   end
 
   def minutes_per_move_select
-    Game::TIMES_PER_MOVE.map { |val| "#{val} minutes per move"}
+    TIMES_PER_MOVE.map { |val| "#{val} minutes per move"}
   end
 
   def available_sits
@@ -36,8 +67,6 @@ class Game < ActiveRecord::Base
   end
 
   def self.available_games
-    #TODO remake
-    Game.all
-    #Game.all :condition => [""]
+    self.where('started_at is ?', nil)
   end
 end
