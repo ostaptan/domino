@@ -1,19 +1,27 @@
-%div{:class => 'navbar navbar-inverse'}
-  %div{:class => 'navbar-inner'}
-    = link_to t(:domino), root_path, :class => 'brand'
-    %div{:class=>'nav-collapse collapse'}
-      %p{:class=>'navbar-text pull-right'}
-        - if current_user
-          = link_to current_user.name, domino_user_path(current_user.id)
-
-    %ul{:class=>'nav'}
-      %li
-        = link_to t(:new_game), new_domino_game_path
-      %li
-        = link_to t(:tournament), '#'
-      %li
-        = link_to t(:dashboard), '#'
-      %li
-        = link_to t(:chat), '#'
+%div#header
+  %div{:class => 'navbar navbar-inverse navbar-fixed-top'}
+    %div{:class => 'navbar-inner'}
+      = link_to t(:domino), root_path, :class => 'brand'
+      %div{:class=>'nav-collapse collapse'}
+        %ul{:class=>'nav pull-right'}
+          %li
+            = link_to t(:new_game), new_domino_game_path
+          %li
+            = link_to t(:tournament), '#'
+          %li
+            = link_to t(:dashboard), '#'
+          %li
+            = link_to t(:chat), domino_chat_index_path
+          - if current_user
+            %li{:class=>'dropdown'}
+              %a{:class=>"dropdown-toggle", :id=>"dLabel", :role=>"button", 'data-toggle'=>"dropdown", 'data-target'=>"#", :href=>"/"}
+                = current_user.name
+                %b{:class=>"caret"}
+              %ul{:class=>"dropdown-menu"}
+                %li
+                  = link_to t(:home), domino_user_path(current_user.id)
+                %li{:class=>"divider"}
+                %li
+                  = link_to t(:sign_out), logout_path
 
 

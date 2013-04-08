@@ -1,5 +1,7 @@
 Domino::Application.routes.draw do
 
+  get "chat/index"
+
   root :to => "visitor#welcome"
 
   match '/login' => 'visitor#login', :as => :login
@@ -28,6 +30,12 @@ Domino::Application.routes.draw do
       collection do
         get :index
         get :show
+      end
+    end
+
+    resources :chat do
+      collection do
+        get :index
       end
     end
   end

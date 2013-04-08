@@ -26,7 +26,8 @@ gem 'jquery-rails'
 gem 'thin'
 gem 'execjs'
 gem 'therubyracer'
-gem "twitter-bootstrap-rails"
+gem 'twitter-bootstrap-rails'
+gem 'faye'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

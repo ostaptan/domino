@@ -1,0 +1,2 @@
+module Domino::ChatHelper
+end

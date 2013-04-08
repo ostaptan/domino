@@ -20,11 +20,11 @@ class VisitorController < ApplicationController
     pswd = params[:password]
 
     unless email.blank? || pswd.blank?
-      user = User.find_by_email(email).try(:authenticate, email, pswd)
-      if user
+      users_array = User.find_by_email(email).try(:authenticate, email, pswd)
+      if users_array && !users_array.blank?
         url = domino_index_path
         #send_mail(user)
-        return if login_user(user, url)
+        return if login_user(users_array.first, url)
       end
     end
     redirect_to_with_notice login_path, t(:invalid_login_or_password), :error
@@ -35,11 +35,11 @@ class VisitorController < ApplicationController
   def login_user(user, redirect_url = nil)
     redirect_url ||= { :controller => 'domino' }
 
-    return false unless user.first.active?
+    return false unless user.active?
 
-    raise "Admin can't be active" if user.first.is_admin?
+    raise "Admin can't be active" if user.is_admin?
 
-    session[:user_id] = user.first.id
+    session[:user_id] = user.id
 
     redirect_to redirect_url
     true
@@ -48,10 +48,10 @@ class VisitorController < ApplicationController
   def send_mail(user)
     m = TMail::Mail.new
 
-    m.subject = "Welcome to Gold Dust"
-    m.to, m.from = user.mail, 'gold dust'
+    m.subject = "Welcome to Domino"
+    m.to, m.from = user.mail, 'domino'
     m.date = Time.now
-    m.body = "Thank you for registering in Gold Dust. Your username is #{user.name} and
+    m.body = "Thank you for registering in Domino. Your username is #{user.name} and
               your password is not available to see even for us))"
 
     ActionMailer::Base.deliver(m)

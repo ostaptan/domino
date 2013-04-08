@@ -1,12 +1,11 @@
-%p{:class=>'welcome'}
+%div#footer
+ %br
  = link_to t(:about), about_visitor_index_path, :class => "btn btn-large btn-large btn-primary disabled"
- -if current_user
-  = link_to t(:log_out), logout_path, :class => "btn btn-large btn-large btn-primary disabled"
- - else
-  = link_to t(:log_in), login_path, :class => "btn btn-large btn-large btn-primary disabled"
+ = link_to t(:rules), '#', :class => "btn btn-large btn-large btn-primary disabled"
 
-
-%div{:class =>'separator'}
-%p{:class=>'welcome copyright'}
- %small
-  = 'Copyright and hsfgb blablalblablablablablalbalb'
+ %p{:class=>'copyright'}
+  %small
+   = 'Copyright and hsfgb blablalblablablablablalbalb'
+  %p
+   vkontakte
+   twitter

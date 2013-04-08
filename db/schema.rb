@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130330091547) do
+ActiveRecord::Schema.define(:version => 20130330091549) do
 
   create_table "games", :force => true do |t|
     t.text     "bones"
@@ -48,29 +48,23 @@ ActiveRecord::Schema.define(:version => 20130330091547) do
   end
 
   create_table "users", :force => true do |t|
-    t.integer  "history_id"
     t.string   "name"
     t.string   "surname"
-    t.integer  "message_id"
     t.integer  "game_id"
     t.string   "login"
     t.string   "password"
     t.string   "email"
     t.string   "phone"
-    t.integer  "friend_id"
     t.integer  "tournament_id"
-    t.integer  "portal_id"
     t.datetime "created_at",                                    :null => false
     t.datetime "updated_at",                                    :null => false
+    t.boolean  "active",                     :default => false
+    t.string   "gender",        :limit => 1
     t.boolean  "is_admin",                   :default => false
     t.string   "avatar"
     t.string   "settings"
-    t.boolean  "active",                     :default => false
-    t.string   "gender",        :limit => 1
-    t.integer  "a_lost",                     :default => 0
-    t.integer  "a_won",                      :default => 0
-    t.integer  "g_raiting",                  :default => 1200
-    t.integer  "s_raiting",                  :default => 1200
+    t.integer  "g_rating",                   :default => 1200
+    t.integer  "s_rating",                   :default => 1200
   end
 
 end

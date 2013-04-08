@@ -3,7 +3,7 @@
     %div{:class=>'left'}
       Goat domino
     %div{:class=>'right'}
-      = current_user.g_raiting
+      = current_user.g_rating
   %br
   %br
   = render :partial => 'domino/users/list', :locals => {:type => :goat}
@@ -12,7 +12,7 @@
     %div{:class=>'left'}
       Spider domino
     %div{:class=>'right'}
-      = current_user.s_raiting
+      = current_user.s_rating
   %br
   %br
   = render :partial => 'domino/users/list', :locals => {:type => :spider}

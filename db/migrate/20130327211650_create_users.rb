@@ -1,5 +1,7 @@
 class CreateUsers < ActiveRecord::Migration
   def change
+    drop_table :users
+
     create_table :users do |t|
       t.string :name
       t.string :surname
@@ -8,9 +10,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password
       t.string :email
       t.string :phone
-      t.integer :friend_id
       t.integer :tournament_id
-      t.integer :portal_id
 
       t.timestamps
     end

@@ -9,3 +9,4 @@ en:
   authorization_required: "You need to authorize!"
   attributes_incorrect: "Some of attributes you provided are incorrect!"
   sign_up: "Sign Up"
+  send: "Send"

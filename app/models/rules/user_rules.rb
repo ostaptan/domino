@@ -6,16 +6,17 @@ module Rules
     def can_register_user?(attr)
       return false unless valid_email?(attr[:email])
       return false unless valid_password?(attr[:password_digest])
-      false unless valid_names?(attr[:name], attr[:surname])
+      return false unless valid_names?(attr[:name], attr[:surname])
+      true
     end
 
     def valid_email?(email)
 
-      if email.blank? || !(email =~ /^([0-9]{8,14})+$/)
+      if email.blank? || !(email.include?('@')) || !(email.include?('.'))
         return false
       end
 
-      if User.exists_mail?(email)
+      if User.exists_email?(email)
         return false
       end
 

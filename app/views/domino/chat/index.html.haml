@@ -1,0 +1,8 @@
+%ul{:id=>'chat', :class=>'messages'}
+  = render :partial => 'messages'
+
+%div{:class=>'welcome'}
+  = form_for Message.new,  :remote => true, :url => {:action => :new} do |f|
+    = f.text_area :message, :size => '30x2', :class => 'message-input'
+    = f.hidden_field :author_id, :value => @user.id
+    = f.submit t(:send), :class => 'btn btn-success btn-large'

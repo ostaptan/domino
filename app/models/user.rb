@@ -41,6 +41,10 @@ class User < ActiveRecord::Base
     false
   end
 
+  def my_message?(m_id)
+    self.id == m_id
+  end
+
   def max_rating(type)
     case type
       when :goat
@@ -95,12 +99,12 @@ class User < ActiveRecord::Base
       self.email = attr[:email]
       self.gender = attr[:gender]
       self.password = User.encrypt_a_password(attr[:password_digest]) if attr[:password_digest]
-      self.build_history
-      self.history.save!
       self.save!
     else
-      :attributes_incorrect
+      return :attributes_incorrect
     end
+    create_history!(self.id)
+    nil
   end
 
   def authenticate(user_mail, user_password)
@@ -115,10 +119,14 @@ class User < ActiveRecord::Base
     r
   end
 
-  def exists_email?(email)
-    User.find_by_email(email)
+  def create_history!(id)
+    @history = History.new
+    @history.create_for_user!(id)
   end
 
+  def self.exists_email?(email)
+    User.find_by_email(email)
+  end
 
   private
 

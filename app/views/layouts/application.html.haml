@@ -10,12 +10,11 @@
     %br
     %div{:class=>"container-fluid"}
       %div{:class=>"row-fluid"}
-        %div{:class=>"span3"}
-          = render :partial => 'navigation/sidebar' if current_user
-
-        %div{:class=>"span9"}
+        %div{:class=>"span7"}
           = render :template => 'navigation/header'
           = render :partial => 'navigation/flash', :locals => {:flash => flash}
           = yield
-          = render :template => 'navigation/footer'
 
+        %div{:class=>"span3 pull-right"}
+          = render :partial => 'navigation/sidebar' if current_user
+  = render :template => 'navigation/footer'

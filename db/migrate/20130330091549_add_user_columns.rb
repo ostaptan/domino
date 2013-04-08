@@ -5,8 +5,8 @@ class AddUserColumns < ActiveRecord::Migration
     add_column :users, :is_admin, :boolean, :default => false
     add_column :users, :avatar, :string
     add_column :users, :settings, :string
-    add_column :users, :g_raiting, :integer, :default => 1200
-    add_column :users, :s_raiting, :integer, :default => 1200
+    add_column :users, :g_rating, :integer, :default => 1200
+    add_column :users, :s_rating, :integer, :default => 1200
   end
 
   def down
