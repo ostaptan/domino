@@ -1,0 +1,26 @@
+%div{:class=>"modal hide fade", :id=>'myModal', :tabindex=>"-1", :role=>"dialog", 'aria-hidden'=>"true"}
+  %div{:class=>"modal-header"}
+    %button{:type=>"button", :class=>"close", 'data-dismiss'=>"modal", 'aria-hidden'=>"true"}
+      ×
+    %h4{:class=>'modal-hd'}
+      Register Form
+    %h5
+      Please fill in all next fields
+  %div{:class=>"modal-body"}
+    = form_for @user, :url => {:action => :process_register} do |form|
+      %p
+        = form.email_field :email, :placeholder => "Email"
+      %p
+        = form.text_field :surname, :placeholder => "Surname"
+      %p
+        = form.text_field :name, :placeholder => "Name"
+      %p
+        = form.select :gender, options_for_select([[:male, 'm'], [:female, 'f']])
+      %p
+        = form.password_field :password_digest, :placeholder => "Password"
+      %p
+        = form.password_field :confirm_password, :placeholder => "Confirm Password"
+      %p
+      %div{:class=>"modal-footer"}
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        = form.submit t(:sign_up), :class => 'btn btn-success'

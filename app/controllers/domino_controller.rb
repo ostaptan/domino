@@ -10,7 +10,7 @@ class DominoController < ApplicationController
     if logged_in?
       redirect_to admin_index_path if current_user.is_admin?
     else
-      redirect_to_with_notice login_path, t(:authorization_required), :error
+      redirect_to_with_notice root_path, t(:authorization_required), :error
     end
   end
 end

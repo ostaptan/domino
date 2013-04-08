@@ -1,2 +1,4 @@
-$("#chat").append("<%= escape_javascript render(@message) %>");
-$("#new_message")[0].reset();
+$("#chat").append("<%= escape_javascript render :partial => 'message', :locals => {:m => @message} %>");
+$("#input").val('');
+var objDiv = document.getElementById("chat");
+objDiv.scrollTop = objDiv.scrollHeight;

@@ -37,7 +37,7 @@ class ApplicationController < ActionController::Base
     reset_user_session
     reset_session
 
-    redirect_to login_path
+    redirect_to root_path
   end
 
   def reset_user_session

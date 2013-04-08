@@ -3,15 +3,14 @@ class VisitorController < ApplicationController
   include VisitorExtensions::Register
 
   def welcome
+    redirect_to domino_index_path if logged_in?
+    @user = User.new
   end
 
   def about
-
   end
 
   def login
-    redirect_to domino_index_path if logged_in?
-    @user = User.new
   end
 
   def do_login
@@ -27,7 +26,7 @@ class VisitorController < ApplicationController
         return if login_user(users_array.first, url)
       end
     end
-    redirect_to_with_notice login_path, t(:invalid_login_or_password), :error
+    redirect_to_with_notice root_path, t(:invalid_login_or_password), :error
   end
 
   private
