@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20130409013327) do
     t.datetime "updated_at",                   :null => false
     t.integer  "players_count", :default => 2
     t.string   "game_type"
+    t.datetime "finished_at"
   end
 
   create_table "games_users", :id => false, :force => true do |t|

@@ -9,3 +9,61 @@
   = link_to t(:new_game), '#newGame', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
 %p
   = link_to t(:join_game), '#joinGame', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
+
+%p
+  %table{:class=>"table table-striped"}
+    %caption
+      %h5{:class=>'pull-left'}
+        Current Games
+    %thead
+      %tr
+        %th
+          id
+        %th
+          Type
+        %th
+          Time per move
+        %th
+          Available sits
+    %tbody
+      - @my_current_games.each do |game|
+        %tr
+          %td
+            = game.id
+          %td
+            = game.game_type
+          %td
+            = game.time_per_move
+          %td
+            = game.available_sits
+          %td
+            = link_to t(:view), '#'
+
+%p
+  %table{:class=>"table table-striped"}
+    %caption
+      %h5{:class=>'pull-left'}
+        Finished Games
+    %thead
+      %tr
+        %th
+          Result
+        %th
+          Type
+        %th
+          Time per move
+        %th
+          Date
+    %tbody
+      - @my_finished_games.each do |game|
+        %tr
+          %td
+            = game.result(current_user)
+          %td
+            = game.game_type
+          %td
+            = game.time_per_move
+          %td
+            = game.finished
+          %td
+            = link_to t(:view), '#'

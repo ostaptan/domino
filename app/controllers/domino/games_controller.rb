@@ -3,6 +3,8 @@ class Domino::GamesController < DominoController
   def index
     @game = Game.new
     @games = Game.available_games
+    @my_current_games = current_user.games
+    @my_finished_games = current_user.finished_games
   end
 
   def show

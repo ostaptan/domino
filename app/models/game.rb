@@ -27,6 +27,14 @@ class Game < ActiveRecord::Base
     self.players_count - players.size
   end
 
+  def result(user)
+    self.winner_id == user.id ? 'Won' : 'Lost'
+  end
+
+  def finished
+    self.finished_at.strftime('%b %d, %Y (%H:%M)') if self.finished_at
+  end
+
   def self.available_games
     #TODO remake
     Game.all

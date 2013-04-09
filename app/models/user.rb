@@ -68,6 +68,11 @@ class User < ActiveRecord::Base
     end
   end
 
+  def finished_games
+    #TODO remake
+    Game.all
+  end
+
   def won_games_count(type)
     case type
       when :goat
