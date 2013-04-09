@@ -1,2 +1,11 @@
+%div{:class=>"modal hide fade", :id=>'newGame', :tabindex=>"-1", :role=>"dialog", 'aria-hidden'=>"true"}
+  = render :partial => 'new_game_modal'
+
+%div{:class=>"modal hide fade", :id=>'joinGame', :tabindex=>"-1", :role=>"dialog", 'aria-hidden'=>"true"}
+  = render :partial => 'list_of_games_modal'
 %p
-  list of games
+  = image_tag ''
+%p
+  = link_to t(:new_game), '#newGame', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
+%p
+  = link_to t(:join_game), '#joinGame', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"

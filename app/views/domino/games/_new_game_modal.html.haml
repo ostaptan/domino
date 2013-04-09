@@ -1,0 +1,16 @@
+%div{:class=>"modal-header"}
+  %button{:type=>"button", :class=>"close", 'data-dismiss'=>"modal", 'aria-hidden'=>"true"}
+    ×
+  %h4{:class=>'modal-hd'}
+    Create a new Game
+  %h5
+    Please fill in all next fields
+%div{:class=>"modal-body"}
+  = form_for @game, :url => {:action => :create} do |form|
+    %p
+      = form.select :game_type, options_for_select(Game::GAME_TYPES)
+      = form.select :players_count, options_for_select(@game.players_count_select)
+      = form.select :time_per_move, options_for_select(@game.minutes_per_move_select)
+    %div{:class=>"modal-footer"}
+      <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+      = form.submit t(:create), :class => 'btn btn-success'

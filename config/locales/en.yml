@@ -10,3 +10,5 @@ en:
   attributes_incorrect: "Some of attributes you provided are incorrect!"
   sign_up: "Sign Up"
   send: "Send"
+  create: "Create"
+  join: "Join"

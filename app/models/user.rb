@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
 
   has_one :history
   has_many :messages
-  has_one :game
+  has_and_belongs_to_many :games
 
   def welcome_phrase
     "Welcome #{self.name}!"
