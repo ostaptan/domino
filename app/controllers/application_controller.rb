@@ -55,4 +55,9 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def users_online
+    User.logged_in_count
+  end
+  helper_method :users_online
+
 end

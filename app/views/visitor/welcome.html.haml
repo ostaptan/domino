@@ -5,4 +5,8 @@
     %br
     %small
       = t(:domino_description)
+  %h2
+    Playing domino now:
+    = users_online
+    users
   = render :partial => 'login' unless current_user

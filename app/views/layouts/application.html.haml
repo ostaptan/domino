@@ -5,6 +5,7 @@
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = javascript_include_tag "http://localhost:9292/faye.js"
+
     = csrf_meta_tags
 
   %body
@@ -19,3 +20,4 @@
         %div{:class=>"span3 pull-right"}
           = render :partial => 'navigation/sidebar' if current_user
   = render :template => 'navigation/footer'
+

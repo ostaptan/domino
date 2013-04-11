@@ -11,10 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130409013330) do
+ActiveRecord::Schema.define(:version => 20130411021022) do
 
   create_table "games", :force => true do |t|
-    t.text     "bones"
     t.string   "game_type"
     t.integer  "time_per_move", :default => 1
     t.integer  "winner_id"
@@ -23,13 +22,22 @@ ActiveRecord::Schema.define(:version => 20130409013330) do
     t.datetime "started_at"
     t.integer  "min_rating",    :default => 10
     t.integer  "max_rating",    :default => 10
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+    t.integer  "rating",        :default => 1200
+    t.text     "data"
   end
 
+  add_index "games", ["game_type"], :name => "index_games_on_game_type"
+  add_index "games", ["players_count"], :name => "index_games_on_players_count"
+  add_index "games", ["rating"], :name => "index_games_on_rating"
+  add_index "games", ["time_per_move"], :name => "index_games_on_time_per_move"
+
   create_table "games_users", :id => false, :force => true do |t|
-    t.integer "user_id"
-    t.integer "game_id"
+    t.integer  "user_id"
+    t.integer  "game_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "histories", :force => true do |t|
@@ -60,8 +68,6 @@ ActiveRecord::Schema.define(:version => 20130409013330) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "surname"
-    t.integer  "game_id"
-    t.string   "login"
     t.string   "password"
     t.string   "email"
     t.string   "phone"
@@ -75,6 +81,18 @@ ActiveRecord::Schema.define(:version => 20130409013330) do
     t.string   "settings"
     t.integer  "g_rating",                   :default => 1200
     t.integer  "s_rating",                   :default => 1200
+    t.datetime "last_seen_at"
+  end
+
+  add_index "users", ["email"], :name => "index_users_on_email"
+  add_index "users", ["g_rating"], :name => "index_users_on_g_rating"
+  add_index "users", ["s_rating"], :name => "index_users_on_s_rating"
+
+  create_table "users_games", :id => false, :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "game_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

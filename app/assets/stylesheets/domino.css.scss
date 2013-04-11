@@ -172,3 +172,16 @@ div#footer {
   width: 800px;
   height: 700px;
 }
+
+.rating-range {
+  color: #000000;
+  display: inline-block;
+}
+
+.rating-range-max [type="text"] {
+  width: 100px;
+}
+
+input#min_rating, input#max_rating {
+  width: 100px;
+}

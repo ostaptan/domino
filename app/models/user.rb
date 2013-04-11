@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   require 'digest/md5'
 
   include Rules::UserRules
+  include RedisSupport
 
   GENDER_MALE = "m"
   GENDER_FEMALE = "f"
@@ -45,6 +46,11 @@ class User < ActiveRecord::Base
     self.id == m_id
   end
 
+  def update_online!
+    self.last_seen_at = Time.now
+    self.save!
+  end
+
   def max_rating(type)
     case type
       when :goat
@@ -69,8 +75,7 @@ class User < ActiveRecord::Base
   end
 
   def finished_games
-    #TODO remake
-    Game.all
+    Game.where("finished_at is not ?", nil)
   end
 
   def won_games_count(type)
@@ -93,6 +98,14 @@ class User < ActiveRecord::Base
       else
         0
     end
+  end
+
+  def recommended_max_rating
+    1300
+  end
+
+  def recommended_min_rating
+    1200
   end
 
   def register(attr)
@@ -129,9 +142,25 @@ class User < ActiveRecord::Base
     @history.create_for_user!(id)
   end
 
+  def online?
+    self.last_seen_at < 15.minutes.ago
+  end
+
   def self.exists_email?(email)
     User.find_by_email(email)
   end
+
+  def self.logged_in_count
+    online = cache_get('users_online')
+    if online
+      return online
+    else
+      value = User.where("last_seen_at < ?", 60.seconds.ago).count
+      cache_put('users_online', value, expire = 10.minutes)
+      return value
+    end
+  end
+
 
   private
 

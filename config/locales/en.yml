@@ -12,3 +12,7 @@ en:
   send: "Send"
   create: "Create"
   join: "Join"
+  find: "Find"
+  game_found: "Game successfully found!"
+  no_games_found: "No available games found by your parameters!"
+  game_started: "Game successfully started!"

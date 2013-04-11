@@ -1,3 +1,0 @@
-class Domino::Gamee
-
-end

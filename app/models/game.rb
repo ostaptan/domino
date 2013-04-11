@@ -12,6 +12,11 @@ class Game < ActiveRecord::Base
   TIMES_PER_MOVE = 1..4
   PLAYERS_COUNT = 2..4
 
+  scope :find_by_params, (lambda do |params|
+    { :conditions => ['rating >= ? and rating <= ? and time_per_move = ? and game_type = ?',
+                      params[:min_rating], params[:max_rating], params[:time_per_move], params[:game_type]] }
+  end)
+
   def create_one!(attr, user)
     if can_create_game?(self, user)
       self.game_type = attr[:game_type]
@@ -29,21 +34,7 @@ class Game < ActiveRecord::Base
       return nil
     end
 
-    if can_start_game?(self)
-      case self.game_type
-        when :goat
-          DominoGame::Goat::Game.new(self)
-        when :spider
-          DominoGame::Spider::Game.new(self)
-        else
-          #TODO remove
-          raise "undentified game!"
-      end
-      self.started_at = Time.now
-      :game_started
-    else
-      :wait
-    end
+    start_game!
   end
 
   def players_count_select
@@ -58,6 +49,10 @@ class Game < ActiveRecord::Base
     self.players_count - players.size
   end
 
+  def status
+    available_sits == 0 ? 'Playing' : "Waiting for opponents. Available sits: #{available_sits}."
+  end
+
   def result(user)
     self.winner_id == user.id ? 'Won' : 'Lost'
   end
@@ -66,7 +61,36 @@ class Game < ActiveRecord::Base
     self.finished_at.strftime('%b %d, %Y (%H:%M)') if self.finished_at
   end
 
+  def start_game!
+    if can_start_game?(self)
+      case self.game_type.to_sym
+        when :goat
+          @goat_game = DominoGame::Goat::Game.new(self)
+
+          self.data = @goat_game.dump
+          self.started_at = DateTime.now
+          self.save!
+        when :spider
+          @spider_game = DominoGame::Spider::Game.new(self)
+
+          self.data = @spider_game.dump
+          self.started_at = DateTime.now
+          self.save!
+        else
+          #TODO remove
+          raise 'unidentified game!'
+      end
+      :game_started
+    else
+      :wait
+    end
+  end
+
+  def self.get_game(user, type)
+    return user.game
+  end
+
   def self.available_games
-    self.where('started_at is ?', nil)
+    self.where('started_at is ?', nil).select {|game| game.available_sits > 0}
   end
 end

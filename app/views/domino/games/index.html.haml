@@ -3,12 +3,14 @@
 
 %div{:class=>"modal hide fade", :id=>'joinGame', :tabindex=>"-1", :role=>"dialog", 'aria-hidden'=>"true"}
   = render :partial => 'list_of_games_modal'
+
+%div{:class=>"modal hide fade", :id=>'findGame', :tabindex=>"-1", :role=>"dialog", 'aria-hidden'=>"true"}
+  = render :partial => 'find_game_modal'
 %p
   = image_tag 'domino_game.jpg'
 %p
   = link_to t(:new_game), '#newGame', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
-%p
   = link_to t(:join_game), '#joinGame', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
-
+  = link_to t(:find_game), '#findGame', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
 = render :partial => 'current_games' unless @my_current_games.blank?
-= render :partial => 'finished_games' unless @my_current_games.blank?
+= render :partial => 'finished_games' unless @my_finished_games.blank?

@@ -1,6 +1,10 @@
 class Domino::GamesController < DominoController
+
+  include Domino::CommonController
+
   before_filter :find_game, :only => [:show, :update]
   before_filter :new_game, :only => [:index, :create]
+  before_filter :get_game_data, :only => [:show]
 
   def index
     @games = Game.available_games
@@ -9,6 +13,8 @@ class Domino::GamesController < DominoController
   end
 
   def show
+    @domino_game
+    'asdasd'
   end
 
   def create
@@ -36,6 +42,17 @@ class Domino::GamesController < DominoController
     end
   end
 
+  def find
+    @params_hash = prepare_find_params(params)
+    @game = Game.find_by_params(@params_hash).select {|game| game.available_sits > 0}.first
+    if @game.blank?
+      redirect_to_with_notice domino_games_path, t(:no_games_found)
+    else
+      redirect_to_with_notice domino_game_path(@game.id), t(:game_found)
+    end
+
+  end
+
   private
 
   def find_game
@@ -44,6 +61,15 @@ class Domino::GamesController < DominoController
 
   def new_game
     @game = Game.new
+  end
+
+  def prepare_find_params(params)
+    {
+      :min_rating => params[:min_rating],
+      :max_rating => params[:max_rating],
+      :time_per_move => params[:time_per_move].split(' ').first.to_i,
+      :game_type => params[:game_type]
+    }
   end
 
 end

@@ -31,6 +31,7 @@ Domino::Application.routes.draw do
         get :index
         get :show
         get :update
+        post :find
       end
     end
 

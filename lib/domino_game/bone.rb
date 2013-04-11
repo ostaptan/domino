@@ -1,12 +1,10 @@
-class Domino::Bone
+class DominoGame::Bone
 
-  def initialise(n1, n2)
+  attr_accessor :n1, :n2
+
+  def initialize(n1, n2)
     @n1, @n2 = n1, n2
     [@n1, @n2]
-  end
-
-  def to_s
-    "#{self.n1}_#{self.n2}.png"
   end
 
 end
