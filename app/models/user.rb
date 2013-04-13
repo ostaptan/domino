@@ -1,17 +1,22 @@
+# md5 is needed for pasword generation
+require 'digest/md5'
+require 'redis_support'
+require 'fileutils'
+
 class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
-  # md5 is needed for pasword generation
-  require 'digest/md5'
-
-  include Rules::UserRules
+  include FileUtils
   include RedisSupport
+  include Rules::UserRules
 
   GENDER_MALE = "m"
   GENDER_FEMALE = "f"
   GENDERS = [GENDER_MALE, GENDER_FEMALE]
 
+  attr_accessible :avatar
   validates_presence_of :name, :email, :password
+  validates_uniqueness_of :email
 
   has_one :history
   has_many :messages
@@ -19,6 +24,14 @@ class User < ActiveRecord::Base
 
   def welcome_phrase
     "Welcome #{self.name}!"
+  end
+
+  def nick_name
+    self.email.split('@').first
+  end
+
+  def full_name
+    self.name + ' ' + self.surname + ' (' + nick_name + ')'
   end
 
   def active?
@@ -51,8 +64,26 @@ class User < ActiveRecord::Base
     self.save!
   end
 
+  def update_edited(attr)
+    self.name = attr[:name]
+    self.email = attr[:email]
+    update_avatar!(attr[:avatar])
+    self.save!
+  end
+
+  def update_avatar!(avat)
+    name = avat.original_filename
+    File.open(Rails.root.join('public', 'tmp_avatars', name), 'wb') do |file|
+      file.write(avat.read)
+    end
+
+    FileUtils.cp "public/tmp_avatars/#{name}", "#{Rails.root}/app/assets/images/avatars/#{name}"
+
+    self.avatar = name
+  end
+
   def max_rating(type)
-    case type
+    case type.to_sym
       when :goat
         history.g_max_rating
       when :spider
@@ -74,7 +105,7 @@ class User < ActiveRecord::Base
     end
   end
 
-  def finished_games
+  def finished_games(page)
     Game.where("finished_at is not ?", nil)
   end
 
@@ -151,12 +182,12 @@ class User < ActiveRecord::Base
   end
 
   def self.logged_in_count
-    online = cache_get('users_online')
+    online = RedisSupport.cache_get('users_online')
     if online
       return online
     else
       value = User.where("last_seen_at < ?", 60.seconds.ago).count
-      cache_put('users_online', value, expire = 10.minutes)
+      RedisSupport.cache_put('users_online', value, expire = 10.minutes)
       return value
     end
   end

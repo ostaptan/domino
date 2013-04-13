@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130411021022) do
+ActiveRecord::Schema.define(:version => 20130412024416) do
 
   create_table "games", :force => true do |t|
     t.string   "game_type"
@@ -20,8 +20,6 @@ ActiveRecord::Schema.define(:version => 20130411021022) do
     t.integer  "players_count", :default => 2
     t.datetime "finished_at"
     t.datetime "started_at"
-    t.integer  "min_rating",    :default => 10
-    t.integer  "max_rating",    :default => 10
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
     t.integer  "rating",        :default => 1200

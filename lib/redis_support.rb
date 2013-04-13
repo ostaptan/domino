@@ -19,26 +19,29 @@ module RedisSupport
 #  end
 
   def redis
-    Thread.current[:redis_zona] ||= Redis.new :host => GameProperties::REDIS_HOST,
-                                              :port => GameProperties::REDIS_PORT
+    Thread.current[:redis_domino] ||= Redis.new :host => GameProperties::REDIS_HOST,
+                                                :port => GameProperties::REDIS_PORT
 #      :logger => RedisLogger.logger
   end
+  module_function :redis
 
   def validate_redis_cache_key(key)
     raise "Incorrect KEY #{key}" unless key.gsub(/[a-zA-Z0-9 _\"\#\-\+\$\|\[\]]+/, "").blank?
     true
   end
+  module_function :validate_redis_cache_key
 
   def cache_put(key, value, expire = nil)
     validate_redis_cache_key(key)
 
     if value
       value = Marshal.dump value
-      redis.set(compose_redis_key(key), value, expire)
+      redis.set(compose_redis_key(key), value)
     else
       cache_del key
     end
   end
+  module_function :cache_put
 
   def cache_get(key, default = nil)
     key = compose_redis_key key
@@ -46,6 +49,7 @@ module RedisSupport
     value = Marshal.load value if value
     value || default
   end
+  module_function :cache_get
 
   def cache_del(key)
     validate_redis_cache_key(key)
@@ -126,6 +130,7 @@ module RedisSupport
   def compose_redis_key(key)
     "#{PROJECT_KEY}#{key}"
   end
+  module_function :compose_redis_key
 
   def merged_options(call_options)
     if call_options

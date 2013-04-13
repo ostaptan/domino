@@ -9,8 +9,6 @@ class CreateGames < ActiveRecord::Migration
       t.integer :players_count, :default => 2
       t.datetime :finished_at
       t.datetime :started_at
-      t.integer :min_rating, :default => 10
-      t.integer :max_rating, :default => 10
 
       t.timestamps
     end

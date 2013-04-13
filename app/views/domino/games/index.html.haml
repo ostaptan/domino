@@ -1,7 +1,7 @@
 %div{:class=>"modal hide fade", :id=>'newGame', :tabindex=>"-1", :role=>"dialog", 'aria-hidden'=>"true"}
   = render :partial => 'new_game_modal'
 
-%div{:class=>"modal hide fade", :id=>'joinGame', :tabindex=>"-1", :role=>"dialog", 'aria-hidden'=>"true"}
+%div{:class=>"modal hide fade", :id=>'listGames', :tabindex=>"-1", :role=>"dialog", 'aria-hidden'=>"true"}
   = render :partial => 'list_of_games_modal'
 
 %div{:class=>"modal hide fade", :id=>'findGame', :tabindex=>"-1", :role=>"dialog", 'aria-hidden'=>"true"}
@@ -10,7 +10,19 @@
   = image_tag 'domino_game.jpg'
 %p
   = link_to t(:new_game), '#newGame', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
-  = link_to t(:join_game), '#joinGame', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
+  = link_to t(:list_of_games), '#listGames', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
   = link_to t(:find_game), '#findGame', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
+
+
+%div{:class=>'pagination'}
+  = will_paginate @my_current_games, :container => false
 = render :partial => 'current_games' unless @my_current_games.blank?
+%div{:class=>'pagination'}
+  = will_paginate @my_current_games, :container => false
+
+
+%div{:class=>'pagination'}
+  = will_paginate @my_finished_games, :container => false
 = render :partial => 'finished_games' unless @my_finished_games.blank?
+%div{:class=>'pagination'}
+  = will_paginate @my_finished_games, :container => false

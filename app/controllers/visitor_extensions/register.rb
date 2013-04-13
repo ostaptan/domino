@@ -14,7 +14,7 @@ module VisitorExtensions
       redirect_to_with_notice :register, t(:psswd_not_match), :error if attr[:password_digest] != attr[:confirm_password]
       notice = @user.register(attr)
       if notice
-        redirect_to_with_notice register_path, t(notice), :error
+        redirect_to_with_notice root_path, t(notice), :error
       else
         redirect_to_with_notice domino_index_path, t(:success_register), :success
       end

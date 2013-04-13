@@ -1,5 +1,18 @@
-%h2
-  = @user.name
-  = @user.surname
-  %p
-    = @user.email
+%p
+  %div{:class=>'players-description'}
+    %h5
+      = link_to @user.full_name, domino_user_path(@user.id)
+    %p
+      = link_to image_tag("avatars/#{@user.avatar}"), domino_user_path(@user.id)
+    %h5
+      Goat Rating:
+      = @user.g_rating
+      %br
+      Spider Rating:
+      = @user.s_rating
+      %br
+      Goat Total:
+      = "#{@user.all_games_count(:goat)} (#{@user.won_games_count(:goat)} W/ #{@user.lost_games_count(:goat)} L)"
+      %br
+      Spider Total:
+      = "#{@user.all_games_count(:spider)} (#{@user.won_games_count(:spider)} W/ #{@user.lost_games_count(:spider)} L)"

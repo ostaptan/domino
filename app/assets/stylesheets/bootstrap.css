@@ -676,6 +676,7 @@ strong {
 
 em {
   font-style: italic;
+  color: #f41a39;
 }
 
 cite {
@@ -5209,7 +5210,7 @@ input[type="submit"].btn.btn-mini {
   left: 50%;
   z-index: 1050;
   width: 560px;
-  height: 600px;
+  height: auto;
   margin-left: -280px;
   background-color: #ffffff;
   border: 1px solid #999;
@@ -5255,8 +5256,8 @@ input[type="submit"].btn.btn-mini {
 
 .modal-body {
   position: relative;
-  min-height: 200px;
-  max-height: 600px;
+  min-height: 100px;
+  max-height: 800px;
   padding: 15px;
   overflow-y: auto;
 }

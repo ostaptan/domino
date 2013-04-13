@@ -3,4 +3,9 @@
     = link_to t(:my_games), domino_games_path, :class => "btn btn-large btn-block btn-primary disabled"
     %div{:class=>"frame-header"}
     = render :partial => 'domino/users/statistic'
-
+    - if params[:controller] == 'domino/games' || params[:controller] == 'domino/chat'
+      %div{:class=>"btn-group"}
+        <a class="btn btn-large btn-block btn-primary dropdown-toggle" data-toggle="dropdown" href="#">Action<span class="caret"></span></a>
+        %ul{:class=>"dropdown-menu"}
+          %li
+            sdgfdsgfdsf

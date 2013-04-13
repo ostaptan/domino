@@ -20,6 +20,8 @@
               %ul{:class=>"dropdown-menu"}
                 %li
                   = link_to t(:home), domino_user_path(current_user.id)
+                %li
+                  = link_to t(:edit), edit_domino_user_path(current_user.id)
                 %li{:class=>"divider"}
                 %li
                   = link_to t(:sign_out), logout_path

@@ -185,3 +185,13 @@ div#footer {
 input#min_rating, input#max_rating {
   width: 100px;
 }
+
+.pagination { padding: 3px; margin: 3px; font-size: 20px}
+.pagination a { padding: 2px 5px 2px 5px; margin: 2px; text-decoration: none; color: #f6f9ff}
+.pagination a:hover,
+.pagination a:active { color: #f41a39; font-size: 20px; }
+.pagination span.current { padding: 2px 5px 2px 5px; margin: 2px; font-weight: bold; background-color: #0088cc; color: #f41a39; }
+.pagination span.disabled { padding: 2px 5px 2px 5px; margin: 2px; color: #171717; }
+
+.border {border-bottom: 1px solid #eeeeee;}
+.players-description { display: inline-block; margin-right: 7px; border: 1px solid #ccc; border-radius: 10px;padding: 6px;margin-top: 7px;background: #f3f596;color: #77767b; }

@@ -1,3 +1,6 @@
+# -*- encoding : utf-8 -*-
+require "./lib/domino_game/bone"
+
 class DominoGame::Market < Array
   include Enumerable
 
@@ -6,7 +9,9 @@ class DominoGame::Market < Array
   def initialize(game)
     @game = game
     @bones = []
-    super
+  end
+
+  def init
     (0..6).each do |num1|
       (0..6).each do |num2|
         @bones << DominoGame::Bone.new(num1, num2)
@@ -18,20 +23,24 @@ class DominoGame::Market < Array
   end
 
   def deal_bones
-    begin
-      deal_try
-    end while !valid_deal?
-  end
-
-  def deal_try
+    init
     @game.players.each do |player|
       player.bones.clear
       player.draw_bones_from_market
     end
   end
 
-  def valid_deal?
-    @game.players.map(&:bones).all?(&:valid_for_init?)
+  def to_s
+    join '|'
+  end
+
+  def from_s s
+    array = []
+    s.split('|').each do |bone_id|
+      nums = bone_id.split('-')
+      array << DominoGame::Bone.new(nums.first, nums.last)
+    end
+    replace array
   end
 
 end

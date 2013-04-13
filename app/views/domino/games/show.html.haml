@@ -1,3 +1,12 @@
-%p
-  = @domino_game
+= render :partial => 'game_description' if @game.available?
+
+- if @domino_game
+  %p
+    = @domino_game.market.inspect
+  %p
+    = @domino_game.players.first.bones
+    = @domino_game.players.last.bones
+  %p
+    = @domino_game.player_names
+
 

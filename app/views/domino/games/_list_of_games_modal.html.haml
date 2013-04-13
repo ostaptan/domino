@@ -30,6 +30,8 @@
             %td
               = game.available_sits
             %td
+              = link_to t(:view), domino_game_path(game.id)
+            %td
               = link_to t(:join), domino_game_path(game.id), :method => :put
   %div{:class=>"modal-footer"}
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>

@@ -1,0 +1,9 @@
+= form_for @user, :url => {:action => :update} do |form|
+  %p
+    = form.email_field :email, :placeholder => "Email"
+  %p
+    = form.text_field :name, :placeholder => "Name"
+  %p
+    = form.file_field :avatar
+  %p
+    = form.submit t(:save), :class => 'btn btn-success btn-large'

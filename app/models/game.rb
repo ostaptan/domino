@@ -1,7 +1,7 @@
 class Game < ActiveRecord::Base
   # attr_accessible :title, :body
 
-  serialize :bones
+  serialize :data, Hash
 
   include GamesExt::Table
   include Rules::GameRules
@@ -13,8 +13,8 @@ class Game < ActiveRecord::Base
   PLAYERS_COUNT = 2..4
 
   scope :find_by_params, (lambda do |params|
-    { :conditions => ['rating >= ? and rating <= ? and time_per_move = ? and game_type = ?',
-                      params[:min_rating], params[:max_rating], params[:time_per_move], params[:game_type]] }
+    {:conditions => ['rating >= ? and rating <= ? and time_per_move = ? and game_type = ?',
+                     params[:min_rating], params[:max_rating], params[:time_per_move], params[:game_type]]}
   end)
 
   def create_one!(attr, user)
@@ -23,8 +23,17 @@ class Game < ActiveRecord::Base
       self.time_per_move = attr[:time_per_move]
       self.players_count = attr[:players_count]
       self.players << user
+      self.rating = calculate_game_rating.to_i
       self.save!
     end
+  end
+
+  def min_rating
+    (rating - rating*0.2).to_i
+  end
+
+  def max_rating
+    (rating + rating*0.2).to_i
   end
 
   def join_one!(user)
@@ -37,12 +46,33 @@ class Game < ActiveRecord::Base
     start_game!
   end
 
+  def calculate_game_rating
+    type = self.game_type
+    case type.to_sym
+      when :goat
+        rat = calculate_goat_game_rating
+      when :spider
+        rat = calculate_spider_game_rating
+      else
+        raise 'unidentified game type while calculating game rating'
+    end
+    rat
+  end
+
+  def calculate_goat_game_rating
+    self.players.size > 1 ? self.players.sum {|pl| pl.g_rating}/self.players.size : self.players.first.g_rating
+  end
+
+  def calculate_spider_game_rating
+    self.players.size > 1 ? self.players.sum {|pl| pl.s_rating}/self.players.size : self.players.first.s_rating
+  end
+
   def players_count_select
-    PLAYERS_COUNT.map { |val| "#{val} players"}
+    PLAYERS_COUNT.map { |val| "#{val} players" }
   end
 
   def minutes_per_move_select
-    TIMES_PER_MOVE.map { |val| "#{val} minutes per move"}
+    TIMES_PER_MOVE.map { |val| "#{val} minutes per move" }
   end
 
   def available_sits
@@ -65,13 +95,13 @@ class Game < ActiveRecord::Base
     if can_start_game?(self)
       case self.game_type.to_sym
         when :goat
-          @goat_game = DominoGame::Goat::Game.new(self)
+          @goat_game = DominoGame::Goat::Game.new.start(self)
 
           self.data = @goat_game.dump
           self.started_at = DateTime.now
           self.save!
         when :spider
-          @spider_game = DominoGame::Spider::Game.new(self)
+          @spider_game = DominoGame::Spider::Game.new.start(self)
 
           self.data = @spider_game.dump
           self.started_at = DateTime.now
@@ -86,11 +116,12 @@ class Game < ActiveRecord::Base
     end
   end
 
-  def self.get_game(user, type)
-    return user.game
+  def available?
+    self.started_at.nil? && available_sits > 0
   end
 
   def self.available_games
-    self.where('started_at is ?', nil).select {|game| game.available_sits > 0}
+    self.where('started_at is ?', nil).select { |game| game.available_sits > 0 }
   end
+
 end
