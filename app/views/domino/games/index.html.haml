@@ -6,23 +6,44 @@
 
 %div{:class=>"modal hide fade", :id=>'findGame', :tabindex=>"-1", :role=>"dialog", 'aria-hidden'=>"true"}
   = render :partial => 'find_game_modal'
-%p
-  = image_tag 'domino-draw.jpg'
-%p
-  = link_to t(:new_game), '#newGame', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
-  = link_to t(:list_of_games), '#listGames', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
-  = link_to t(:find_game), '#findGame', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
+
+%div{:class=>'games'}
+  %h1{:class=>'edit-user'}
+    Games
+  %p
+    = image_tag 'domino_game.jpg'
+  %p
+    = link_to t(:new_game), '#newGame', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
+    = link_to t(:list_of_games), '#listGames', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
+    = link_to t(:find_game), '#findGame', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
 
 
-%div{:class=>'pagination'}
-  = will_paginate @my_current_games, :container => false
-= render :partial => 'current_games' unless @my_current_games.blank?
-%div{:class=>'pagination'}
-  = will_paginate @my_current_games, :container => false
 
+  %div{:class=>"tabbable"}
+    %ul{:class=>"nav nav-tabs"}
+      %li{:class=>"active"}
+        = link_to 'Friends', "#friends", 'data-toggle'=>"tab"
+      %li
+        = link_to 'Current Games', "#current_games", 'data-toggle'=>"tab"
+      %li
+        = link_to 'Finished Games', "#finished_games", 'data-toggle'=>"tab"
 
-%div{:class=>'pagination'}
-  = will_paginate @my_finished_games, :container => false
-= render :partial => 'finished_games' unless @my_finished_games.blank?
-%div{:class=>'pagination'}
-  = will_paginate @my_finished_games, :container => false
+    %div{:class=>"tab-content"}
+      %div{:class=>"tab-pane active", :id=>"friends"}
+        %p
+          = render(:partial => 'domino/users/friends')
+
+      %div{:class=>"tab-pane", :id=>"current_games"}
+        %p
+          %div{:class=>'pagination'}
+            = will_paginate @my_current_games, :container => false
+          = render(:partial => 'current_games')
+          %div{:class=>'pagination'}
+            = will_paginate @my_current_games, :container => false
+      %div{:class=>"tab-pane", :id=>"finished_games"}
+        %p
+          %div{:class=>'pagination'}
+            = will_paginate @my_finished_games, :container => false
+          = render(:partial => 'finished_games')
+          %div{:class=>'pagination'}
+            = will_paginate @my_finished_games, :container => false

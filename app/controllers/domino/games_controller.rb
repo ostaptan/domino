@@ -7,6 +7,7 @@ class Domino::GamesController < DominoController
   before_filter :get_game_data, :only => [:show]
 
   def index
+    @user = current_user
     @games = Game.available_games
     @my_current_games = current_user.games.paginate(:page => params[:page], :per_page => 10).order('id ASC')
     @my_finished_games = current_user.finished_games(params[:page]).paginate(:page => params[:page], :per_page => 10).order('id ASC')

@@ -1,4 +1,4 @@
-%p
+%div{:class=>'left-menu'}
   %div{:class=>'players-description'}
     %h5
       = link_to @user.full_name, domino_user_path(@user.id)
@@ -16,3 +16,12 @@
       %br
       Spider Total:
       = "#{@user.all_games_count(:spider)} (#{@user.won_games_count(:spider)} W/ #{@user.lost_games_count(:spider)} L)"
+  = render :partial => 'domino/friendships/friends'
+
+%div{:class=>'middle-menu'}
+  %div{:class=>'player-info'}
+    = render :partial => 'domino/games/current_games'
+
+
+
+

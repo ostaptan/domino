@@ -27,6 +27,8 @@ Domino::Application.routes.draw do
       end
     end
 
+    resources :friendships
+
     resources :games do
       collection do
         get :index

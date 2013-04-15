@@ -1,0 +1,15 @@
+%div{:class=>"modal-header"}
+  %button{:type=>"button", :class=>"close", 'data-dismiss'=>"modal", 'aria-hidden'=>"true"}
+    ×
+  %h4{:class=>'modal-hd'}
+    You Followed
+%div{:class=>"modal-body"}
+  - for friendship in @user.friendships
+    %div{:class=>'players-description'}
+      = link_to friendship.friend.nick_name, domino_user_path(friendship.friend.id)
+      %br
+      = avatar_tag(friendship.friend, true)
+  %div{:class=>"modal-footer"}
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+
+

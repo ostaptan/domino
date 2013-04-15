@@ -3,6 +3,13 @@ module Rules
 
     include Rules::BaseRules
 
+    def can_follow?(user)
+      return false if user == self
+      return false if self.friendships.find_by_friend_id(user.id)
+
+      true
+    end
+
     def can_register_user?(attr)
       return false unless valid_email?(attr[:email])
       return false unless valid_password?(attr[:password_digest])

@@ -1,4 +1,4 @@
-class Domino::ChatController < ApplicationController
+class Domino::ChatController < DominoController
 
   def index
     @user = current_user

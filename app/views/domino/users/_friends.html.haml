@@ -1,0 +1,31 @@
+%p
+  %table{:class=>"table table-striped"}
+    %caption
+      %h5{:class=>'pull-left'}
+        My Friends List
+    %thead
+      %tr
+        %th
+          id
+        %th
+          Name(nick)
+        %th
+          Goat Rating
+        %th
+          Spider Rating
+        %th
+          Action
+    %tbody
+      - for friendship in @user.friendships
+        %tr
+          %td
+            = friendship.friend.id
+          %td
+            = friendship.friend.full_name
+          %td
+            = friendship.friend.g_rating
+          %td
+            = friendship.friend.s_rating
+          %td
+            = link_to t(:play), '#'
+            = link_to t(:delete), domino_friendship_path(friendship), :method => :delete

@@ -1,0 +1,15 @@
+%div{:class=>"modal-header"}
+  %button{:type=>"button", :class=>"close", 'data-dismiss'=>"modal", 'aria-hidden'=>"true"}
+    ×
+  %h4{:class=>'modal-hd'}
+    You Followed
+%div{:class=>"modal-body"}
+  - for user in @user.inverse_friends
+    %div{:class=>'players-description'}
+      = link_to user.nick_name, domino_user_path(user.id)
+      %br
+      = avatar_tag(user, true)
+  %div{:class=>"modal-footer"}
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+
+

@@ -1,0 +1,16 @@
+%div#sidebar
+  %sidebar
+    %div{:class=>"frame grey"}
+      %h3{:class=>'head'}
+        Not a member yet??
+      %h5
+        It's FREE and EASY!
+      %ul
+        %li{:class=>'h6'}
+          Play domino with friends!
+        %li{:class=>'h6'}
+          Meet players from around the world!
+        %li{:class=>'h6'}
+          Train yourself and share knowledge!
+      %p
+        = link_to t(:join_now), "#myModal", :class => "btn btn-large btn-block btn-primary disabled", 'data-toggle'=>"modal"

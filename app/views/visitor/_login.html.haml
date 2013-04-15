@@ -8,8 +8,9 @@
         = password_field_tag :password, nil, :placeholder => 'Password'
       %p
         = link_to t(:forgot), forgot_visitor_index_path, :class => 'forgot'
-      %p{:class => 'remember'}
-        = check_box_tag :remember_me, 'Remember Me'
+      %p{:class=>'remember'}
+        = check_box_tag :remember_me
+        Remember Me
       %p
         = submit_tag 'Sign in >', :class => 'btn btn-large btn-primary'
         = link_to t(:register), "#myModal", :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
