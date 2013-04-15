@@ -31,6 +31,8 @@ GEM
     addressable (2.3.3)
     arel (3.0.2)
     builder (3.0.4)
+    chronic (0.9.1)
+    chunky_png (1.2.8)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -61,12 +63,20 @@ GEM
       yajl-ruby (>= 1.0.0)
     faye-websocket (0.4.7)
       eventmachine (>= 0.12.0)
+    fspath (2.0.4)
     geocoder (1.1.6)
     haml (4.0.1)
       tilt
     hike (1.2.1)
     http_parser.rb (0.5.3)
     i18n (0.6.1)
+    image_optim (0.8.0)
+      fspath (~> 2.0.3)
+      image_size (~> 1.1.2)
+      in_threads (~> 1.1.1)
+      progress (~> 2.4.0)
+    image_size (1.1.2)
+    in_threads (1.1.1)
     journey (1.0.4)
     jquery-rails (2.2.1)
       railties (>= 3.0, < 5.0)
@@ -80,7 +90,12 @@ GEM
     mime-types (1.21)
     multi_json (1.7.2)
     mysql2 (0.3.11)
+    newrelic-redis (1.4.0)
+      newrelic_rpm (~> 3.0)
+      redis (< 4.0)
+    newrelic_rpm (3.5.8.72)
     polyglot (0.3.3)
+    progress (2.4.0)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -108,11 +123,16 @@ GEM
       json (~> 1.4)
     redis (3.0.3)
     ref (1.0.4)
+    rmagick (2.13.2)
+    rpm_contrib (2.1.11)
+      newrelic_rpm (>= 3.1.1)
+      newrelic_rpm (>= 3.1.1)
     sass (3.2.7)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
+    sprite-factory (1.5.3)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -138,6 +158,9 @@ GEM
     uglifier (1.3.0)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    whenever (0.8.2)
+      activesupport (>= 2.3.4)
+      chronic (>= 0.6.3)
     will_paginate (3.0.4)
     yajl-ruby (1.1.0)
 
@@ -145,20 +168,29 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler
+  chunky_png
   coffee-rails (~> 3.2.1)
   coffee-script
   execjs
   faye
   geocoder
   haml
+  image_optim
   jquery-rails
   json
   mysql2
+  newrelic-redis
+  newrelic_rpm (~> 3.5.3)
   rails (= 3.2.13)
   redis
+  rmagick
+  rpm_contrib
   sass-rails (~> 3.2.3)
+  sprite-factory (>= 1.4.0)
   therubyracer
   thin
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)
+  whenever
   will_paginate

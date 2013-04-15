@@ -7,7 +7,6 @@ gem 'rails', '3.2.13'
 
 gem 'mysql2'
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -18,6 +17,20 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+
+  # sprite-factory
+  gem 'sprite-factory', '>= 1.4.0'
+  gem 'chunky_png'
+  gem 'rmagick'
+  gem 'image_optim'
+end
+
+group :production do
+  gem 'bundler'
+  gem 'whenever'
+  gem 'newrelic-redis'
+  gem 'rpm_contrib'
+  gem 'newrelic_rpm', "~> 3.5.3"
 end
 
 gem 'haml'

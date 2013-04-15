@@ -10,7 +10,7 @@ class DominoGame::Bone
   end
 
   def to_s
-    "#{@n1}-#{@n2}"
+    "#{@n1}_#{@n2}"
   end
 
 end

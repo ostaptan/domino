@@ -1,12 +1,13 @@
 = render :partial => 'game_description' if @game.available?
 
 - if @domino_game
-  %p
-    = @domino_game.market.inspect
-  %p
-    = @domino_game.players.first.bones
-    = @domino_game.players.last.bones
-  %p
-    = @domino_game.player_names
-
-
+  - @domino_game.market.each do |bone|
+    = content_tag :div, nil, :class => bone_v_class(bone)
+  %span10
+    First player
+    - @domino_game.players.first.bones.each do |bone|
+      = content_tag :div, nil, :class => bone_v_class(bone)
+  %span10
+    Second Player
+    - @domino_game.players.last.bones.each do |bone|
+      = content_tag :div, nil, :class => bone_v_class(bone)

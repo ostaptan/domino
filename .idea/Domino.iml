@@ -27,6 +27,8 @@
     <orderEntry type="library" scope="PROVIDED" name="arel (v3.0.2, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.0.4, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.3.4, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="chronic (v0.9.1, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="chunky_png (v1.2.8, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v3.2.2, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.2.0, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.6.2, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
@@ -39,10 +41,15 @@
     <orderEntry type="library" scope="PROVIDED" name="execjs (v1.4.0, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="faye (v0.8.9, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="faye-websocket (v0.4.7, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="fspath (v2.0.4, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="geocoder (v1.1.6, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="haml (v4.0.1, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.1, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="http_parser.rb (v0.5.3, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.1, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="image_optim (v0.8.0, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="image_size (v1.1.2, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="in_threads (v1.1.1, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="journey (v1.0.4, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v2.2.1, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="libv8 (v3.11.8.17, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
@@ -50,7 +57,10 @@
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.21, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.7.2, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mysql2 (v0.3.11, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="newrelic-redis (v1.4.0, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="newrelic_rpm (v3.5.8.72, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.3, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="progress (v2.4.0, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.4.5, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-cache (v1.2, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-ssl (v1.3.3, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
@@ -61,8 +71,10 @@
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.12.2, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="redis (v3.0.3, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ref (v1.0.4, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rpm_contrib (v2.1.11, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.2.7, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v3.2.6, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sprite-factory (v1.5.3, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v2.2.2, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="therubyracer (v0.11.4, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thin (v1.5.1, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
@@ -72,6 +84,7 @@
     <orderEntry type="library" scope="PROVIDED" name="twitter-bootstrap-rails (v2.2.6, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.37, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uglifier (v1.3.0, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="whenever (v0.8.2, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="will_paginate (v3.0.4, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="yajl-ruby (v1.1.0, RVM: ruby-2.0.0-p0 [domino]) [gem]" level="application" />
   </component>
