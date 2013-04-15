@@ -1,9 +1,56 @@
+%h1{:class=>'edit-user'}
+  = image_tag 'user_info.png'
+  = "#{@user.nick_name} > "
+  Edit Profile Info
+%div{:class=>'font-description'}
+  = t(:edit_user_description)
 = form_for @user, :url => {:action => :update} do |form|
-  %p
-    = form.email_field :email, :placeholder => "Email"
-  %p
-    = form.text_field :name, :placeholder => "Name"
-  %p
-    = form.file_field :avatar
-  %p
-    = form.submit t(:save), :class => 'btn btn-success btn-large'
+  %ul
+    %li{:class=>'edit-fields'}
+      = label_tag 'Email: '
+      %li{:class=>'edit-fields'}
+        = form.email_field :email
+    %br
+    %li{:class=>'edit-fields'}
+      = label_tag 'First Name: '
+      %li{:class=>'edit-fields'}
+        = form.text_field :name
+    %br
+    %li{:class=>'edit-fields'}
+      = label_tag 'Last Name: '
+      %li{:class=>'edit-fields'}
+        = form.text_field :surname
+    %br
+    %li{:class=>'edit-fields'}
+      = label_tag 'Avatar: '
+      %li{:class=>'edit-fields'}
+        = avatar_tag @user, true
+      %li{:class=>'edit-fields'}
+        = form.file_field :avatar
+    %br
+    %br
+    %li{:class=>'edit-fields birth-date'}
+      = label_tag 'Date of Birth: '
+      %li{:class=>'edit-fields'}
+        = select_tag :birth_date_month, options_for_select(Date::MONTHNAMES.each_with_index.collect{|m, i| [m, i.to_s]})
+      %li{:class=>'edit-fields'}
+        = select_tag :birth_date_day, options_for_select((1..31).each_with_index.collect{|m, i| [m, i.to_s]})
+      %li{:class=>'edit-fields'}
+        = select_tag :birth_date_year, options_for_select((Time.now.year).downto(1985).each_with_index.collect{|m, i| [m, i.to_s]})
+    %br
+    %li{:class=>'edit-fields'}
+      = label_tag 'Location: '
+      %li{:class=>'edit-fields'}
+        = form.text_field :location
+        = ", #{@user.country}"
+      %h5{:class=>'example'}
+        Example: “New York City”
+    %br
+      %li{:class=>'edit-fields'}
+        = label_tag 'Country: '
+        %li{:class=>'edit-fields'}
+          = form.select :country, options_for_select(Country.names_array)
+
+    %p
+      = form.submit t(:save), :class => 'btn btn-success btn-large'
+

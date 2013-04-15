@@ -31,6 +31,8 @@ gem 'redis'
 gem 'json'
 gem 'faye'
 gem 'will_paginate'
+
+gem 'geocoder'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

@@ -1,10 +1,17 @@
 class Domino::UsersController < DominoController
 
+  include Domino::UsersHelper
+
   def index
   end
 
   def show
     @user = User.find_by_id params[:id]
+    #User.all.each do |u|
+      #  unless u.avatar
+      #u.avatar = 'no_avatar.jpg'
+      #u.save!
+    #end
   end
 
   def edit

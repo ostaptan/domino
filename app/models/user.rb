@@ -22,6 +22,11 @@ class User < ActiveRecord::Base
   has_many :messages
   has_and_belongs_to_many :games
 
+  geocoded_by :ip_address,
+              :latitude => :lat, :longitude => :lon
+  after_validation :geocode,
+                   :if => lambda{ |obj| obj.address_changed? }
+
   def welcome_phrase
     "Welcome #{self.name}!"
   end
@@ -36,6 +41,10 @@ class User < ActiveRecord::Base
 
   def active?
     self.active
+  end
+
+  def address_changed?
+    self.last_ip != self.ip_address
   end
 
   def male?
@@ -72,7 +81,7 @@ class User < ActiveRecord::Base
   end
 
   def update_avatar!(avat)
-    name = avat.original_filename
+    name = "#{self.id.to_s}.jpg"
     File.open(Rails.root.join('public', 'tmp_avatars', name), 'wb') do |file|
       file.write(avat.read)
     end
@@ -143,6 +152,8 @@ class User < ActiveRecord::Base
     #TODO set false unless user confirmed email
     self.active = true
     if can_register_user?(attr)
+      self.ip_address = attr[:ip]
+      self.last_ip = attr[:ip]
       self.name = attr[:name]
       self.surname = attr[:surname]
       self.email = attr[:email]

@@ -15,6 +15,7 @@ Domino::Application.routes.draw do
       get :about
       post :do_login
       post :process_register
+      get :forgot
     end
   end
 

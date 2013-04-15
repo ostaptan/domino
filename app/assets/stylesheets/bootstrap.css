@@ -1106,7 +1106,7 @@ input[type="color"],
   width: 500px;
   padding: 4px 6px;
   margin-bottom: 10px;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 20px;
   color: #555555;
   vertical-align: middle;
@@ -1208,8 +1208,8 @@ input[type="file"] {
 }
 
 select {
-  height: 60px;
-  width: 500px;
+  height: auto;
+  width: auto;
   background-color: #ffffff;
   border: 1px solid #cccccc;
 }

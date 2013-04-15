@@ -3,7 +3,7 @@
     %h5
       = link_to @user.full_name, domino_user_path(@user.id)
     %p
-      = link_to image_tag("avatars/#{@user.avatar}"), domino_user_path(@user.id)
+      = avatar_tag(@user)
     %h5
       Goat Rating:
       = @user.g_rating
