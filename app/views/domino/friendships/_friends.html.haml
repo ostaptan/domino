@@ -1,0 +1,23 @@
+%div{:class=>"modal hide fade", :id=>'youFollowed', :tabindex=>"-1", :role=>"dialog", 'aria-hidden'=>"true"}
+  = render :partial => 'domino/friendships/you_followed_modal'
+
+%div{:class=>"modal hide fade", :id=>'yourFollowers', :tabindex=>"-1", :role=>"dialog", 'aria-hidden'=>"true"}
+  = render :partial => 'domino/friendships/your_followers_modal'
+
+%div{:class=>'framed you_followed'}
+  %p
+    = link_to t(:you_followed, :count => @user.friendships.size), '#youFollowed', 'data-toggle'=>"modal"
+  - for friendship in @user.friendships.first(3)
+    %div{:class=>'players-description'}
+      = link_to friendship.friend.nick_name, domino_user_path(friendship.friend.id)
+      %br
+      = avatar_tag(friendship.friend, true)
+%div{:class=>'framed followers'}
+  %p
+    = link_to t(:your_followers, :count => @user.inverse_friends.size), '#yourFollowers', 'data-toggle'=>"modal"
+  - for user in @user.inverse_friends.first(3)
+    %p{:class=>'players-description'}
+      = link_to user.nick_name, domino_user_path(user.id)
+      %br
+      = avatar_tag(user, true)
+= link_to t(:add_to_friends), domino_friendships_path(:friend_id => @user), :method => :post if current_user.can_follow?(@user)

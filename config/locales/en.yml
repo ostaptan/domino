@@ -21,3 +21,5 @@ en:
   edit_user_description: "All information on this page is OPTIONAL unless otherwise indicated. Anything you enter on this page (except your email addresses) will be visible in your public profile page."
   forgot: "Forgot your password? Click here!"
   remember_me: "Remember me"
+  you_followed: "You Followed (%{count})"
+  your_followers: "Your Followers (%{count})"

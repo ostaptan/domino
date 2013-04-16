@@ -80,7 +80,7 @@ class Game < ActiveRecord::Base
   end
 
   def status
-    available_sits == 0 ? 'Playing' : "Waiting for opponents. Available sits: #{available_sits}."
+    available_sits == 0 ? 'Playing' : "Available sits: #{available_sits}."
   end
 
   def result(user)

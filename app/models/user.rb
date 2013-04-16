@@ -14,18 +14,20 @@ class User < ActiveRecord::Base
   GENDER_FEMALE = "f"
   GENDERS = [GENDER_MALE, GENDER_FEMALE]
 
-  attr_accessible :avatar
+  attr_accessible :avatar, :latitude, :longitude
   validates_presence_of :name, :email, :password
   validates_uniqueness_of :email
 
   has_one :history
   has_many :messages
+  has_many :friendships
+  has_many :friends, :through => :friendships
+  has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
+  has_many :inverse_friends, :through => :inverse_friendships, :source => :user
   has_and_belongs_to_many :games
 
-  geocoded_by :ip_address,
-              :latitude => :lat, :longitude => :lon
-  after_validation :geocode,
-                   :if => lambda{ |obj| obj.address_changed? }
+  geocoded_by :location
+  after_validation :geocode
 
   def welcome_phrase
     "Welcome #{self.name}!"
@@ -43,8 +45,8 @@ class User < ActiveRecord::Base
     self.active
   end
 
-  def address_changed?
-    self.last_ip != self.ip_address
+  def address
+    self.country + ',' + self.location
   end
 
   def male?
@@ -75,8 +77,12 @@ class User < ActiveRecord::Base
 
   def update_edited(attr)
     self.name = attr[:name]
+    self.surname = attr[:surname]
     self.email = attr[:email]
-    update_avatar!(attr[:avatar])
+    self.country = attr[:country]
+    self.location = attr[:location]
+    self.birth_date = attr[:birth_date]
+    update_avatar!(attr[:avatar]) if attr[:avatar]
     self.save!
   end
 
@@ -87,7 +93,7 @@ class User < ActiveRecord::Base
     end
 
     FileUtils.cp "public/tmp_avatars/#{name}", "#{Rails.root}/app/assets/images/avatars/#{name}"
-
+    File.delete("public/tmp_avatars/#{name}") if File.exist?("public/tmp_avatars/#{name}")
     self.avatar = name
   end
 
@@ -158,6 +164,7 @@ class User < ActiveRecord::Base
       self.surname = attr[:surname]
       self.email = attr[:email]
       self.gender = attr[:gender]
+      self.avatar = 'no_avatar.jpg'
       self.password = User.encrypt_a_password(attr[:password_digest]) if attr[:password_digest]
       self.save!
     else
