@@ -47,10 +47,8 @@ ActiveRecord::Schema.define(:version => 20130415222407) do
   add_index "games", ["time_per_move"], :name => "index_games_on_time_per_move"
 
   create_table "games_users", :id => false, :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "game_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer "user_id"
+    t.integer "game_id"
   end
 
   create_table "histories", :force => true do |t|
@@ -81,6 +79,7 @@ ActiveRecord::Schema.define(:version => 20130415222407) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "surname"
+    t.integer  "game_id"
     t.string   "password"
     t.string   "email"
     t.string   "phone"
@@ -109,12 +108,5 @@ ActiveRecord::Schema.define(:version => 20130415222407) do
   add_index "users", ["email"], :name => "index_users_on_email"
   add_index "users", ["g_rating"], :name => "index_users_on_g_rating"
   add_index "users", ["s_rating"], :name => "index_users_on_s_rating"
-
-  create_table "users_games", :id => false, :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "game_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
 
 end

@@ -33,9 +33,9 @@ Domino::Application.routes.draw do
       collection do
         get :index
         get :show
-        post :show
         get :update
         post :find
+        get 'handle_move/(:id)' => 'games#handle_move', :as => :handle_move
       end
     end
 
@@ -43,10 +43,6 @@ Domino::Application.routes.draw do
       collection do
         get :index
       end
-    end
-
-    namespace :online_game do
-      post :handle_move
     end
 
   end

@@ -1,32 +1,32 @@
 $(function () {
-    $("#draggable_0-0").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_0-1").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_0-2").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_0-3").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_0-4").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_0-5").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_0-6").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_1-1").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_1-2").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_1-3").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_1-4").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_1-5").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_1-6").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_2-2").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_2-3").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_2-4").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_2-5").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_2-6").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_3-3").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_3-4").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_3-5").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_3-6").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_4-4").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_4-5").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_4-6").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_5-5").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_5-6").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#draggable_6-6").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#0-0").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#0-1").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#0-2").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#0-3").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#0-4").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#0-5").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#0-6").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#1-1").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#1-2").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#1-3").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#1-4").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#1-5").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#1-6").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#2-2").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#2-3").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#2-4").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#2-5").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#2-6").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#3-3").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#3-4").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#3-5").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#3-6").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#4-4").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#4-5").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#4-6").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#5-5").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#5-6").draggable({ cursor: "move", revert: "invalid", scroll: false });
+    $("#6-6").draggable({ cursor: "move", revert: "invalid", scroll: false });
 
     var $rBox = $("#rotateBox"),
         $firstPlace = $("#firstPlace"),
@@ -42,10 +42,11 @@ $(function () {
                 if (value == true) {
                     $($firstPlace).data('canDrop', false).attr('data-can-drop', false);
                     createHPlacesFor(ui.draggable);
+                    var id = getURLParameter('id');
                     $.ajax({
-                        type: "POST",
-                        url: "/domino/online_game/handle_move",
-                        data: { total_changes: JSON.stringify(ui.draggable)},
+                        type: "GET",
+                        url: "handle_move/" + id,
+                        data: { total_changes: ui.draggable.prop('id')},
                         success: function () {
                             alert("Success!");
                         }
@@ -121,5 +122,12 @@ $(function () {
             .css({ "transform": "rotate(90deg)", "-webkit-transform": "rotate(90deg)", "-moz-transform": "rotate(90deg)" })
             .find("div")
             .fadeIn();
+    }
+
+    function getURLParameter(name) {
+        var full_url = document.URL; // Get current url
+        var url_array = full_url.split('/') // Split the string into an array with / as separator
+        var last_segment = url_array[url_array.length-1];  // Get the last part of the array (-1)
+        return last_segment
     }
 });

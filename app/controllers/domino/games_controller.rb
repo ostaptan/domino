@@ -17,8 +17,8 @@ class Domino::GamesController < DominoController
     @user = current_user
   end
 
-  def save
-
+  def handle_move
+    @arr = params[:total_changes] if params[:total_changes]
   end
 
   def create
