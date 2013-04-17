@@ -27,17 +27,82 @@ $(function() {
     $( "#draggable_5-5" ).draggable({ cursor: "move", revert: "invalid", scroll: false });
     $( "#draggable_5-6" ).draggable({ cursor: "move", revert: "invalid", scroll: false });
     $( "#draggable_6-6" ).draggable({ cursor: "move", revert: "invalid", scroll: false });
-    var $rBox = $( "#rotateBox" );
+    var $rBox = $( "#rotateBox"),
+        $firstPlace = $("#firstPlace"),
+        $rightPlace = $("#right"),
+        $leftPlace = $("#left");
+
+    $firstPlace.droppable ({
+        drop: function( event, ui ) {
+            $(function()
+            {
+                var done;
+
+                if( done ) return;
+                done = true;
+
+
+                createHPlacesFor(ui.draggable)
+            });
+        }
+    });
+
+    $rightPlace.droppable ({
+        drop: function( event, ui ) {
+            $( this )
+                .find( "div" )
+                .html( "Moved!" );
+            createHPlacesFor(ui.draggable)
+        }
+    });
+
+    $leftPlace.droppable ({
+        drop: function( event, ui ) {
+            $( this )
+                .find( "div" )
+                .html( "Moved!" );
+            createHPlacesFor(ui.draggable)
+        }
+    });
 
     $rBox.droppable({
         drop: function( event, ui ) {
-            //
             $( this )
                 .find( "p" )
                 .html( "Dropped!" );
             rotateBone( ui.draggable );
         }
     });
+
+    function createHPlacesFor($previousBone) {
+        var offsets = $previousBone.offset();
+        var top = offsets.top;
+        var left = offsets.left;
+        createHPlace(top, left, 'left');
+        createHPlace(top, left, 'right');
+    }
+
+    function createHPlace($top, $left, $type) {
+        var divTag = document.createElement("div");
+        divTag.id = $type;
+        if ($type == 'right') {
+            divTag.style.top = $top - 20;
+            divTag.style.left = $left + 41;
+        } else if ($type == 'left') {
+            divTag.style.top = $top - 20;
+            divTag.style.left = $left - 166;
+        }
+        divTag.style.margin = "0px auto";
+        divTag.className = "dynamicHDiv";
+        document.getElementById('battle-field').appendChild(divTag);
+    }
+
+    function createVPlaceFor($previousBone) {
+        var offsets = $previousBone.offset();
+        var top = offsets.top;
+        var left = offsets.left;
+
+    }
 
     function rotateBone( $bone ) {
       $bone

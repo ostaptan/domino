@@ -55,7 +55,7 @@
   height: 135px;
   position: absolute;
   left: 1130px;
-  top: 250px;
+  top: 20px;
 }
 
 .my-position {
@@ -73,11 +73,28 @@
 
 div#draggable_0-0, div#draggable_0-1, div#draggable_0-2, div#draggable_0-3, div#draggable_0-4, div#draggable_0-5, div#draggable_0-6, div#draggable_3-5 { width: 65px; height: 135px; border: 1px solid #006dcc;}
 div#rotateBox { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
-div#rotateBox {
-  -moz-transform:rotate(90deg);
-  -webkit-transform:rotate(90deg);
-  -o-transform:rotate(90deg);
-  -ms-transform:rotate(90deg);
-}
 
 .drop-to-rotate {position: absolute;left: 0px;top: 625px;border: 2px solid #ccc}
+
+.firstPlace {
+  width: 65px;
+  height: 135px;
+  position: absolute;
+  border: 2px solid #ccc;
+  top: 320px;
+  left: 510px;
+}
+
+.dynamicVDiv {
+  width: 65px;
+  height: 135px;
+  position: absolute;
+  border: 2px solid #ccc;
+}
+
+.dynamicHDiv {
+  width: 135px;
+  height: 65px;
+  position: absolute;
+  border: 2px solid #ccc;
+}
