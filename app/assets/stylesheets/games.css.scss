@@ -1,3 +1,83 @@
 // Place all the styles related to the Games controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.online-play-game {
+  margin-left: -250px;
+  margin-right: -250px;
+  margin: 10px;
+  left: 0px;
+  top: 22px;
+  position: absolute;
+  padding: 0px;
+  width: 1900px;
+  height: 835px;
+  background-color: #2ba6cb;
+}
+
+.online-game-main-container {
+  width: 1200px;
+  margin: 15px;
+  left: 0px;
+  top: 7px;
+  position: absolute;
+  padding: 0px;
+  height: 505px;
+}
+
+.online-game-right-container {
+  margin: 15px 15px 15px 0px;
+  left: 1228px;
+  top: 7px;
+  position: absolute;
+  padding: 0px;
+  width: 640px;
+  height: 505px;
+}
+
+.player-bones {
+  margin: 10px 0px 10px 0px;
+  min-width: 700px;
+  height: 140px;
+}
+
+.battle-field {
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  left: 250px;
+  top: 250px;
+}
+
+.market {
+  width: 65px;
+  height: 135px;
+  position: absolute;
+  left: 1130px;
+  top: 250px;
+}
+
+.my-position {
+  position:absolute;
+  left:250px;
+  top:655px;
+}
+.player-0 {top: 5px;}
+.player-1 {
+  position:absolute;
+  left:250px;
+  top:20px;
+}
+.player-2 {}
+
+div#draggable_0-0, div#draggable_0-1, div#draggable_0-2, div#draggable_0-3, div#draggable_0-4, div#draggable_0-5, div#draggable_0-6, div#draggable_3-5 { width: 65px; height: 135px; border: 1px solid #006dcc;}
+div#rotateBox { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+div#rotateBox {
+  -moz-transform:rotate(90deg);
+  -webkit-transform:rotate(90deg);
+  -o-transform:rotate(90deg);
+  -ms-transform:rotate(90deg);
+}
+
+.drop-to-rotate {position: absolute;left: 0px;top: 625px;border: 2px solid #ccc}

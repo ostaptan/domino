@@ -3,6 +3,12 @@ class ApplicationController < ActionController::Base
 
   include RedisSupport
 
+  def online_game?
+    params[:controller] == 'domino/games' && params[:action] == 'show'
+  end
+
+  helper_method :online_game?
+
   # Authorized user
   def current_user
     return @current_user if defined?(@current_user)

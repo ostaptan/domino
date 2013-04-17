@@ -1,0 +1,9 @@
+%div{:class=>'player-bones'}
+  <!-- Here player is NOT a user(instance of model User) but a DominoGame::Player instance -->
+  = player.name
+  - if player.player_id == current_user.id
+    - player.bones.each do |bone|
+      = content_tag :div, nil, :class => bone_v_class(bone), :id => "draggable_#{bone}"
+  - else
+    - player.bones.each do |bone|
+      = content_tag :div, nil, :class => bone_v_class_hidden

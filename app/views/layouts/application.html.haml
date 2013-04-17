@@ -5,6 +5,9 @@
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = javascript_include_tag "http://localhost:9292/faye.js"
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
     = csrf_meta_tags
 
@@ -12,14 +15,22 @@
     %br
     %div{:class=>"container-fluid"}
       %div{:class=>'u-header'}
-      %div{:class=>"row-fluid page"}
-        %div{:class=>"main-container"}
+      - claz = online_game? ? "online-play-game" : "row-fluid page"
+      - claz2 = online_game? ? "online-game-main-container" : "main-container"
+
+      = content_tag :div, nil, :class => claz do
+        = content_tag :div, nil, :class => claz2 do
           = render :template => 'navigation/header'
           = render :partial => 'navigation/flash', :locals => {:flash => flash}
           = yield
 
-        %div{:class=>"right-container"}
-          = current_user ? render(:partial => 'navigation/sidebar') : render(:partial => 'navigation/advertise')
-      %div{:class => 'footer'}
-        = render :template => 'navigation/footer'
+        - if online_game?
+          %div{:class=>"online-game-right-container"}
+            = render :partial => 'domino/games/online/right_panel'
+        - else
+          %div{:class=>"right-container"}
+            = current_user ? render(:partial => 'navigation/sidebar') : render(:partial => 'navigation/advertise')
+      - unless online_game?
+        %div{:class => 'footer'}
+          = render :template => 'navigation/footer'
 

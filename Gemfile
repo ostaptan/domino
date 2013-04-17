@@ -33,6 +33,10 @@ group :production do
   gem 'newrelic_rpm', "~> 3.5.3"
 end
 
+group :development do
+  gem 'better_errors'
+end
+
 gem 'haml'
 gem 'coffee-script'
 gem 'jquery-rails'

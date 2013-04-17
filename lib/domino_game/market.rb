@@ -14,9 +14,11 @@ class DominoGame::Market < Array
   def init
     (0..6).each do |num1|
       (0..6).each do |num2|
-        @bones << DominoGame::Bone.new(num1, num2)
+        @bones << DominoGame::Bone.new(num1, num2) if num1 <= num2
       end
     end
+    raise "too many bones!!!!" unless @bones.size == 28
+
     @bones.shuffle!
 
     replace @bones

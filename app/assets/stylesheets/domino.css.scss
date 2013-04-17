@@ -232,4 +232,5 @@ input#min_rating, input#max_rating {
 .example {margin-left: 70px; margin-top: -5px;}
 .input [type="text"] {font-size: 30px;}
 .birth-date {width: auto !important;}
-.games {padding: 20px;}
+.games, .login {padding: 20px;}
+.form-signin-heading {margin-left: 10px;}

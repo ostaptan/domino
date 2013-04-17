@@ -8,4 +8,8 @@ module DominoHelper
     "bone-h bone-h-#{bone.to_s.downcase}"
   end
 
+  def bone_v_class_hidden
+    "bone-v bone-v-hidden"
+  end
+
 end
