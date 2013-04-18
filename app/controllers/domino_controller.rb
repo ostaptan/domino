@@ -1,6 +1,6 @@
 class DominoController < ApplicationController
 
-  before_filter :authorize_access, :except => [:logout]
+  before_filter :authorize_access, :except => [:logout, :show]
   after_filter :update_online
 
   def index

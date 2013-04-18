@@ -1,0 +1,8 @@
+%div#battle-field
+  - #{@domino_game.battle_field.first_bone}
+  - drop = "#draggable_0-1"
+  - can_drop = 'true'
+  %div{:id=>"firstPlace",:class=>"firstPlace", 'data-can-drop'=> can_drop,'data-which-drop'=> drop}
+    Drop here to move!
+
+  = @domino_game.battle_field.first_bone

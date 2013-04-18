@@ -1,5 +1,4 @@
 # -*- encoding : utf-8 -*-
-require "./lib/domino_game/bone"
 
 class DominoGame::Market < Array
   include Enumerable
@@ -11,10 +10,10 @@ class DominoGame::Market < Array
     @bones = []
   end
 
-  def init
+  def init(bones_type = :goat)
     (0..6).each do |num1|
       (0..6).each do |num2|
-        @bones << DominoGame::Bone.new(num1, num2) if num1 <= num2
+        bones_type.to_sym == :goat ? push_goat_bones(num1, num2) : push_spider_bones(n1, n2)
       end
     end
     raise "too many bones!!!!" unless @bones.size == 28
@@ -22,6 +21,14 @@ class DominoGame::Market < Array
     @bones.shuffle!
 
     replace @bones
+  end
+
+  def push_goat_bones(n1, n2)
+    @bones << DominoGame::Goat::Bone.new(n1, n2) if n1 <= n2
+  end
+
+  def push_spider_bones(n1, n2)
+    @bones << DominoGame::Spider::Bone.new(n1, n2) if n1 <= n2
   end
 
   def deal_bones
@@ -40,7 +47,7 @@ class DominoGame::Market < Array
     array = []
     s.split('|').each do |bone_id|
       nums = bone_id.split('-')
-      array << DominoGame::Bone.new(nums.first, nums.last)
+      array << DominoGame::Goat::Bone.new(nums.first, nums.last)
     end
     replace array
   end

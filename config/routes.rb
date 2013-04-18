@@ -33,6 +33,7 @@ Domino::Application.routes.draw do
       collection do
         get :index
         get :show
+        post :show
         get :update
         post :find
       end
@@ -43,6 +44,11 @@ Domino::Application.routes.draw do
         get :index
       end
     end
+
+    namespace :online_game do
+      post :handle_move
+    end
+
   end
 
   match '/admin' => 'admin#index', :as => :admin_index

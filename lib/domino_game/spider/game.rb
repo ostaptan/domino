@@ -4,7 +4,7 @@ require "./lib/domino_game/players_list"
 
 class DominoGame::Spider::Game < DominoGame::AbstractGame
 
-  attr_accessor :market, :players
+  attr_accessor :market, :players, :firster
 
   def initialize
     super

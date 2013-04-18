@@ -17,6 +17,10 @@ class Domino::GamesController < DominoController
     @user = current_user
   end
 
+  def save
+
+  end
+
   def create
     if @game.create_one!(params[:game], current_user)
       respond_to do |format|

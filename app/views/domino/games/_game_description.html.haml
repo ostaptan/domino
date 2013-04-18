@@ -6,9 +6,9 @@
     %h5
       = link_to pl.full_name, domino_user_path(pl.id)
     %p
-      = link_to image_tag("avatars/#{pl.avatar}"), domino_user_path(pl.id)
+      = avatar_tag(pl)
     %h5
-      Rating:
+      Max Rating:
       = pl.max_rating(@game.game_type)
       %br
       Total:

@@ -9,6 +9,7 @@ class DominoGame::AbstractGame
     @game = game
     @players.init(user_ids)
     @market.deal_bones
+    @players.define_who_strike_first
   end
 
   def user_ids

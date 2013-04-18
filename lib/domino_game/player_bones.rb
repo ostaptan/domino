@@ -1,5 +1,4 @@
 # -*- encoding : utf-8 -*-
-require "./lib/domino_game/bone"
 
 class DominoGame::PlayerBones < Array
 
@@ -18,9 +17,13 @@ class DominoGame::PlayerBones < Array
     r = []
     s.split('|').each do |bone_id|
       nums = bone_id.split('-')
-      r << DominoGame::Bone.new(nums.first, nums.last)
+      r << DominoGame::Goat::Bone.new(nums.first, nums.last)
     end
     r
+  end
+
+  def lowest_doublebone
+    select {|bone| bone if bone.doublebone? }.sort{|x,y| x <=> y }.first
   end
 
 end

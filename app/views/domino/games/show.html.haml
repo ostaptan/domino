@@ -2,14 +2,9 @@
   = render :partial => 'game_description'
 -elsif @domino_game
   = render :partial => 'domino/games/online/market'
+  = render :partial => 'domino/games/online/rotation_box'
 
-  %div{:id=>'battle-field'}
-    %div{:id=>"rotateBox",:class=>"drop-to-rotate"}
-      %p
-        Drop here to rotate
-
-    %div{:id=>"firstPlace",:class=>"firstPlace"}
-      Drop here to move!
+  = render :partial => 'domino/games/online/battle-field'
 
   - @domino_game.players.each_with_index do |player, i|
     = content_tag :div, render(:partial => 'domino/games/online/player_bones', :locals => {:player => player}), :class => player.player_id == current_user.id ? "my-position" : "player-#{i}"
