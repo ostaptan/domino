@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@mixin zoom {
+  zoom:0.8;-moz-transform: scale(0.8);
+}
+
 
 div#online-play-game {
   margin: 30px 10px 0px 10px;
@@ -42,9 +46,11 @@ div#battle-field {
   position: absolute;
   left: 250px;
   top: 250px;
+  @include zoom;
 }
 
-.market {
+div#market {
+
 
 }
 bone-rotated {
@@ -54,10 +60,10 @@ bone-rotated {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
-div#player-2 {top: 5px;left: 400px;height: 135px;position: absolute;}      //top player
-div#player-4 {bottom: 0px;left: 400px;height: 135px;position: absolute;}  //bottom player
-div#player-1 {top: 110px;left: 0px;width: 135px;position: absolute}            //left
-div#player-3 {top: 110px;right: 0px;width: 135px;position: absolute}           //right
+div#player-2 {top: 5px;left: 400px;height: 135px;position: absolute;@include zoom;}      //top player
+div#player-4 {bottom: 0px;left: 400px;height: 135px;position: absolute;@include zoom;}  //bottom player
+div#player-1 {top: 110px;left: 0px;width: 135px;position: absolute;@include zoom;}            //left
+div#player-3 {top: 110px;right: 0px;width: 135px;position: absolute;@include zoom;}           //right
 
 
 div#rotateBox { width: 150px; height: 150px; padding: 0.5em; left: 200px; margin: 10px; border: 2px solid #cccccc; bottom: 0px; position: absolute}

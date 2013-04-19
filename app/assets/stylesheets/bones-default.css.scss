@@ -1,30 +1,58 @@
-.bone-v-0-0 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') 0px 4px no-repeat}
-.bone-v-0-1 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -66px 4px no-repeat}
-.bone-v-0-2 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -135px 4px no-repeat}
-.bone-v-0-3 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -203px 4px no-repeat}
-.bone-v-0-4 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -271px 4px no-repeat}
-.bone-v-0-5 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -340px 4px no-repeat}
-.bone-v-0-6 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -408px 4px no-repeat}
-.bone-v-1-1 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') 0px -133px no-repeat}
-.bone-v-1-2 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -66px -133px no-repeat}
-.bone-v-1-3 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -135px -133px no-repeat}
-.bone-v-1-4 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -203px -133px no-repeat}
-.bone-v-1-5 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -271px -133px no-repeat}
-.bone-v-1-6 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -340px -133px no-repeat}
-.bone-v-2-2 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -408px -132px no-repeat}
-.bone-v-2-3 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') 0px -266px no-repeat}
-.bone-v-2-4 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -66px -266px no-repeat}
-.bone-v-2-5 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -135px -266px no-repeat}
-.bone-v-2-6 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -203px -266px no-repeat}
-.bone-v-3-3 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -271px -266px no-repeat}
-.bone-v-3-4 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -340px -266px no-repeat}
-.bone-v-3-5 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -408px -266px no-repeat}
-.bone-v-3-6 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') 0px -401px no-repeat}
-.bone-v-4-4 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -66px -401px no-repeat}
-.bone-v-4-5 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -135px -401px no-repeat}
-.bone-v-4-6 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -203px -401px no-repeat}
-.bone-v-5-5 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -271px -401px no-repeat}
-.bone-v-5-6 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -340px -401px no-repeat}
-.bone-v-6-6 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -408px -401px no-repeat}
-.bone-v-hidden {display: inline-block; width: 65px; height: 135px; background-color: #000; overflow: true;}
-.bone-h-hidden {display: inline-block; width: 135px; height: 65px; background-color: #000; overflow: true;margin-top: 1px;}
+.bone-v-0-0 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') 0px 4px no-repeat;margin-left: 5px}
+.bone-v-0-1 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -66px 4px no-repeat;margin-left: 5px}
+.bone-v-0-2 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -135px 4px no-repeat;margin-left: 5px}
+.bone-v-0-3 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -203px 4px no-repeat;margin-left: 5px}
+.bone-v-0-4 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -271px 4px no-repeat;margin-left: 5px}
+.bone-v-0-5 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -340px 4px no-repeat;margin-left: 5px}
+.bone-v-0-6 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -408px 4px no-repeat;margin-left: 5px}
+.bone-v-1-1 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') 0px -133px no-repeat;margin-left: 5px}
+.bone-v-1-2 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -66px -133px no-repeat;margin-left: 5px}
+.bone-v-1-3 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -135px -133px no-repeat;margin-left: 5px}
+.bone-v-1-4 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -203px -133px no-repeat;margin-left: 5px}
+.bone-v-1-5 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -271px -133px no-repeat;margin-left: 5px}
+.bone-v-1-6 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -340px -133px no-repeat;margin-left: 5px}
+.bone-v-2-2 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -408px -132px no-repeat;margin-left: 5px}
+.bone-v-2-3 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') 0px -266px no-repeat;margin-left: 5px}
+.bone-v-2-4 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -66px -266px no-repeat;margin-left: 5px}
+.bone-v-2-5 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -135px -266px no-repeat;margin-left: 5px}
+.bone-v-2-6 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -203px -266px no-repeat;margin-left: 5px}
+.bone-v-3-3 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -271px -266px no-repeat;margin-left: 5px}
+.bone-v-3-4 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -340px -266px no-repeat;margin-left: 5px}
+.bone-v-3-5 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -408px -266px no-repeat;margin-left: 5px}
+.bone-v-3-6 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') 0px -401px no-repeat;margin-left: 5px}
+.bone-v-4-4 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -66px -401px no-repeat;margin-left: 5px}
+.bone-v-4-5 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -135px -401px no-repeat;margin-left: 5px}
+.bone-v-4-6 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -203px -401px no-repeat;margin-left: 5px}
+.bone-v-5-5 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -271px -401px no-repeat;margin-left: 5px}
+.bone-v-5-6 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -340px -401px no-repeat;margin-left: 5px}
+.bone-v-6-6 {display: inline-block; width: 65px; height: 135px; background: image-url('dominos_sprite.png') -408px -401px no-repeat;margin-left: 5px}
+.bone-v-hidden {display: inline-block; width: 65px; height: 135px; background-color: #000; overflow: true;margin-left: 5px}
+.bone-h-hidden {display: inline-block; width: 135px; height: 65px; background-color: #000; overflow: true;margin-top: 5px}
+.bone-h-0-0 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') 0px -411px no-repeat;margin-top: 5px}
+.bone-h-0-1 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') 2px -346px no-repeat;margin-top: 5px}
+.bone-h-0-2 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') 0px -276px no-repeat;margin-top: 5px}
+.bone-h-0-3 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') 0px -210px no-repeat;margin-top: 5px}
+.bone-h-0-4 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') 0px -141px no-repeat;margin-top: 5px}
+.bone-h-0-5 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') 0px -75px no-repeat;margin-top: 5px}
+.bone-h-0-6 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') 0px -5px no-repeat;margin-top: 5px}
+.bone-h-1-1 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') -133px -411px no-repeat;margin-top: 5px}
+.bone-h-1-2 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') -133px -346px no-repeat;margin-top: 5px}
+.bone-h-1-3 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') -133px -276px no-repeat;margin-top: 5px}
+.bone-h-1-4 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') -133px -210px no-repeat;margin-top: 5px}
+.bone-h-1-5 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') -133px -141px no-repeat;margin-top: 5px}
+.bone-h-1-6 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') -133px -75px no-repeat;margin-top: 5px}
+.bone-h-2-2 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') -133px -5px no-repeat;margin-top: 5px}
+.bone-h-2-3 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') -270px -411px no-repeat;margin-top: 5px}
+.bone-h-2-4 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') -270px -346px no-repeat;margin-top: 5px}
+.bone-h-2-5 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') -270px -276px no-repeat;margin-top: 5px}
+.bone-h-2-6 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') -270px -210px no-repeat;margin-top: 5px}
+.bone-h-3-3 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') -270px -141px no-repeat;margin-top: 5px}
+.bone-h-3-4 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') -270px -75px no-repeat;margin-top: 5px}
+.bone-h-3-5 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') -270px -5px no-repeat;margin-top: 5px}
+.bone-h-3-6 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') -407px -411px no-repeat;margin-top: 5px}
+.bone-h-4-4 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') -407px -346px no-repeat;margin-top: 5px}
+.bone-h-4-5 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') -407px -276px no-repeat;margin-top: 5px}
+.bone-h-4-6 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') -407px -210px no-repeat;margin-top: 5px}
+.bone-h-5-5 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') -407px -141px no-repeat;margin-top: 5px}
+.bone-h-5-6 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') -407px -75px no-repeat;margin-top: 5px}
+.bone-h-6-6 {display: inline-block; width: 135px; height: 65px; background: image-url('dominos_sprite_h.png') -407px -5px no-repeat;margin-top: 5px}

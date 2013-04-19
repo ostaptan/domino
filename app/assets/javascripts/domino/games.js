@@ -1,33 +1,4 @@
 $(function () {
-    $("#0-0").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#0-1").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#0-2").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#0-3").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#0-4").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#0-5").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#0-6").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#1-1").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#1-2").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#1-3").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#1-4").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#1-5").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#1-6").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#2-2").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#2-3").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#2-4").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#2-5").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#2-6").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#3-3").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#3-4").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#3-5").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#3-6").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#4-4").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#4-5").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#4-6").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#5-5").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#5-6").draggable({ cursor: "move", revert: "invalid", scroll: false });
-    $("#6-6").draggable({ cursor: "move", revert: "invalid", scroll: false });
-
     var $rBox = $("#rotateBox"),
         $firstPlace = $("#firstPlace"),
         $rightPlace = $("#right"),
@@ -42,7 +13,7 @@ $(function () {
                 if (value == true) {
                     $($firstPlace).data('canDrop', false).attr('data-can-drop', false);
                     createHPlacesFor(ui.draggable);
-                    var id = getURLParameter('id');
+                    var id = getURLid();
                     $.ajax({
                         type: "GET",
                         url: "handle_move/" + id,
@@ -124,10 +95,9 @@ $(function () {
             .fadeIn();
     }
 
-    function getURLParameter(name) {
+    function getURLid() {
         var full_url = document.URL; // Get current url
-        var url_array = full_url.split('/') // Split the string into an array with / as separator
-        var last_segment = url_array[url_array.length-1];  // Get the last part of the array (-1)
-        return last_segment
+        var url_array = full_url.split('/'); // Split the string into an array with / as separator
+        return url_array[url_array.length-1];  // Get the last part of the array (-1)
     }
 });

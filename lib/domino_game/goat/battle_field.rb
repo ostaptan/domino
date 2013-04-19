@@ -17,7 +17,6 @@ class DominoGame::Goat::BattleField
 
   def add_bone(bone)
     @bones.push bone
-    @bones.flatten!.uniq!
   end
 
   def last_right
