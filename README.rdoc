@@ -10,12 +10,12 @@ features!
 == Installation Guide
 
 1) Install Ruby version higher than 1.9.2
-    <strong>for Windows:</strong> http://rubyinstaller.org/
-    <strong>for Mac/Linux:</strong> https://rvm.io/rvm/install/
+    for Windows: http://rubyinstaller.org/
+    for Mac/Linux: https://rvm.io/rvm/install/
 
 2) Install Rails version higher than 3.2.13
-    <strong>for Windows:</strong> http://railsinstaller.org/
-    <strong>for Mac/Linux:</strong>
+    for Windows: http://railsinstaller.org/
+    for Mac/Linux:
         rvm use ruby x.x.x@domino --create (x.x.x -- your version)
         gem install rails -v 3.2.13
 
@@ -26,22 +26,22 @@ features!
 4) Install Git
 
 5) Install ImageMagick
-    <strong>for Windows: http://stackoverflow.com/questions/6473853/ruby-on-rails-rmagick-on-windows-7
-    <strong>for Mac/Linux: http://railscasts.com/episodes/374-image-manipulation
+    for Windows: http://stackoverflow.com/questions/6473853/ruby-on-rails-rmagick-on-windows-7
+    for Mac/Linux: http://railscasts.com/episodes/374-image-manipulation
 
 6) Install NOsql databse -- Redis
-    <strong>for Windows:</strong> http://redis.io/download
-    <strong>for Mac:</strong> brew install redis-server
-    <strong>for Linux:</strong> sudo apt-get install redis-server
+    for Windows: http://redis.io/download
+    for Mac: brew install redis-server
+    for Linux: sudo apt-get install redis-server
 
 7) Go into project folder via terminal and run:
-    <strong>bundle install</strong>
+    bundle install
 
 8) Run Redis, MySQL and Faye
-   <strong>redis:</strong> (Via terminal!!!) redis-server
-   <strong>mysql:</strong> as you wish
-   <strong>faye:</strong> (From project directory via terminal!!!)
+   redis: (Via terminal!!!) redis-server
+   mysql: as you wish
+   faye: (From project directory via terminal!!!)
         rackup faye.ru -E production
 
-9) Run project & goto <strong>localhost:3000</strong>
+9) Run project & goto localhost:3000
 
