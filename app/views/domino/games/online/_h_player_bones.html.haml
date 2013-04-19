@@ -1,0 +1,8 @@
+<!-- Here player is NOT a user(instance of model User) but a DominoGame::Player instance -->
+= player.name
+- if player.player_id == current_user.id
+  - player.bones.each do |bone|
+    = content_tag :div, nil, :class => bone_h_class(bone), :id => "#{bone}"
+- else
+  - player.bones.size.times do
+    = content_tag :div, nil, :class => bone_h_class_hidden, :size => '20x20'

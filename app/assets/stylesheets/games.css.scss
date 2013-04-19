@@ -3,86 +3,71 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.online-play-game {
-  margin-left: -250px;
-  margin-right: -250px;
-  margin: 10px;
-  left: 0px;
-  top: 22px;
+div#online-play-game {
+  margin: 30px 10px 0px 10px;
+  border-radius: 10px;
   position: absolute;
   padding: 0px;
-  width: 1900px;
-  height: 835px;
+  width: 100%;
+  height: 100%;
   background-color: #2ba6cb;
 }
 
-.online-game-main-container {
-  width: 1200px;
-  margin: 15px;
-  left: 0px;
-  top: 7px;
+.online-main-container {
+  width: 75%;
+  margin: 10px 10px 10px 0px;
   position: absolute;
-  padding: 0px;
-  height: 505px;
+  padding: 10px;
+  height: 90%;
 }
 
-.online-game-right-container {
-  margin: 15px 15px 15px 0px;
-  left: 1228px;
-  top: 7px;
+.online-right-container {
+  display: inline-block;
+  margin: 10px 0px 10px 10px;
   position: absolute;
-  padding: 0px;
-  width: 640px;
-  height: 505px;
+  padding: 10px;
+  right: 10px;
+  width: 20%;
+  height: 90%;
 }
 
 .player-bones {
   margin: 10px 0px 10px 0px;
-  min-width: 700px;
   height: 140px;
+  width: auto;
+
 }
 
-.battle-field {
-  width: 700px;
-  height: 700px;
+div#battle-field {
   position: absolute;
   left: 250px;
   top: 250px;
 }
 
 .market {
-  width: 65px;
-  height: 135px;
-  position: absolute;
-  left: 1130px;
-  top: 30px;
+
+}
+bone-rotated {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  transform:rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
-.my-position {
-  position:absolute;
-  left:250px;
-  top:655px;
-}
-.player-0 {top: 5px;}
-.player-1 {
-  position:absolute;
-  left:250px;
-  top:20px;
-}
-.player-2 {}
+div#player-2 {top: 5px;left: 400px;height: 135px;position: absolute;}      //top player
+div#player-4 {bottom: 0px;left: 400px;height: 135px;position: absolute;}  //bottom player
+div#player-1 {top: 110px;left: 0px;width: 135px;position: absolute}            //left
+div#player-3 {top: 110px;right: 0px;width: 135px;position: absolute}           //right
 
-div#draggable_0-0, div#draggable_0-1, div#draggable_0-2, div#draggable_0-3, div#draggable_0-4, div#draggable_0-5, div#draggable_0-6, div#draggable_3-5 { width: 65px; height: 135px; border: 1px solid #006dcc;}
-div#rotateBox { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
 
-.drop-to-rotate {position: absolute;left: 0px;top: 625px;border: 2px solid #ccc}
+div#rotateBox { width: 150px; height: 150px; padding: 0.5em; left: 200px; margin: 10px; border: 2px solid #cccccc; bottom: 0px; position: absolute}
 
 .firstPlace {
   width: 65px;
   height: 135px;
   position: absolute;
   border: 2px solid #ccc;
-  top: 320px;
-  left: 510px;
+
 }
 
 .dynamicVDiv {

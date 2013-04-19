@@ -1,8 +1,27 @@
 %div#battle-field
   - #{@domino_game.battle_field.first_bone}
-  - drop = "#6-6"
+  - drop = "##{@domino_game.first_bone}"
   - can_drop = 'true'
-  %div{:id=>"firstPlace",:class=>"firstPlace", 'data-can-drop'=> can_drop,'data-which-drop'=> drop}
-    Drop here to move!
+  - if @domino_game.battle_field.bones.blank?
+    %div{:id=>"firstPlace",:class=>"firstPlace", 'data-can-drop'=> can_drop,'data-which-drop'=> drop}
+      Drop here to move!
+  - else
+    - @domino_game.battle_field.bones.each do |bone|
+      = content_tag :div, nil, :class => battle_bone_v_class(bone), :id => "#{bone}"
 
-  = @domino_game.battle_field.first_bone
+  = @domino_game.first_bone
+  current
+  = @domino_game.players.current.name
+  = @domino_game.players.current.bones.class
+  = @domino_game.players.current.bones.to_s
+  firster
+  = @domino_game.players.firster.name
+  = @domino_game.players.firster.bones.class
+  = @domino_game.players.firster.bones.to_s
+  nexter
+  = @domino_game.players.nexter.name
+  = @domino_game.players.nexter.bones.class
+  = @domino_game.players.nexter.bones.to_s
+  battlefield
+  = @domino_game.battle_field.bones.inspect
+  - @domino_game.battle_field.bones.flatten!

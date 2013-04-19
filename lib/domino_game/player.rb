@@ -22,7 +22,8 @@ class DominoGame::Player
   def dump
     {
         :player_id => @player_id,
-        :bones => @bones.to_s
+        :bones => @bones.to_s,
+        :active => @active
     }
   end
 

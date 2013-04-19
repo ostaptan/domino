@@ -4,7 +4,7 @@ class Domino::GamesController < DominoController
 
   before_filter :find_game, :only => [:show, :update]
   before_filter :new_game, :only => [:index, :create]
-  before_filter :get_game_data, :only => [:show]
+  before_filter :get_game_data, :only => [:show, :handle_move]
 
   def index
     @user = current_user
@@ -15,10 +15,15 @@ class Domino::GamesController < DominoController
 
   def show
     @user = current_user
+    render :layout => 'online_game'
   end
 
   def handle_move
-    @arr = params[:total_changes] if params[:total_changes]
+    @bone_num = params[:bone_num] if params[:bone_num]
+    @domino_game.process_move(@bone_num)
+
+    save_game_dump
+    render :layout => 'online_game'
   end
 
   def create

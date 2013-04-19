@@ -1,23 +1,23 @@
 # -*- encoding : utf-8 -*-
-# implemented as two side linked list
+# bones implemented as two side linked list
 class DominoGame::Goat::BattleField
 
-  attr_accessor :bones, :game, :first_bone, :table
+  attr_accessor :bones, :game
 
   def initialize(game)
     @game = game
-    @needed_nums = []
-    @bones = []
-  end
-
-  def init
-    @first_bone = @game.players.firster.bones.lowest_doublebone
+    super()
   end
 
   def needed_nums
     unless @bones.blank?
 
     end
+  end
+
+  def add_bone(bone)
+    @bones.push bone
+    @bones.flatten!.uniq!
   end
 
   def last_right
@@ -30,14 +30,12 @@ class DominoGame::Goat::BattleField
 
   def dump
     {
-        :bones => @bones.to_s,
-        :first_bone => @first_bone.to_s
+        :bones => @bones.to_s
     }
   end
 
   def load_dump(dump)
-    @bones.from_s(dump[:bones]) unless @bones.blank?
-    @first_bone = DominoGame::Goat::Bone.from_s dump[:first_bone]
+    @bones = DominoGame::PlayerBones.new(@game).from_s(dump[:bones])
     self
   end
 

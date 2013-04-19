@@ -19,7 +19,7 @@ class DominoGame::PlayerBones < Array
       nums = bone_id.split('-')
       r << DominoGame::Goat::Bone.new(nums.first, nums.last)
     end
-    r
+    replace r
   end
 
   def lowest_doublebone

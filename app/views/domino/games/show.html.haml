@@ -1,10 +1,15 @@
 - if @game.available?
   = render :partial => 'game_description'
 -elsif @domino_game
-  = render :partial => 'domino/games/online/market'
-  = render :partial => 'domino/games/online/rotation_box'
+  = #render :partial => 'domino/games/online/market'
 
   = render :partial => 'domino/games/online/battle-field'
+  = render :partial => 'domino/games/online/rotation_box'
 
   - @domino_game.players.each_with_index do |player, i|
-    = content_tag :div, render(:partial => 'domino/games/online/player_bones', :locals => {:player => player}), :class => player.player_id == current_user.id ? "my-position" : "player-#{i}"
+    - type = i+1
+    %div{:id => "player-#{type}"}
+      - if type%2 != 0
+        = render(:partial => 'domino/games/online/h_player_bones', :locals => {:player => player})
+      -else
+        = render(:partial => 'domino/games/online/v_player_bones', :locals => {:player => player})

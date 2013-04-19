@@ -46,7 +46,7 @@ $(function () {
                     $.ajax({
                         type: "GET",
                         url: "handle_move/" + id,
-                        data: { total_changes: ui.draggable.prop('id')},
+                        data: { bone_num: ui.draggable.prop('id')},
                         success: function () {
                             alert("Success!");
                         }

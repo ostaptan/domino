@@ -3,7 +3,8 @@ require "./lib/domino_game/player"
 
 class DominoGame::PlayersList < Array
 
-  attr_accessor :finished, :array, :firster
+  attr_reader :game
+  attr_accessor :finished, :firster, :nexter, :current
 
   def initialize(game)
     @game = game
@@ -25,7 +26,33 @@ class DominoGame::PlayersList < Array
       arr << pl.bones.lowest_doublebone
     end
     arr.compact!
-    @firster = self[arr.index(arr.min)]
+    set_firster self[arr.index(arr.min)]
+  end
+
+  def set_firster(firster)
+    @firster = firster
+    @nexter = player_next_to(@firster)
+    @current = @firster
+  end
+
+  def player_next_to(player)
+    self[ (index(player) + 1) % size ]
+  end
+
+  def current_is_firster?
+    @current == @firster
+  end
+
+  def current_is_nexter?
+    @current == @nexter
+  end
+
+  def set_firster_nexter
+    set_firster(@defender)
+  end
+
+  def set_firster_next_to_nexter
+    set_firster( player_next_to(@defender) )
   end
 
   def dump
@@ -33,6 +60,8 @@ class DominoGame::PlayersList < Array
         :players =>  map(&:dump),
         :finished => @finished.map { |arr| arr.map(&:player_id) },
         :firster => @firster.player_id,
+        :nexter => @nexter.player_id,
+        :current => @current.player_id
     }
   end
 
@@ -40,6 +69,8 @@ class DominoGame::PlayersList < Array
     replace dump[:players].map { |player_hash| DominoGame::Player.new(@game).load_dump(player_hash) }
     @finished = dump[:finished].map{|arr| arr.map{|player_id| by_player_id(player_id)}}
     @firster = by_player_id(dump[:firster])
+    @nexter = by_player_id(dump[:nexter])
+    @current = by_player_id(dump[:current])
     self
   end
 
