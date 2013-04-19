@@ -37,11 +37,15 @@ features!
 7) Go into project folder via terminal and run:
     bundle install
 
-8) Run Redis, MySQL and Faye
+8) Run project migrations to create proper tables in the database
+    from terminal:
+    rake db:migrate
+
+9) Run Redis, MySQL and Faye
    redis: (Via terminal!!!) redis-server
    mysql: as you wish
    faye: (From project directory via terminal!!!)
         rackup faye.ru -E production
 
-9) Run project & goto localhost:3000
+10) Run project & goto localhost:3000
 
