@@ -72,6 +72,9 @@ GEM
       eventmachine (>= 0.12.0)
     fspath (2.0.4)
     geocoder (1.1.6)
+    gon (4.1.0)
+      actionpack (>= 2.3.0)
+      json
     haml (4.0.1)
       tilt
     hike (1.2.1)
@@ -184,6 +187,7 @@ DEPENDENCIES
   execjs
   faye
   geocoder
+  gon
   haml
   image_optim
   jquery-rails

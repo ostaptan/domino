@@ -16,6 +16,10 @@ class DominoGame::Goat::Move
     game.battle_field.add_bone(bone)
   end
 
+  def take_bone
+
+  end
+
   def is_current_player?
     game.players.current == player
   end

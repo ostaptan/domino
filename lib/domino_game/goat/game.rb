@@ -18,24 +18,17 @@ class DominoGame::Goat::Game < DominoGame::AbstractGame
     self
   end
 
-  def process_move(bone_no)
-    if active?
-      move = get_move(bone_no)
-      move.do_move
-      #after_move(move)
-      #do_obvious_pickup_move
-    end
-  end
-
-  def get_move(bone_no)
-    bone = take_bone_from_player(bone_no)
-    DominoGame::Goat::Move.new(self, @players.current, bone)
-  end
-
   def take_bone_from_player(bone_no)
     bone_nums_arr = bone_no.split('-')
     bone = @players.current.bones.select { |bn| bn.n1 == bone_nums_arr.first && bn.n2 == bone_nums_arr.last}
     @players.current.bones.delete bone.first
+    bone.first
+  end
+
+  def take_bone_from_market(bone_no)
+    bone_nums_arr = bone_no.split('-')
+    bone = @market.bones.select { |bn| bn.n1 == bone_nums_arr.first && bn.n2 == bone_nums_arr.last}
+    @market.bones.delete bone.first
     bone.first
   end
 

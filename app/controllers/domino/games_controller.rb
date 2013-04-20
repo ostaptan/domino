@@ -1,10 +1,13 @@
 class Domino::GamesController < DominoController
 
-  include Domino::CommonController
+  include Domino::OnlineExt::CommonController
+  include Domino::OnlineExt::AjaxHandleController
 
   before_filter :find_game, :only => [:show, :update]
   before_filter :new_game, :only => [:index, :create]
-  before_filter :get_game_data, :only => [:show, :handle_move]
+  before_filter :get_game_data, :only => [:show, :handle_move, :take_from_market]
+  before_filter :get_bone, :only => [:handle_move, :take_from_market]
+  after_filter :save_game, :only => [:handle_move, :take_from_market, :handle_move]
 
   def index
     @user = current_user
@@ -14,15 +17,9 @@ class Domino::GamesController < DominoController
   end
 
   def show
+    gon.players = @domino_game.players
+    gon.battle_field = @domino_game.battle_field
     @user = current_user
-    render :layout => 'online_game'
-  end
-
-  def handle_move
-    @bone_num = params[:bone_num] if params[:bone_num]
-    @domino_game.process_move(@bone_num)
-
-    save_game_dump
     render :layout => 'online_game'
   end
 

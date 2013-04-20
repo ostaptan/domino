@@ -1,3 +1,6 @@
-%div#market
-  = content_tag :div, nil, :class => bone_v_class_hidden
-  Market
+= content_tag :div, nil, :class => bone_v_class_hidden, :id=>'market' unless @domino_game.market.blank?
+%div{:id=>'market-desc'}
+  Market (
+  = @domino_game.market.size
+  )
+

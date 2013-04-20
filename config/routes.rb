@@ -36,6 +36,7 @@ Domino::Application.routes.draw do
         get :update
         post :find
         get 'handle_move/(:id)' => 'games#handle_move', :as => :handle_move
+        get 'take_from_market/(:id)' => 'games#take_from_market', :as => :take_from_market
       end
     end
 

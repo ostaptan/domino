@@ -4,16 +4,17 @@
       Online Domino
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
-    = javascript_include_tag "http://localhost:9292/faye.js"
+    = javascript_include_tag 'http://localhost:9292/faye.js'
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    = javascript_include_tag 'require'
 
     = csrf_meta_tags
 
   %body
     %div#online-play-game
-      %div.online-main-container
+      %div#online-main-container
         = render :template => 'navigation/header'
         = render :partial => 'navigation/flash', :locals => {:flash => flash}
         = yield
