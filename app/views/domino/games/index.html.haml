@@ -1,11 +1,13 @@
 %div{:class=>"modal hide fade", :id=>'newGame', :tabindex=>"-1", :role=>"dialog", 'aria-hidden'=>"true"}
-  = render :partial => 'new_game_modal'
+  = render 'new_game_modal'
 
 %div{:class=>"modal hide fade", :id=>'listGames', :tabindex=>"-1", :role=>"dialog", 'aria-hidden'=>"true"}
-  = render :partial => 'list_of_games_modal'
+  = render 'list_of_games_modal'
 
 %div{:class=>"modal hide fade", :id=>'findGame', :tabindex=>"-1", :role=>"dialog", 'aria-hidden'=>"true"}
-  = render :partial => 'find_game_modal'
+  = render 'find_game_modal'
+
+= javascript_include_tag 'games_pagination'
 
 %div{:class=>'games'}
   %h1{:class=>'edit-user'}
@@ -30,20 +32,9 @@
 
     %div{:class=>"tab-content"}
       %div{:class=>"tab-pane active", :id=>"friends"}
-        %p
-          = render(:partial => 'domino/users/friends')
+        = render 'domino/users/friends'
 
       %div{:class=>"tab-pane", :id=>"current_games"}
-        %p
-          %div{:class=>'pagination'}
-            = will_paginate @my_current_games, :container => false
-          = render(:partial => 'current_games')
-          %div{:class=>'pagination'}
-            = will_paginate @my_current_games, :container => false
+        = render 'current_games'
       %div{:class=>"tab-pane", :id=>"finished_games"}
-        %p
-          %div{:class=>'pagination'}
-            = will_paginate @my_finished_games, :container => false
-          = render(:partial => 'finished_games')
-          %div{:class=>'pagination'}
-            = will_paginate @my_finished_games, :container => false
+        = render 'finished_games'

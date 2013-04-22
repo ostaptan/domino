@@ -3,20 +3,25 @@ require "./lib/domino_game/player_bones"
 
 class DominoGame::Player
 
-  attr_accessor :bones, :player_id
+  attr_accessor :bones, :player_id, :position
 
   def initialize(game)
     @game = game
   end
 
-  def init(player_id)
-    @player_id = player_id
+  def init(options)
+    @player_id = options[:player_id]
     @bones = DominoGame::PlayerBones.new(self)
     @active = true
+    @position = options[:position]
   end
 
   def name
     User.find_by_id(@player_id).name
+  end
+
+  def description
+    "#{name} (#{@bones.size.to_s})"
   end
 
   def index
@@ -48,7 +53,8 @@ class DominoGame::Player
     {
         :player_id => @player_id,
         :bones => @bones.to_s,
-        :active => @active
+        :active => @active,
+        :position => @position
     }
   end
 
@@ -60,6 +66,7 @@ class DominoGame::Player
     @player_id = dump[:player_id]
     @bones = DominoGame::PlayerBones.new(@game).from_s(dump[:bones])
     @active = dump[:active]
+    @position = dump[:position]
     self
   end
 

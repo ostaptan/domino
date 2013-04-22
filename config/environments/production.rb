@@ -20,6 +20,11 @@ Domino::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  config.middleware.use ExceptionNotifier,
+                        :email_prefix => "[Exception] ",
+                        :sender_address => %{"Exception Notifier" <support@domino.com>},
+                        :exception_recipients => %w{otan256@gmail.com}
+
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 

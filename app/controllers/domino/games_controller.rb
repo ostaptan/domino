@@ -17,10 +17,8 @@ class Domino::GamesController < DominoController
   end
 
   def show
-    gon.players = @domino_game.players
-    gon.battle_field = @domino_game.battle_field
     @user = current_user
-    render :layout => 'online_game'
+    render layout: 'online_game'
   end
 
   def create

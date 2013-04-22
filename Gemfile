@@ -23,6 +23,16 @@ group :assets do
   gem 'chunky_png'
   gem 'rmagick'
   gem 'image_optim'
+
+  gem 'haml'
+
+  gem 'coffee-script'
+  gem 'jquery-rails'
+
+  gem 'json'
+  gem 'execjs'
+  gem 'therubyracer'
+  gem 'twitter-bootstrap-rails'
 end
 
 group :production do
@@ -38,19 +48,16 @@ group :development do
   gem 'binding_of_caller'
 end
 
-gem 'haml'
-gem 'coffee-script'
-gem 'jquery-rails'
+
+
 gem 'thin'
-gem 'execjs'
-gem 'therubyracer'
-gem 'twitter-bootstrap-rails'
 gem 'redis'
-gem 'json'
 gem 'faye'
 gem 'will_paginate'
+gem 'foreman'
 
-gem 'gon'
+gem 'exception_notification'
+
 gem 'geocoder'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -62,7 +69,7 @@ gem 'geocoder'
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+gem 'debugger'

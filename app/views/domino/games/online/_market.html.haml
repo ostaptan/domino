@@ -1,6 +1,9 @@
-= content_tag :div, nil, :class => bone_v_class_hidden, :id=>'market' unless @domino_game.market.blank?
-%div{:id=>'market-desc'}
-  Market (
-  = @domino_game.market.size
-  )
+- unless @domino_game.market.blank?
+  %div#market
+    - if current_user.can_do_move?(@domino_game)
+      = link_to content_tag(:div, nil, :class => bone_v_class_hidden), take_from_market_domino_games_path(@game_db.id), :remote =>true, :id=>'market_link'
+    - else
+      = content_tag(:div, nil, :class => bone_v_class_hidden)
+  %div#market_desc
+    = @domino_game.market.description
 

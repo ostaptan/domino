@@ -12,7 +12,7 @@ class DominoGame::PlayersList < Array
   end
 
   def init(player_ids)
-    push *player_ids.map{|player_id| player = DominoGame::Player.new(@game); player.init(player_id); player}
+    push *player_ids.each_with_index.map{|player_id, index| player = DominoGame::Player.new(@game); player.init({player_id: player_id, position: index+1}); player}
     @finished = []
   end
 

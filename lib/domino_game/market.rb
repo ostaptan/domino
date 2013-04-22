@@ -39,6 +39,10 @@ class DominoGame::Market < Array
     end
   end
 
+  def description
+    "Market (#{self.size})"
+  end
+
   def to_s
     join '|'
   end

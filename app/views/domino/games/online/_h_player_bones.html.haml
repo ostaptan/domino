@@ -1,9 +1,13 @@
 <!-- Here player is NOT a user(instance of model User) but a DominoGame::Player instance -->
-%h3
-  = "#{player.name} (#{player.bones.size})"
-- if player.player_id == current_user.id
-  - player.bones.each do |bone|
-    = content_tag :div, nil, :class => bone_h_class(bone), :id => "#{bone}"
+%h3#player_desc
+  = player.description
+- if current_user.can_do_move?(@domino_game)
+  -if current_user.can_do_move?(@domino_game)
+    - player.bones.each do |bone|
+      = content_tag :div, nil, :class => bone_h_class(bone), :id => "#{bone}"
+  - else
+    - player.bones.each do |bone|
+      = content_tag :div, nil, :class => bone_v_class(bone)
 - else
   - player.bones.size.times do
     = content_tag :div, nil, :class => bone_h_class_hidden

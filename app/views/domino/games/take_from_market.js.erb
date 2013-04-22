@@ -1,0 +1,6 @@
+<% broadcast "/online_game/#{@game_db.id}" do %>
+    $("#market_desc").html("<%= j @domino_game.market.description %>");
+
+    $("#player-<%= @domino_game.players.current.position %>").html("<%= j render(:partial => 'domino/games/online/h_player_bones', :locals => {:player => @domino_game.players.current}) %>");
+    $("#player_desc").html("<%= j @domino_game.players.current.description %>");
+<% end %>

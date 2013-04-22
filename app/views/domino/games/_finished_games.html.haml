@@ -1,3 +1,6 @@
+%div{:class=>'pagination'}
+  = will_paginate @my_finished_games, :container => false
+
 %p
   %table{:class=>"table table-striped"}
     %caption
@@ -26,3 +29,6 @@
             = game.finished
           %td
             = link_to t(:view), '#'
+
+%div{:class=>'pagination'}
+  = will_paginate @my_finished_games, :container => false

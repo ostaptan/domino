@@ -86,6 +86,10 @@ class User < ActiveRecord::Base
     self.save!
   end
 
+  def can_do_move?(domino_game)
+    self.id == domino_game.players.current.player_id
+  end
+
   def update_avatar!(avat)
     name = "#{self.id.to_s}.jpg"
     File.open(Rails.root.join('public', 'tmp_avatars', name), 'wb') do |file|
