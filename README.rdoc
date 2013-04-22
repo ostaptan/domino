@@ -45,7 +45,7 @@ features!
    redis: (Via terminal!!!) redis-server
    mysql: as you wish
    faye: (From project directory via terminal!!!)
-        rackup faye.ru -E production
+        foreman start
 
 10) Run project & goto localhost:3000
 
