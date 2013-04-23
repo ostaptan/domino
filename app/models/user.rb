@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
 
   attr_accessible :avatar, :latitude, :longitude
   validates_presence_of :name, :email, :password
-  validates_uniqueness_of :email
+  #validates_uniqueness_of :email
 
   has_one :history
   has_many :messages
@@ -174,8 +174,39 @@ class User < ActiveRecord::Base
     else
       return :attributes_incorrect
     end
-    create_history!(self.id)
+    self.create_history!(self.id)
     nil
+  end
+
+  def self.registered_with_facebook?(auth)
+    self.find_by_uid(auth[:uid])
+  end
+
+  def self.from_omniauth(auth)
+    if self.registered_with_facebook?(auth)
+      user = self.find_by_uid(auth[:uid])
+      user.oauth_expires_at = Time.at(auth.credentials.expires_at)
+      user.save!
+    else
+      where(auth.slice(:provider, :uid, :email)).first_or_initialize.tap do |user|
+        user.provider = auth.provider
+        user.uid = auth.uid
+        user.name = auth.info.first_name
+        user.surname = auth.info.last_name
+        user.oauth_token = auth.credentials.token
+        user.avatar = auth.info.image
+        user.password = '1'
+        user.email = auth.info.email
+        user.oauth_expires_at = Time.at(auth.credentials.expires_at)
+        user.save!
+        self.create_history!(user.id)
+      end
+    end
+
+  end
+
+  def from_facebook?
+    self.provider == 'facebook'
   end
 
   def authenticate(user_mail, user_password)
@@ -190,7 +221,7 @@ class User < ActiveRecord::Base
     r
   end
 
-  def create_history!(id)
+  def self.create_history!(id)
     @history = History.new
     @history.create_for_user!(id)
   end

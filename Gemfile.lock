@@ -75,8 +75,11 @@ GEM
     eventmachine (1.0.3)
     exception_notification (3.0.1)
       actionmailer (>= 3.0.4)
+    excon (0.20.1)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    faraday (0.8.7)
+      multipart-post (~> 1.1)
     faye (0.8.9)
       cookiejar (>= 0.3.0)
       em-http-request (>= 0.3.0)
@@ -93,9 +96,19 @@ GEM
     geocoder (1.1.6)
     haml (4.0.1)
       tilt
+    hashie (2.0.3)
+    heroku (2.38.0)
+      heroku-api (~> 0.3.7)
+      launchy (>= 0.3.2)
+      netrc (~> 0.7.7)
+      rest-client (~> 1.6.1)
+      rubyzip
+    heroku-api (0.3.9)
+      excon (~> 0.20.1)
     highline (1.6.18)
     hike (1.2.1)
     http_parser.rb (0.5.3)
+    httpauth (0.2.0)
     i18n (0.6.1)
     image_optim (0.8.0)
       fspath (~> 2.0.3)
@@ -109,6 +122,10 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.7.7)
+    jwt (0.1.8)
+      multi_json (>= 1.5)
+    launchy (2.3.0)
+      addressable (~> 2.3)
     libv8 (3.11.8.17)
     mail (2.5.3)
       i18n (>= 0.4.0)
@@ -116,6 +133,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.21)
     multi_json (1.7.2)
+    multipart-post (1.2.0)
     mysql2 (0.3.11)
     net-scp (1.1.0)
       net-ssh (>= 2.6.5)
@@ -124,10 +142,25 @@ GEM
     net-ssh (2.6.7)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
+    netrc (0.7.7)
     newrelic-redis (1.4.0)
       newrelic_rpm (~> 3.0)
       redis (< 4.0)
     newrelic_rpm (3.5.8.72)
+    oauth2 (0.8.1)
+      faraday (~> 0.8)
+      httpauth (~> 0.1)
+      jwt (~> 0.1.4)
+      multi_json (~> 1.0)
+      rack (~> 1.2)
+    omniauth (1.1.4)
+      hashie (>= 1.2, < 3)
+      rack
+    omniauth-facebook (1.4.1)
+      omniauth-oauth2 (~> 1.1.0)
+    omniauth-oauth2 (1.1.1)
+      oauth2 (~> 0.8.0)
+      omniauth (~> 1.0)
     polyglot (0.3.3)
     progress (2.4.0)
     rack (1.4.5)
@@ -157,10 +190,13 @@ GEM
       json (~> 1.4)
     redis (3.0.3)
     ref (1.0.4)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rmagick (2.13.2)
     rpm_contrib (2.1.11)
       newrelic_rpm (>= 3.1.1)
       newrelic_rpm (>= 3.1.1)
+    rubyzip (0.9.9)
     sass (3.2.7)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -216,12 +252,14 @@ DEPENDENCIES
   foreman
   geocoder
   haml
+  heroku
   image_optim
   jquery-rails
   json
   mysql2
   newrelic-redis
   newrelic_rpm (~> 3.5.3)
+  omniauth-facebook
   rails (= 3.2.13)
   redis
   rmagick

@@ -14,7 +14,7 @@
       = avatar_tag(friendship.friend, true)
 %div{:class=>'framed followers'}
   %p
-    = link_to t(:your_followers, :count => @user.inverse_friends.size), '#yourFollowers', 'data-toggle'=>"modal"
+    = link_to t(:followers, :count => @user.inverse_friends.size), '#yourFollowers', 'data-toggle'=>"modal"
   - for user in @user.inverse_friends.first(3)
     %p{:class=>'players-description'}
       = link_to user.nick_name, domino_user_path(user.id)

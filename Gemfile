@@ -49,7 +49,7 @@ group :development do
 end
 
 
-
+gem 'heroku'
 gem 'thin'
 gem 'redis'
 gem 'faye'
@@ -57,7 +57,7 @@ gem 'will_paginate'
 gem 'foreman'
 
 gem 'exception_notification'
-
+gem 'omniauth-facebook'
 gem 'geocoder'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

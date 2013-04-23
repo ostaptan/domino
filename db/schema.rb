@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130415222407) do
+ActiveRecord::Schema.define(:version => 20130423184356) do
 
   create_table "countries", :force => true do |t|
     t.string  "iso"
@@ -47,8 +47,10 @@ ActiveRecord::Schema.define(:version => 20130415222407) do
   add_index "games", ["time_per_move"], :name => "index_games_on_time_per_move"
 
   create_table "games_users", :id => false, :force => true do |t|
-    t.integer "user_id"
-    t.integer "game_id"
+    t.integer  "user_id"
+    t.integer  "game_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "histories", :force => true do |t|
@@ -79,20 +81,19 @@ ActiveRecord::Schema.define(:version => 20130415222407) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "surname"
-    t.integer  "game_id"
     t.string   "password"
     t.string   "email"
     t.string   "phone"
     t.integer  "tournament_id"
-    t.datetime "created_at",                                    :null => false
-    t.datetime "updated_at",                                    :null => false
-    t.boolean  "active",                     :default => false
-    t.string   "gender",        :limit => 1
-    t.boolean  "is_admin",                   :default => false
+    t.datetime "created_at",                                       :null => false
+    t.datetime "updated_at",                                       :null => false
+    t.boolean  "active",                        :default => false
+    t.string   "gender",           :limit => 1
+    t.boolean  "is_admin",                      :default => false
     t.string   "avatar"
     t.string   "settings"
-    t.integer  "g_rating",                   :default => 1200
-    t.integer  "s_rating",                   :default => 1200
+    t.integer  "g_rating",                      :default => 1200
+    t.integer  "s_rating",                      :default => 1200
     t.datetime "last_seen_at"
     t.datetime "birth_date"
     t.string   "location"
@@ -103,10 +104,21 @@ ActiveRecord::Schema.define(:version => 20130415222407) do
     t.string   "last_ip"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "provider"
+    t.integer  "uid"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"
   add_index "users", ["g_rating"], :name => "index_users_on_g_rating"
   add_index "users", ["s_rating"], :name => "index_users_on_s_rating"
+
+  create_table "users_games", :id => false, :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "game_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end

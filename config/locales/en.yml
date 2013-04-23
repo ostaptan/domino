@@ -22,5 +22,5 @@ en:
   forgot: "Forgot your password? Click here!"
   remember_me: "Remember me"
   you_followed: "You Followed (%{count})"
-  your_followers: "Your Followers (%{count})"
+  followers: "Followers (%{count})"
   its_not_your_turn: "It's not your turn! Wait until your opponent moves!"

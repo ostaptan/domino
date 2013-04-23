@@ -1,8 +1,10 @@
 Domino::Application.routes.draw do
-
   get "chat/index"
 
   root :to => "visitor#welcome"
+
+  match 'auth/:provider/callback', to: 'facebook#create'
+  match 'auth/failure', to: redirect('/')
 
   match '/login' => 'visitor#login', :as => :login
   match '/register' => 'visitor#register', :as => :register
@@ -28,6 +30,8 @@ Domino::Application.routes.draw do
     end
 
     resources :friendships
+
+    resources :dashboard
 
     resources :games do
       collection do

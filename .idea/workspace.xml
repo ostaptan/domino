@@ -6,52 +6,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d126bee-43f7-48cb-924e-adb6ee91b6c8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Procfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/games_pagination.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/domino/games/index.js.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/domino/online_games.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/login-facebook-button.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130423184356_users_add_facebook_integration.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/domino/dashboard.css.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/domino/dashboard.js.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/domino/dashboard_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/functional/domino/dashboard_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/domino/dashboard_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/helpers/domino/dashboard_helper_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/facebook.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/facebook_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/domino/dashboard/index.html.haml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/omniauth.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/domino/users/show.js.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/domino/games/_current_games.html.haml" afterPath="$PROJECT_DIR$/app/views/domino/games/_current_games.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/domino/games/_finished_games.html.haml" afterPath="$PROJECT_DIR$/app/views/domino/games/_finished_games.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/domino/games/online/_h_player_bones.html.haml" afterPath="$PROJECT_DIR$/app/views/domino/games/online/_h_player_bones.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/domino/games/online/_market.html.haml" afterPath="$PROJECT_DIR$/app/views/domino/games/online/_market.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/domino/games/online/_v_player_bones.html.haml" afterPath="$PROJECT_DIR$/app/views/domino/games/online/_v_player_bones.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/domino/online_ext/ajax_handle_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/domino/online_ext/ajax_handle_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/domino/friendships/_friends.html.haml" afterPath="$PROJECT_DIR$/app/views/domino/friendships/_friends.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/visitor/_login.html.haml" afterPath="$PROJECT_DIR$/app/views/visitor/_login.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/en.yml" afterPath="$PROJECT_DIR$/config/locales/en.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/games.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/games.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/domino/games_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/domino/games_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/domino/games/index.html.haml" afterPath="$PROJECT_DIR$/app/views/domino/games/index.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/domino/market.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/domino/market.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/domino_game/market.rb" afterPath="$PROJECT_DIR$/lib/domino_game/market.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/domino_game/player.rb" afterPath="$PROJECT_DIR$/lib/domino_game/player.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/domino_game/players_list.rb" afterPath="$PROJECT_DIR$/lib/domino_game/players_list.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/domino/games/show.html.haml" afterPath="$PROJECT_DIR$/app/views/domino/games/show.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/domino/games/take_from_market.js.erb" afterPath="$PROJECT_DIR$/app/views/domino/games/take_from_market.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/game_properties.rb" afterPath="$PROJECT_DIR$/lib/game_properties.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/navigation/header.html.haml" afterPath="$PROJECT_DIR$/app/views/navigation/header.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/domino/users/show.html.haml" afterPath="$PROJECT_DIR$/app/views/domino/users/show.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/domino/users_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/domino/users_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="03455075-c626-4a5b-94ef-db86d65f6751" name="Not to commit" comment="" />
     <ignored path="Domino.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/database.yml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366667595043" ignored="false" />
-    <file path="/Gemfile" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366665743551" ignored="false" />
-    <file path="/Dummy.txt" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366664437415" ignored="false" />
+    <file path="/Gemfile" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366740941369" ignored="false" />
+    <file path="/Dummy.txt" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366738335394" ignored="false" />
     <file path="/application.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366654138863" ignored="false" />
-    <file path="/routes.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366412364914" ignored="false" />
+    <file path="/routes.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366746356959" ignored="false" />
     <file path="/application.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366652724263" ignored="false" />
     <file path="/footer.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365625452404" ignored="false" />
-    <file path="/header.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365735255573" ignored="false" />
+    <file path="/header.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366739796212" ignored="false" />
     <file path="/domino.css.scss" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366332444354" ignored="false" />
     <file path="/welcome.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366138930474" ignored="false" />
     <file path="/application.css" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1364650822544" ignored="false" />
     <file path="/application_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366141880029" ignored="false" />
     <file path="/domino_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366246412825" ignored="false" />
-    <file path="/user.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366662132047" ignored="false" />
+    <file path="/user.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366746250977" ignored="false" />
     <file path="/_sidebar.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365812370004" ignored="false" />
     <file path="/20130327211645_create_users.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365246664218" ignored="false" />
     <file path="/20130327211730_create_messages.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1364499450514" ignored="false" />
@@ -69,7 +68,7 @@
     <file path="/_flash.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365198117779" ignored="false" />
     <file path="/20130330091545_add_user_columns.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365205911092" ignored="false" />
     <file path="/user_rules.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366067220938" ignored="false" />
-    <file path="/show.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366673093775" ignored="false" />
+    <file path="/show.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366738548352" ignored="false" />
     <file path="/users_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366062339599" ignored="false" />
     <file path="/domino.css" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365202094050" ignored="false" />
     <file path="/games_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366667624331" ignored="false" />
@@ -85,8 +84,8 @@
     <file path="/bones.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365451909520" ignored="false" />
     <file path="/market.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366661293979" ignored="false" />
     <file path="/player.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366661783153" ignored="false" />
-    <file path="/README.rdoc" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366395028401" ignored="false" />
-    <file path="/Ruby Console" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366660677773" ignored="false" />
+    <file path="/README.rdoc" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366674566951" ignored="false" />
+    <file path="/Ruby Console" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366746210242" ignored="false" />
     <file path="/history.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365245426669" ignored="false" />
     <file path="/application.js" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365460608296" ignored="false" />
     <file path="/chat_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366064767052" ignored="false" />
@@ -95,7 +94,7 @@
     <file path="/create.js.erb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365460115788" ignored="false" />
     <file path="$PROJECT_DIR$/../chat_sandbox/config/database.yml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365448852608" ignored="false" />
     <file path="/_message.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365454690634" ignored="false" />
-    <file path="/_login.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366138961563" ignored="false" />
+    <file path="/_login.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366744670979" ignored="false" />
     <file path="/_register.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365457780328" ignored="false" />
     <file path="/new.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365465512480" ignored="false" />
     <file path="/temp.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365576952399" ignored="false" />
@@ -133,7 +132,7 @@
     <file path="/20130413092901_add_birth.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365850527994" ignored="false" />
     <file path="/edit.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366078413543" ignored="false" />
     <file path="/schema.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365848437309" ignored="false" />
-    <file path="/users_helper.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365850108042" ignored="false" />
+    <file path="/users_helper.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366745463370" ignored="false" />
     <file path="/countries.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365853650765" ignored="false" />
     <file path="/country.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365854313500" ignored="false" />
     <file path="/20130413115116_create_countries.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365854373376" ignored="false" />
@@ -174,6 +173,10 @@
     <file path="/production.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366667531927" ignored="false" />
     <file path="/online_games.js.coffee" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366672929211" ignored="false" />
     <file path="/.gitignore" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366673483826" ignored="false" />
+    <file path="/development.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366742089736" ignored="false" />
+    <file path="/omniauth.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366742160973" ignored="false" />
+    <file path="/20130423184356_users_add_facebook_integration.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366742741219" ignored="false" />
+    <file path="/facebook_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366745991769" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,82 +196,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="user.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="185" column="0" selection-start="3899" selection-end="3899" vertical-scroll-proportion="0.3955095">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="facebook_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/facebook_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="66" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="redis_support.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/redis_support.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="show.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/domino/games/show.html.haml">
+        <entry file="file://$PROJECT_DIR$/app/views/domino/users/show.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="28" selection-start="70" selection-end="70" vertical-scroll-proportion="-1.25">
+            <state line="7" column="13" selection-start="197" selection-end="197" vertical-scroll-proportion="-4.375">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.js.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/domino/chat/create.js.erb">
+      <file leaf-file-name="users_helper.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/helpers/domino/users_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="42" vertical-scroll-proportion="-0.0">
+            <state line="5" column="34" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/domino/games/index.js.erb">
+      <file leaf-file-name="_login.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/visitor/_login.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="16" column="50" selection-start="681" selection-end="681" vertical-scroll-proportion="-10.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="take_from_market.js.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/domino/games/take_from_market.js.erb">
+      <file leaf-file-name="development.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="118" selection-start="240" selection-end="240" vertical-scroll-proportion="-1.875">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_h_player_bones.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/domino/games/online/_h_player_bones.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="6" selection-start="444" selection-end="444" vertical-scroll-proportion="-6.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="13" selection-start="209" selection-end="209" vertical-scroll-proportion="0.53763443">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chat.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/domino/chat.js.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="230" selection-end="360" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="online_games.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/domino/online_games.js.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="19" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bones.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/domino/bones.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="36" column="0" selection-start="1369" selection-end="1369" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -295,22 +289,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/app/views/domino/friendships/_friends.html.haml" />
         <option value="$PROJECT_DIR$/config/locales/en.yml" />
-        <option value="$PROJECT_DIR$/app/controllers/domino/online_ext/ajax_handle_controller.rb" />
-        <option value="$PROJECT_DIR$/config/initializers/faye.rb" />
-        <option value="$PROJECT_DIR$/app/views/domino/games/online/_h_player_bones.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/domino/games/online/_v_player_bones.html.haml" />
-        <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/app/views/domino/dashboard/index.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/navigation/header.html.haml" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/config/environments/production.rb" />
-        <option value="$PROJECT_DIR$/config/database.yml" />
-        <option value="$PROJECT_DIR$/app/controllers/domino/games_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/domino/games/take_from_market.js.erb" />
-        <option value="$PROJECT_DIR$/app/views/domino/games/show.html.haml" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/domino/online_games.js.coffee" />
-        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/config/environments/development.rb" />
+        <option value="$PROJECT_DIR$/lib/game_properties.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20130423184356_users_add_facebook_integration.rb" />
+        <option value="$PROJECT_DIR$/config/facebook.yml" />
+        <option value="$PROJECT_DIR$/config/initializers/omniauth.rb" />
+        <option value="$PROJECT_DIR$/app/views/visitor/_login.html.haml" />
+        <option value="$PROJECT_DIR$/app/helpers/domino/users_helper.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/facebook_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
       </list>
     </option>
   </component>
@@ -353,7 +347,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -396,7 +390,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -411,10 +437,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="locales" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -471,6 +493,32 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="visitor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="navigation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -511,8 +559,30 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="users" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -594,6 +664,58 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="friendships" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="chat" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -644,6 +766,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="helpers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helpers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -667,126 +829,12 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="domino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Domino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="online_ext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Domino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Domino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Domino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Domino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -800,10 +848,10 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
+    <property name="dynamic.classpath" value="false" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="js.erb" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -822,29 +870,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Rails.Development: Domino">
-    <configuration default="false" name="Rails console: Domino" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
-      <module name="Domino" />
-      <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <IRB_RUN_CONFIG NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <IRB_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="true" />
-      <IRB_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="RVM: ruby-1.9.3-p392 [domino]" />
-      <IRB_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$PROJECT_DIR$/script/rails" />
-      <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="console" />
-      <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="true" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
     <configuration default="false" name="db:migrate" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="Domino" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -894,6 +919,29 @@
       <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$USER_HOME$/.rvm/rubies/ruby-1.9.3-p392/bin/irb" />
       <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--prompt simple" />
       <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="false" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Rails console: Domino" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
+      <module name="Domino" />
+      <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <IRB_RUN_CONFIG NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <IRB_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="true" />
+      <IRB_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="RVM: ruby-1.9.3-p392 [domino]" />
+      <IRB_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$PROJECT_DIR$/script/rails" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="console" />
+      <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="true" />
       <RunnerSettings RunnerId="RubyRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
@@ -1299,13 +1347,13 @@
       <item index="1" class="java.lang.String" itemvalue="Rails.Development: Domino" />
       <item index="2" class="java.lang.String" itemvalue="Rake.test" />
       <item index="3" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="4" class="java.lang.String" itemvalue="IRB console.Rails console: Domino" />
-      <item index="5" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="6" class="java.lang.String" itemvalue="IRB console.IRB console" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.db:migrate" />
+      <item index="5" class="java.lang.String" itemvalue="IRB console.IRB console" />
+      <item index="6" class="java.lang.String" itemvalue="IRB console.Rails console: Domino" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="IRB console.IRB console" />
+        <item index="0" class="java.lang.String" itemvalue="IRB console.Rails console: Domino" />
         <item index="1" class="java.lang.String" itemvalue="IRB console.IRB console" />
         <item index="2" class="java.lang.String" itemvalue="IRB console.IRB console" />
         <item index="3" class="java.lang.String" itemvalue="IRB console.IRB console" />
@@ -1403,7 +1451,15 @@
       <created>1366416338176</created>
       <updated>1366416338176</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="faye for game implemented. pagination bug fixed. ajax post requests added to game. waiting for developing game engine.,">
+      <created>1366673586704</created>
+      <updated>1366673586704</updated>
+    </task>
+    <task id="LOCAL-00018" summary="foreman update doc">
+      <created>1366674579367</created>
+      <updated>1366674579367</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1434,7 +1490,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995495" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28121665" sideWeight="0.6813063" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28441834" sideWeight="0.6813063" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3490991" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277027" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1488,7 +1544,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="take from market" />
+    <option name="LAST_COMMIT_MESSAGE" value="foreman update doc" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1514,114 +1570,123 @@
     <MESSAGE value="readme update" />
     <MESSAGE value="style &amp; js refactored" />
     <MESSAGE value="take from market" />
+    <MESSAGE value="faye for game implemented. pagination bug fixed. ajax post requests added to game. waiting for developing game engine.," />
+    <MESSAGE value="foreman update doc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="139" />
+      <option name="time" value="148" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/domino/games/online/_v_player_bones.html.haml">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130423184356_users_add_facebook_integration.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="6" selection-start="428" selection-end="428" vertical-scroll-proportion="-6.25">
+        <state line="6" column="51" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
+    <entry file="file://$PROJECT_DIR$/config/facebook.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="43" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0">
+        <state line="10" column="27" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/config/initializers/omniauth.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="28" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.0">
+        <state line="8" column="53" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="80" selection-start="1086" selection-end="1086" vertical-scroll-proportion="0.0">
+        <state line="104" column="36" selection-start="4060" selection-end="4060" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="22" selection-start="853" selection-end="853" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/domino/games_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="10" selection-start="823" selection-end="823" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/domino/chat/create.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="42" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/domino/games/index.js.erb">
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p392@domino/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/domino/chat.js.coffee">
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p392@domino/gems/ruby-debug-ide-0.4.17.beta16/lib/ruby-debug-ide/ide_processor.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="230" selection-end="360" vertical-scroll-proportion="0.0">
+        <state line="82" column="0" selection-start="2611" selection-end="2611" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/domino/bones.js">
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p392@domino/gems/ruby-debug-ide-0.4.17.beta16/lib/ruby-debug-ide.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="120" column="0" selection-start="3551" selection-end="3551" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/domino/games/show.html.haml">
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p392@domino/gems/debugger-1.5.0/lib/ruby-debug/interface.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="28" selection-start="70" selection-end="70" vertical-scroll-proportion="-1.25">
+        <state line="174" column="0" selection-start="4123" selection-end="4123" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/domino/online_games.js.coffee">
+    <entry file="file://$PROJECT_DIR$/app/views/visitor/_login.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="19" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
+        <state line="16" column="50" selection-start="681" selection-end="681" vertical-scroll-proportion="-10.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/domino/games/take_from_market.js.erb">
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="118" selection-start="240" selection-end="240" vertical-scroll-proportion="-1.875">
+        <state line="36" column="0" selection-start="1369" selection-end="1369" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/domino/games/online/_h_player_bones.html.haml">
+    <entry file="file://$PROJECT_DIR$/app/views/domino/users/show.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="6" selection-start="444" selection-end="444" vertical-scroll-proportion="-6.25">
+        <state line="7" column="13" selection-start="197" selection-end="197" vertical-scroll-proportion="-4.375">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/app/helpers/domino/users_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="209" selection-end="209" vertical-scroll-proportion="0.53763443">
+        <state line="5" column="34" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/redis_support.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="66" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/facebook_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="185" column="0" selection-start="3899" selection-end="3899" vertical-scroll-proportion="0.3955095">
           <folding />
         </state>
       </provider>

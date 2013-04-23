@@ -1,3 +1,5 @@
+= javascript_include_tag 'games_pagination'
+
 %div{:class=>'left-menu'}
   %div{:class=>'players-description'}
     %h5
@@ -19,7 +21,7 @@
   = render :partial => 'domino/friendships/friends'
 
 %div{:class=>'middle-menu'}
-  %div{:class=>'player-info'}
+  %div{:class=>'player-info', :id => 'current_games'}
     = render :partial => 'domino/games/current_games'
 
 
