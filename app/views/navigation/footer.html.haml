@@ -3,12 +3,17 @@
  = link_to t(:about), about_visitor_index_path, :class => "btn btn-large btn-large btn-primary disabled"
  = link_to t(:rules), '#', :class => "btn btn-large btn-large btn-primary disabled"
 
- %p{:class=>'copyright'}
+ %div{:class=>'copyright'}
   %small
    = 'Copyright and hsfgb blablalblablablablablalbalb'
-  %p
-   Online:
-   = users_online
-  %p
-   vkontakte
-   twitter
+%div.social-likes
+ %a.twitter-share-button{"data-count" => "horizontal", "data-via" => "fuonrails", :href => "http://twitter.com/share", :style => 'height: 0px;important!'} Tweet
+
+%div
+ Online:
+ = users_online
+%div.social-likes
+ = facebook_like
+
+%script{:src => "http://platform.twitter.com/widgets.js", :type => "text/javascript"}
+

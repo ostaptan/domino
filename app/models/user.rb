@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   include FileUtils
   include RedisSupport
   include Rules::UserRules
+  include GamesExt::GamesMethods
 
   GENDER_MALE = "m"
   GENDER_FEMALE = "f"
@@ -28,6 +29,10 @@ class User < ActiveRecord::Base
 
   geocoded_by :location
   after_validation :geocode
+
+  class << self
+    include UserExt::FacebookIntegration
+  end
 
   def welcome_phrase
     "Welcome #{self.name}!"
@@ -86,10 +91,6 @@ class User < ActiveRecord::Base
     self.save!
   end
 
-  def can_do_move?(domino_game)
-    self.id == domino_game.players.current.player_id
-  end
-
   def update_avatar!(avat)
     name = "#{self.id.to_s}.jpg"
     File.open(Rails.root.join('public', 'tmp_avatars', name), 'wb') do |file|
@@ -113,42 +114,6 @@ class User < ActiveRecord::Base
     end
   end
 
-  def all_games_count(type)
-    case type
-      when :goat
-        history.g_a_lost + history.g_a_won
-      when :spider
-        history.s_a_lost + history.s_a_won
-      else
-        0
-    end
-  end
-
-  def finished_games(page)
-    Game.where("finished_at is not ?", nil)
-  end
-
-  def won_games_count(type)
-    case type
-      when :goat
-        history.g_a_won
-      when :spider
-        history.s_a_won
-      else
-        0
-    end
-  end
-
-  def lost_games_count(type)
-    case type
-      when :goat
-        history.g_a_lost
-      when :spider
-        history.s_a_lost
-      else
-        0
-    end
-  end
 
   def recommended_max_rating
     1300
@@ -178,37 +143,6 @@ class User < ActiveRecord::Base
     nil
   end
 
-  def self.registered_with_facebook?(auth)
-    self.find_by_uid(auth[:uid])
-  end
-
-  def self.from_omniauth(auth)
-    if self.registered_with_facebook?(auth)
-      user = self.find_by_uid(auth[:uid])
-      user.oauth_expires_at = Time.at(auth.credentials.expires_at)
-      user.save!
-    else
-      where(auth.slice(:provider, :uid, :email)).first_or_initialize.tap do |user|
-        user.provider = auth.provider
-        user.uid = auth.uid
-        user.name = auth.info.first_name
-        user.surname = auth.info.last_name
-        user.oauth_token = auth.credentials.token
-        user.avatar = auth.info.image
-        user.password = '1'
-        user.email = auth.info.email
-        user.oauth_expires_at = Time.at(auth.credentials.expires_at)
-        user.save!
-        self.create_history!(user.id)
-      end
-    end
-
-  end
-
-  def from_facebook?
-    self.provider == 'facebook'
-  end
-
   def authenticate(user_mail, user_password)
     encrypted_password = User.encrypt_a_password(user_password)
     r = User.all :conditions => ["email = ? and password = ?", user_mail, encrypted_password]
@@ -219,6 +153,10 @@ class User < ActiveRecord::Base
     end
 
     r
+  end
+
+  def from_facebook?
+    self.provider == 'facebook'
   end
 
   def self.create_history!(id)
@@ -244,7 +182,6 @@ class User < ActiveRecord::Base
       return value
     end
   end
-
 
   private
 

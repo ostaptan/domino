@@ -3,7 +3,6 @@ class Game < ActiveRecord::Base
 
   serialize :data, Hash
 
-  include GamesExt::Table
   include Rules::GameRules
 
   has_and_belongs_to_many :players, :class_name => User

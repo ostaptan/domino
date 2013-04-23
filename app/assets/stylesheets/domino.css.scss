@@ -57,9 +57,7 @@ div#sidebar {
   margin-bottom: 5px;
 }
 
-.battle {
-
-}
+.social-likes {text-align: center;display: inline-block;max-height: 50px;margin: 10px;}
 
 div#battle-field {
   position:relative;
@@ -242,4 +240,5 @@ input#min_rating, input#max_rating {
 .input [type="text"] {font-size: 30px;}
 .birth-date {width: auto !important;}
 .games, .login {padding: 20px;}
-.form-signin-heading {margin-left: 10px;}
+.form-signin-heading {margin-left: 10px;margin-bottom: 10px}
+.form-signin {margin-left: 10px;}
