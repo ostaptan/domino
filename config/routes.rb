@@ -55,6 +55,9 @@ Domino::Application.routes.draw do
   match '/admin' => 'admin#index', :as => :admin_index
   namespace :admin do
 
+    resources :users
+
+
   end
 
 

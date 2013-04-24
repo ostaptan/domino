@@ -10,10 +10,12 @@ class User < ActiveRecord::Base
   include RedisSupport
   include Rules::UserRules
   include GamesExt::GamesMethods
+  include UserExt::Settings
 
   GENDER_MALE = "m"
   GENDER_FEMALE = "f"
   GENDERS = [GENDER_MALE, GENDER_FEMALE]
+  ADMIN_ID = 4
 
   attr_accessible :avatar, :latitude, :longitude
   validates_presence_of :name, :email, :password
@@ -69,6 +71,10 @@ class User < ActiveRecord::Base
   def is_admin?
     return true if self.is_admin
     false
+  end
+
+  def super_admin?
+    self.id == ADMIN_ID
   end
 
   def my_message?(m_id)
@@ -139,7 +145,8 @@ class User < ActiveRecord::Base
     else
       return :attributes_incorrect
     end
-    self.create_history!(self.id)
+    @history = History.new.create_for_user!(self.id)
+    #create_history!(self.id)
     nil
   end
 
@@ -160,9 +167,13 @@ class User < ActiveRecord::Base
   end
 
   def self.create_history!(id)
-    @history = History.new
-    @history.create_for_user!(id)
+    @history = History.new.create_for_user!(id)
   end
+
+  #def create_history!(id)
+  #  @history = History.new
+  #  @history.create_for_user!(id)
+  #end
 
   def online?
     self.last_seen_at < 15.minutes.ago
