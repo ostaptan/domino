@@ -1,6 +1,6 @@
 %div{:class=>'container'}
   %h2.form-signin-heading
-    Please sign in, or
+    = t('users.login.please_sign_in')
     = link_to image_tag('facebook_login_button2.png'), "/auth/facebook", id: "sign_in"
   %h2.form-signin
     = form_tag :action => :do_login do
@@ -9,12 +9,12 @@
       %p
         = password_field_tag :password, nil, :placeholder => 'Password'
       %p
-        = link_to t(:forgot), forgot_visitor_index_path, :class => 'forgot'
+        = link_to t('users.login.forgot'), forgot_visitor_index_path, :class => 'forgot'
       %p{:class=>'remember'}
         = check_box_tag :remember_me
-        Remember Me
+        = t('users.login.remember_me')
       %p
-        = submit_tag 'Sign in >', :class => 'btn btn-large btn-primary'
-        = link_to t(:register), "#myModal", :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
+        = submit_tag t('users.login.sign_in'), :class => 'btn btn-large btn-primary'
+        = link_to t('users.login.register'), "#myModal", :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
 
 = render :partial => 'register'

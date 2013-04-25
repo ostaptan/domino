@@ -3,28 +3,28 @@
   %h1{:class=>'edit-user'}
     = image_tag 'user_info.png'
     = "#{@user.nick_name} > "
-    Edit Profile Info
+    = t('users.edit.descr')
   %div{:class=>'font-description'}
     = t(:edit_user_description)
   = form_for @user, :url => {:action => :update} do |form|
     %ul
       %li{:class=>'edit-fields'}
-        = label_tag 'Email: '
+        = label_tag t('global.email')
         %li{:class=>'edit-fields'}
           = form.email_field :email
       %br
       %li{:class=>'edit-fields'}
-        = label_tag 'First Name: '
+        = label_tag t('global.name')
         %li{:class=>'edit-fields'}
           = form.text_field :name
       %br
       %li{:class=>'edit-fields'}
-        = label_tag 'Last Name: '
+        = label_tag t('global.surname')
         %li{:class=>'edit-fields'}
           = form.text_field :surname
       %br
       %li{:class=>'edit-fields'}
-        = label_tag 'Avatar: '
+        = label_tag t('global.avatar')
         %li{:class=>'edit-fields'}
           = avatar_tag @user, true
         %li{:class=>'edit-fields'}
@@ -32,7 +32,7 @@
       %br
       %br
       %li{:class=>'edit-fields birth-date'}
-        = label_tag 'Date of Birth: '
+        = label_tag t('global.date_of_birth')
         %li{:class=>'edit-fields'}
           = select_tag :month, options_for_select(Date::MONTHNAMES.each_with_index.collect{|m, i| [m, (i+1).to_s]}, @month)
         %li{:class=>'edit-fields'}
@@ -41,7 +41,7 @@
           = select_tag :year, options_for_select((Time.now.year).downto(1985).each_with_index.collect{|m, i| [m, (i+1).to_s]}, @year)
       %br
       %li{:class=>'edit-fields'}
-        = label_tag 'Location: '
+        = label_tag t('global.location')
         %li{:class=>'edit-fields'}
           = form.text_field :location
           %h3{:class=>'inline'}
@@ -50,9 +50,9 @@
           Example: “New York City”
       %br
         %li{:class=>'edit-fields'}
-          = label_tag 'Country: '
+          = label_tag t('global.country')
           %li{:class=>'edit-fields'}
             = form.select :country, options_for_select(Country.names_array, @user.country)
 
       %p
-        = form.submit t(:save), :class => 'btn btn-success btn-large'
+        = form.submit t('global.save'), :class => 'btn btn-success btn-large'

@@ -1,12 +1,12 @@
 %div{:class=>'page-header login'}
   %h1
     %welcome
-      = current_user ? current_user.welcome_phrase : t(:welcome) + '!'
+      = current_user ? current_user.welcome_phrase : t('users.login.welcome')
     %br
     %small
-      = t(:domino_description)
+      = t('users.login.domino_description')
   %h2
-    Playing domino now:
+    = t('users.login.playing_domino_now')
     = users_online
-    users
+    = t('global.users')
   = render :partial => 'login' unless current_user

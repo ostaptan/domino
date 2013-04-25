@@ -6,4 +6,9 @@ module GameProperties
   FACEBOOK_SECRET = '112312312321'
   FACEBOOK_APP_ID = '123456'
 
+  SMALL = 4
+  MEDIUM = 6
+  BIG = 8
+  HUGE = 12
+
 end

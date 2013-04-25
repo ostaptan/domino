@@ -1,17 +1,21 @@
 %div#header
   %div{:class => 'navbar navbar-inverse navbar-fixed-top'}
-    %div{:class => 'navbar-inner'}
-      = link_to t(:domino), root_path, :class => 'brand'
+    %div.navbar-inner
+      = link_to t('global.domino'), root_path, :class => 'brand'
       %div{:class=>'nav-collapse collapse'}
         %ul{:class=>'nav pull-right'}
           %li
-            = link_to t(:games), domino_games_path
+            = link_to image_tag('flag-icon-england.gif'), set_localization_path(:en)
           %li
-            = link_to t(:tournament), '#'
+            = link_to image_tag('flag-russian-small.jpg'), set_localization_path(:ru)
           %li
-            = link_to t(:dashboard), domino_dashboard_index_path
+            = link_to t('global.games'), domino_games_path
           %li
-            = link_to t(:chat), domino_chat_index_path
+            = link_to t('global.tournament'), '#'
+          %li
+            = link_to t('global.dashboard'), domino_dashboard_index_path
+          %li
+            = link_to t('global.chat'), domino_chat_index_path
           - if current_user
             %li{:class=>'dropdown'}
               %a{:class=>"dropdown-toggle", :id=>"dLabel", :role=>"button", 'data-toggle'=>"dropdown", 'data-target'=>"#", :href=>"/"}
@@ -19,11 +23,10 @@
                 %b{:class=>"caret"}
               %ul{:class=>"dropdown-menu"}
                 %li
-                  = link_to t(:home), domino_user_path(current_user.id)
+                  = link_to t('global.home'), domino_user_path(current_user.id)
                 %li
-                  = link_to t(:edit), edit_domino_user_path(current_user.id)
+                  = link_to t('global.edit'), edit_domino_user_path(current_user.id)
                 %li{:class=>"divider"}
                 %li
-                  = link_to t(:sign_out), logout_path
-
+                  = link_to t('global.sign_out'), logout_path
 

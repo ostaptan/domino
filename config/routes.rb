@@ -12,6 +12,8 @@ Domino::Application.routes.draw do
 
   match '/domino' => 'domino#index', :as => :domino_index
 
+  match '/set_localization/(:locale)' => 'visitor#set_localization', as: :set_localization
+
   resources :visitor do
     collection do
       get :about

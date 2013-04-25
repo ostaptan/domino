@@ -11,24 +11,24 @@
 
 %div{:class=>'games'}
   %h1{:class=>'edit-user'}
-    Games
+    = t('games.header')
   %p
     = image_tag 'domino_game.jpg'
   %p
-    = link_to t(:new_game), '#newGame', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
-    = link_to t(:list_of_games), '#listGames', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
-    = link_to t(:find_game), '#findGame', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
+    = link_to t('games.new_game'), '#newGame', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
+    = link_to t('games.list_of_games'), '#listGames', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
+    = link_to t('games.find_game'), '#findGame', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
 
 
 
   %div{:class=>"tabbable"}
     %ul{:class=>"nav nav-tabs"}
       %li{:class=>"active"}
-        = link_to 'Friends', "#friends", 'data-toggle'=>"tab"
+        = link_to t('global.friends'), "#friends", 'data-toggle'=>"tab"
       %li
-        = link_to 'Current Games', "#current_games", 'data-toggle'=>"tab"
+        = link_to t('games.current_games'), "#current_games", 'data-toggle'=>"tab"
       %li
-        = link_to 'Finished Games', "#finished_games", 'data-toggle'=>"tab"
+        = link_to t('games.finished_games'), "#finished_games", 'data-toggle'=>"tab"
 
     %div{:class=>"tab-content"}
       %div{:class=>"tab-pane active", :id=>"friends"}

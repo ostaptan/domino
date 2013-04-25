@@ -2,6 +2,17 @@ module UserExt::Settings
 
   PATTERN = "[\\w\\;\\.]"
 
+  def get_locale
+    self.settings[:locale] || I18n.default_locale
+  end
+
+  def set_locale(locale)
+    unless locale.blank?
+      self.settings.merge!({locale: locale})
+      self.save!
+    end
+  end
+
   def setting_get(key)
     return unless self.settings
     m = self.settings.match(/\|#{key}=(#{PATTERN}*)\|/)

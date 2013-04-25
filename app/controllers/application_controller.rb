@@ -3,6 +3,16 @@ class ApplicationController < ActionController::Base
 
   include RedisSupport
 
+  before_filter :localization
+
+  def localization
+    if current_user
+      I18n.locale = current_user.get_locale || I18n.default_locale
+    else
+      I18n.locale = I18n.default_locale
+    end
+  end
+
   def online_game?
     params[:controller] == 'domino/games' && params[:action] == 'show'
   end

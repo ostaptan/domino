@@ -2,15 +2,15 @@
   %sidebar
     %div{:class=>"frame grey"}
       %h3{:class=>'head'}
-        Not a member yet??
+        = t('advertise.not_member')
       %h5
-        It's FREE and EASY!
+        = t('advertise.free')
       %ul
         %li{:class=>'h6'}
-          Play domino with friends!
+          = t('advertise.play_with_friends')
         %li{:class=>'h6'}
-          Meet players from around the world!
+          = t('advertise.meet_world')
         %li{:class=>'h6'}
-          Train yourself and share knowledge!
+          = t('advertise.train')
       %p
-        = link_to t(:join_now), "#myModal", :class => "btn btn-large btn-block btn-primary disabled", 'data-toggle'=>"modal"
+        = link_to t('advertise.join_now'), "#myModal", :class => "btn btn-large btn-block btn-primary disabled", 'data-toggle'=>"modal"

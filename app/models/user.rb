@@ -6,6 +6,8 @@ require 'fileutils'
 class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
+  serialize :settings, Hash
+
   include FileUtils
   include RedisSupport
   include Rules::UserRules
@@ -28,6 +30,10 @@ class User < ActiveRecord::Base
   has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
   has_many :inverse_friends, :through => :inverse_friendships, :source => :user
   has_and_belongs_to_many :games
+  has_many :news, :class_name => DashboardNews
+  has_many :comments, :class_name => DashboardComment
+
+  belongs_to :clan
 
   geocoded_by :location
   after_validation :geocode

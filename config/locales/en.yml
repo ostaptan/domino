@@ -2,25 +2,147 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
-  register: "Register"
-  domino_description: "Magnificent game for playing simple domino of spider domino!"
+  global:
+    domino: "Domino"
+    goat_domino: "Goat domino"
+    spider_domino: "Spider domino"
+    send: "Send"
+    create: "Create"
+    join: "Join"
+    save: "Save"
+    edit: "Edit"
+    find: "Find"
+    users: "Users"
+    user: "User"
+    close: "Close"
+    male: "Male"
+    female: "Female"
+    email: "Email"
+    surname: "Surname"
+    name: "Name"
+    password: "Password"
+    confirm_password: "Confirm Password"
+    avatar: "Avatar:"
+    date_of_birth: "Date of Birth:"
+    location: "Location:"
+    country: "Country:"
+    about: "About"
+    rules: "How to play"
+    copyright: "Copyright. This game is a private property of Dynamic Games Company. All rights reserved."
+    online: "Online:"
+    games: "Games"
+    tournament: "Tournament"
+    dashboard: "Dashboard"
+    chat: "Chat"
+    home: "Home"
+    sign_out: "Sign out"
+    play: "Play"
+    delete: "Delete"
+    action: "Action"
+    total: "Total:"
+    date: "Date"
+    friends: "Friends"
+    from: "From"
+    to: "To"
+    opponents: "Opponents:"
+    max: "Max:"
+    min: "Min:"
+
+
+  about:
+    description: "dsgdfgsdfgsdf dfs gs dfg sg ert awgfsgawasd gas g asd gawegas gas ga sdg "
+    header: "About Project"
+
+  how_to_play:
+    header: "Domino game rules:"
+    description: "Basic rules
+                  The most popular type of play are layout games, which fall into two main categories, blocking games and scoring games.
+                  Most domino games are blocking games, i.e. the objective is to empty one's hand while blocking the opponent's. In the end, a score may be determined by counting the pips in the losing players' hands.
+                  In scoring games the scoring is different and happens mostly during game play, making it the principal objective."
+
+
+  advertise:
+    not_member: "Not a member yet??"
+    free: "It's FREE and EASY!"
+    play_with_friends: "Play domino with friends!"
+    meet_world: "Meet players from around the world!"
+    train: "Train yourself and share knowledge!"
+    join_now: "Join Now!"
+
+
+  notices:
+    localization_changed: "Language successfully changed to %{locale}!"
+
+  users:
+    sidebar:
+      my_games: "My Games"
+
+    edit:
+      descr: "Edit Profile Info"
+    show:
+      goat_rating: "Goat Rating:"
+      spider_rating: "Spider Rating:"
+      goat_total: "Goat Total:"
+      spider_total: "Spider Total:"
+      you_followed: "You Followed (%{count})"
+      followers: "Followers (%{count})"
+      add_to_friends: "Add to friends"
+      friends_list: "My friends list"
+      highest: "Highest:"
+      best_win: "Best Win:"
+      avg_opp: "Avg. Opp.:"
+    registration:
+      register_form: "Register Form"
+      fill_in_fields: "Please fill in all next fields."
+      sign_up: "Register!"
+    login:
+      welcome: "Welcome!!"
+      sign_up: "Sign Up"
+      register: "Register"
+      forgot: "Forgot your password? Click here!"
+      remember_me: "Remember me"
+      domino_description: "Magnificent game for playing simple domino of spider domino!"
+      please_sign_in: "Please sign in, or"
+      sign_in: "Sign in >"
+      playing_domino_now: "Playing domino now:"
+
+
+  games:
+    header: "Games"
+    current_games: "Current Games"
+    finished_games: "Finished Games"
+    type: "Type"
+    time_per_move: "Time per move"
+    status: "Status"
+    result: "Result"
+    new_game: "New Game"
+    list_of_games: "List of Games"
+    find_game: "Find Game"
+    select_fieds: "Please select next fields"
+    rating_points: "game rating points."
+    select_game: "Please select a Game"
+    available_sits: "Available Sits %{count}"
+    create_game: "Create a new Game"
+    max_rating: "Max Rating"
+    game_type: "Game type"
+    game_rating: "Game rating:"
+    waiting_for_players: "Waiting for %{count} players"
+    game_description: "Game Description:"
+    playing: "Playing"
+    players: "%{count} players"
+    minutes_per_move: "%{count} minutes per move"
+
+
   invalid_login_or_password: "Cannot login! Maybe your email or password are incorrect."
   authorization_required: "You need to authorize!"
   attributes_incorrect: "Some of attributes you provided are incorrect!"
-  sign_up: "Sign Up"
-  send: "Send"
-  create: "Create"
-  join: "Join"
-  save: "Save"
-  find: "Find"
+
+
   game_found: "Game successfully found!"
   cant_join_game: "Cannot join this game. Sorry!"
   no_games_found: "No available games found by your parameters!"
   game_started: "Game successfully started!"
   edit_user_description: "All information on this page is OPTIONAL unless otherwise indicated. Anything you enter on this page (except your email addresses) will be visible in your public profile page."
-  forgot: "Forgot your password? Click here!"
-  remember_me: "Remember me"
-  you_followed: "You Followed (%{count})"
-  followers: "Followers (%{count})"
+
+
   its_not_your_turn: "It's not your turn! Wait until your opponent moves!"

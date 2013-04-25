@@ -1,11 +1,11 @@
 %ul
   %li
-    Highest:
+    = t('users.show.highest')
     = current_user.max_rating(type)
   %li
-    Avg. Opp.:
+    = t('users.show.avg_opp')
   %li
-    Best Win:
+    = t('users.show.best_win')
   %li
-    Total:
+    = t('global.total')
     = "#{current_user.all_games_count(type)} (#{current_user.won_games_count(type)} W/ #{current_user.lost_games_count(type)} L)"

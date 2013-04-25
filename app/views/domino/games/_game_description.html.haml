@@ -1,5 +1,5 @@
 %h2
-  Opponents:
+  = t('global.opponents')
 %div{:class=>'border'}
 - @game.players.each do |pl|
   %div{:class=>'players-description'}
@@ -8,36 +8,34 @@
     %p
       = avatar_tag(pl)
     %h5
-      Max Rating:
+      = t('games.max_rating')
       = pl.max_rating(@game.game_type)
       %br
-      Total:
+      = t('global.total')
       = "#{pl.all_games_count(@game.game_type)} (#{pl.won_games_count(@game.game_type)} W/ #{pl.lost_games_count(@game.game_type)} L)"
 %h2
-  Game Description:
+
 %div{:class=>'border'}
 %h4
   %ul
     %li
-      Game type:
+      = t('games.game_type')
       = @game.game_type.camelize
     %li
-      Waiting for:
-      = @game.available_sits
-      players
+      = t('games.waiting_for_players', count: @game.available_sits)
     %li
-      Game rating:
+      = t('games.game_rating')
       = "#{@game.rating} points"
       %ul
         %li
-          Min:
+          = t('global.max')
           = "#{@game.min_rating} points"
         %li
-          Max:
+          = t('global.max')
           = "#{@game.max_rating} points"
     %li
-      Time per move:
+      = t('games.time_per_move')
       = "#{@game.time_per_move} minutes"
 
 %div{:class=>'actions'}
-  = link_to t(:join), domino_game_path(@game.id), :method => :put, :class => 'btn btn-large btn-success' unless @game.players.include? current_user
+  = link_to t('global.join'), domino_game_path(@game.id), :method => :put, :class => 'btn btn-large btn-success' unless @game.players.include? current_user

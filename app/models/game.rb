@@ -4,7 +4,7 @@ class Game < ActiveRecord::Base
   serialize :data, Hash
 
   include Rules::GameRules
-
+  include Helpers::TranslateHelper
   has_and_belongs_to_many :players, :class_name => User
 
   GAME_TYPES = %w(goat spider)
@@ -67,11 +67,11 @@ class Game < ActiveRecord::Base
   end
 
   def players_count_select
-    PLAYERS_COUNT.map { |val| "#{val} players" }
+    PLAYERS_COUNT.map { |val| t('game.players', count: val)}
   end
 
   def minutes_per_move_select
-    TIMES_PER_MOVE.map { |val| "#{val} minutes per move" }
+    TIMES_PER_MOVE.map { |val| t('game.minutes_per_move', count: val) }
   end
 
   def available_sits
@@ -79,7 +79,7 @@ class Game < ActiveRecord::Base
   end
 
   def status
-    available_sits == 0 ? 'Playing' : "Available sits: #{available_sits}."
+    available_sits == 0 ? t('games.playing') : t('games.available_sits', count: available_sits)
   end
 
   def result(user)

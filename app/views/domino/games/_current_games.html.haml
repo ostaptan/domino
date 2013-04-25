@@ -5,17 +5,17 @@
   %table{:class=>"table table-striped"}
     %caption
       %h5{:class=>'pull-left'}
-        Current Games
+        = t('games.current_games')
     %thead
       %tr
         %th
           id
         %th
-          Type
+          = t('games.type')
         %th
-          Time per move
+          = t('games.time_per_move')
         %th
-          Status
+          = t('games.status')
     %tbody
       - @my_current_games.each do |game|
         %tr

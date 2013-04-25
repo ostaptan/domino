@@ -2,20 +2,22 @@
   %button{:type=>"button", :class=>"close", 'data-dismiss'=>"modal", 'aria-hidden'=>"true"}
     ×
   %h4{:class=>'modal-hd'}
-    Find a new Game
+    = t('games.find_game')
   %h5{:class=>'modal-hd'}
-    Please select next fields
+    = t('games.select_fields')
 %div{:class=>"modal-body"}
   %p
     = form_tag find_domino_games_path do
       %div{:class=>'rating-range'}
-        From
+        = t('global.from')
         = text_field_tag :min_rating, current_user.recommended_min_rating, :placeholder => 'Min Rating', :class => 'rating-range-min'
-        To
+        = t('global.to')
         = text_field_tag :max_rating, current_user.recommended_max_rating, :placeholder => 'Max Rating', :class => 'rating-range-max'
-        game rating points.
+        = t('games.rating points')
       = select_tag :game_type, options_for_select(Game::GAME_TYPES)
       = select_tag :time_per_move, options_for_select(@game.minutes_per_move_select)
       %div{:class=>"modal-footer"}
-        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-        = submit_tag t(:find), :class=>'btn-medium btn btn-success'
+        <button class="btn" data-dismiss="modal" aria-hidden="true">
+        = t('global.close')
+        </button>
+        = submit_tag t('global.find'), :class=>'btn-medium btn btn-success'

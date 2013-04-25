@@ -1,19 +1,25 @@
+%div{:class=>'modal hide fade', :id=>'aboutModal', :tabindex=>'-1', :role=>'dialog', 'aria-hidden'=>'true'}
+ = render partial: 'navigation/about'
+
+%div{:class=>'modal hide fade', :id=>'howToPlayModal', :tabindex=>'-1', :role=>'dialog', 'aria-hidden'=>'true'}
+ = render partial: 'navigation/how_to_play'
+ 
 %div#footer
  %br
- = link_to t(:about), about_visitor_index_path, :class => "btn btn-large btn-large btn-primary disabled"
- = link_to t(:rules), '#', :class => "btn btn-large btn-large btn-primary disabled"
+ = link_to t('global.about'),  '#aboutModal', :class => 'btn btn-large btn-large btn-primary disabled', 'data-toggle'=>'modal'
+ = link_to t('global.rules'), '#howToPlayModal', :class => 'btn btn-large btn-large btn-primary disabled', 'data-toggle'=>'modal'
 
  %div{:class=>'copyright'}
   %small
-   = 'Copyright and hsfgb blablalblablablablablalbalb'
+   = t('global.copyright')
 %div.social-likes
- %a.twitter-share-button{"data-count" => "horizontal", "data-via" => "fuonrails", :href => "http://twitter.com/share", :style => 'height: 0px;important!'} Tweet
+ %a.twitter-share-button{'data-count' => 'horizontal', 'data-via' => 'fuonrails', :href => 'http://twitter.com/share', :style => 'height: 0px;important!'} Tweet
 
 %div
- Online:
+ = t('global.online')
  = users_online
 %div.social-likes
  = facebook_like
 
-%script{:src => "http://platform.twitter.com/widgets.js", :type => "text/javascript"}
+%script{:src => 'http://platform.twitter.com/widgets.js', :type => 'text/javascript'}
 

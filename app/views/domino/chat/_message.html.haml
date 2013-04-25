@@ -1,10 +1,10 @@
-%div{:class=>'message-wrapper'}
+%div.message-wrapper
   - if current_user.my_message?(m.author_id)
     %div{:class=>'author'}
-      = User.find_by_id(m.author_id).name
+      = m.author.name
   - else
     %div{:class=>'non-author'}
-      = User.find_by_id(m.author_id).name
+      = m.author.name
   %div{:class=>'content'}
     = m.message
   %div#chat-time

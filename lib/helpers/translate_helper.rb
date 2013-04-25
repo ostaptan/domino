@@ -19,7 +19,7 @@ module Helpers
         I18n.t(key, options.merge({ :scope => [:activerecord, :attributes], :default => default }))
       end
 
-      def tg(key, options = { })
+      def t(key, options = { })
         I18n.translate(key, options)
       end
 

@@ -5,17 +5,17 @@
   %table{:class=>"table table-striped"}
     %caption
       %h5{:class=>'pull-left'}
-        Finished Games
+        = t('games.finished_games')
     %thead
       %tr
         %th
-          Result
+          = t('games.result')
         %th
-          Type
+          = t('games.type')
         %th
-          Time per move
+          = t('games.time_per_move')
         %th
-          Date
+          = t('global.date')
     %tbody
       - @my_finished_games.each do |game|
         %tr

@@ -1,20 +1,20 @@
 %p
   %table{:class=>"table table-striped"}
     %caption
-      %h5{:class=>'pull-left'}
-        My Friends List
+      %h5.pull-left
+        = t('users.show.friends_list')
     %thead
       %tr
         %th
           id
         %th
-          Name(nick)
+          = t('global.name')
         %th
-          Goat Rating
+          = t('users.show.goat_rating')
         %th
-          Spider Rating
+          = t('users.show.spider_rating')
         %th
-          Action
+          = t('global.action')
     %tbody
       - for friendship in @user.friendships
         %tr
@@ -27,5 +27,5 @@
           %td
             = friendship.friend.s_rating
           %td
-            = link_to t(:play), '#'
-            = link_to t(:delete), domino_friendship_path(friendship), :method => :delete
+            = link_to t('global.play'), '#'
+            = link_to t('global.delete'), domino_friendship_path(friendship), :method => :delete

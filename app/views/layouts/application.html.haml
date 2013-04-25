@@ -16,7 +16,7 @@
           = render :partial => 'navigation/flash', :locals => {:flash => flash}
           = yield
 
-        %div{:class=>"right-container"}
+        %div.right-container
           = current_user ? render(:partial => 'navigation/sidebar') : render(:partial => 'navigation/advertise')
       %div{:class => 'footer'}
         = render :template => 'navigation/footer'
