@@ -1,0 +1,15 @@
+%div.modal-header
+  %button{:type=>"button", :class=>"close", 'data-dismiss'=>"modal", 'aria-hidden'=>"true"}
+    ×
+  %h4.modal-hd
+    = t('dashboard.news.create_post')
+%div.modal-body
+  = form_for @post, :url => {action: :create_post}, validate: true do |form|
+    %p
+      = form.text_field :header, :placeholder => t('global.title')
+      = form.text_area :content, :placeholder => t('global.content')
+    %div.modal-footer
+      <button class="btn" data-dismiss="modal" aria-hidden="true">
+      = t('global.close')
+      </button>
+      = form.submit t('global.create'), :class => 'btn btn-success'

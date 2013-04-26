@@ -1,1 +1,18 @@
+%div.dashboard
+  %div.tabbable
+    %ul{:class=>'nav nav-tabs'}
+      %li.active
+        = link_to t('dashboard.news.header'), '#news', 'data-toggle'=>'tab'
+      %li
+        = link_to t('dashboard.forum.header'), '#forum', 'data-toggle'=>'tab'
+      %li
+        = link_to t('dashboard.events.header'), '#events', 'data-toggle'=>'tab'
 
+    %div.tab-content
+      %div{:class=>'tab-pane active', :id=>'news'}
+        = render 'news'
+
+      %div{:class=>'tab-pane', :id=>'forum'}
+        = render 'forum'
+      %div{:class=>'tab-pane', :id=>'events'}
+        = render 'events'

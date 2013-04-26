@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130423184356) do
+ActiveRecord::Schema.define(:version => 20130425232342) do
+
+  create_table "clans", :force => true do |t|
+    t.string   "type",       :default => "small"
+    t.string   "name"
+    t.integer  "g_rating",   :default => 500
+    t.integer  "s_rating",   :default => 500
+    t.integer  "leader_id"
+    t.string   "avatar",     :default => "no_avatar_clan.jpg"
+    t.datetime "created_at",                                   :null => false
+    t.datetime "updated_at",                                   :null => false
+    t.integer  "glory",      :default => 0
+  end
 
   create_table "countries", :force => true do |t|
     t.string  "iso"
@@ -19,6 +31,27 @@ ActiveRecord::Schema.define(:version => 20130423184356) do
     t.string  "printable_name"
     t.string  "iso3"
     t.integer "numcode"
+  end
+
+  create_table "dashboard_comments", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "content"
+    t.integer  "likes",      :default => 0
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
+
+  create_table "dashboard_news", :force => true do |t|
+    t.integer  "user_id"
+    t.text     "content"
+    t.string   "header"
+    t.integer  "likes",      :default => 0
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.boolean  "active",     :default => true
+    t.datetime "closed_at"
+    t.text     "likers"
+    t.text     "dislikers"
   end
 
   create_table "friendships", :force => true do |t|

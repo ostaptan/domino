@@ -48,7 +48,7 @@ group :development do
   gem 'binding_of_caller'
 end
 
-
+gem 'client_side_validations'
 gem 'heroku'
 gem 'thin'
 gem 'redis'

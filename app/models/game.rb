@@ -67,11 +67,11 @@ class Game < ActiveRecord::Base
   end
 
   def players_count_select
-    PLAYERS_COUNT.map { |val| t('game.players', count: val)}
+    PLAYERS_COUNT.map { |val| I18n.translate('games.players', count: val)}
   end
 
   def minutes_per_move_select
-    TIMES_PER_MOVE.map { |val| t('game.minutes_per_move', count: val) }
+    TIMES_PER_MOVE.map { |val| I18n.t('games.minutes_per_move', count: val) }
   end
 
   def available_sits
@@ -79,7 +79,7 @@ class Game < ActiveRecord::Base
   end
 
   def status
-    available_sits == 0 ? t('games.playing') : t('games.available_sits', count: available_sits)
+    available_sits == 0 ? I18n.translate('games.playing') : I18n.translate('games.available_sits', count: available_sits)
   end
 
   def result(user)

@@ -21,7 +21,9 @@ class User < ActiveRecord::Base
 
   attr_accessible :avatar, :latitude, :longitude
   validates_presence_of :name, :email, :password
-  #validates_uniqueness_of :email
+  validates_confirmation_of :password
+  validates_length_of :password, minimum: 4
+  validates_uniqueness_of :email
 
   has_one :history
   has_many :messages

@@ -9,6 +9,7 @@ en:
     send: "Send"
     create: "Create"
     join: "Join"
+    view: "View"
     save: "Save"
     edit: "Edit"
     find: "Find"
@@ -47,7 +48,59 @@ en:
     opponents: "Opponents:"
     max: "Max:"
     min: "Min:"
-
+    title: "Title"
+    content: "Content"
+    ago: "ago"
+  datetime:
+      distance_in_words:
+        half_a_minute: "half a minute"
+        less_than_x_seconds:
+          one:   "less than 1 second"
+          other: "less than %{count} seconds"
+        x_seconds:
+          one:   "1 second"
+          other: "%{count} seconds"
+        less_than_x_minutes:
+          one:   "less than a minute"
+          other: "less than %{count} minutes"
+        x_minutes:
+          one:   "1 minute"
+          other: "%{count} minutes"
+        about_x_hours:
+          one:   "about 1 hour"
+          other: "about %{count} hours"
+        x_days:
+          one:   "1 day"
+          other: "%{count} days"
+        about_x_months:
+          one:   "about 1 month"
+          other: "about %{count} months"
+        x_months:
+          one:   "1 month"
+          other: "%{count} months"
+        about_x_years:
+          one:   "about 1 year"
+          other: "about %{count} years"
+        over_x_years:
+          one:   "over 1 year"
+          other: "over %{count} years"
+        almost_x_years:
+          one:   "almost 1 year"
+          other: "almost %{count} years"
+      prompts:
+        year:   "Year"
+        month:  "Month"
+        day:    "Day"
+        hour:   "Hour"
+        minute: "Minute"
+        second: "Seconds"
+  time:
+      am: am
+      formats:
+        default: ! '%a, %d %B %H:%M:%S %Y'
+        long: ! '%B %d, %Y %H:%M'
+        short: ! '%d %b %H:%M'
+      pm: pm
 
   about:
     description: "dsgdfgsdfgsdf dfs gs dfg sg ert awgfsgawasd gas g asd gawegas gas ga sdg "
@@ -71,7 +124,7 @@ en:
 
 
   notices:
-    localization_changed: "Language successfully changed to %{locale}!"
+    localization_changed: "Язык успешно изменен на %{count} !"
 
   users:
     sidebar:
@@ -131,6 +184,23 @@ en:
     playing: "Playing"
     players: "%{count} players"
     minutes_per_move: "%{count} minutes per move"
+
+  clans:
+    header: "Clans"
+    my_clan: "My Clan"
+
+
+  dashboard:
+    news:
+      header: "News"
+      create_post: "Create Post"
+      notice:
+        cannot_like: "You cannot change you liked!"
+        cannot_dislike: "You cannot change you disliked!"
+    forum:
+      header: "Forum"
+    events:
+      header: "Events"
 
 
   invalid_login_or_password: "Cannot login! Maybe your email or password are incorrect."

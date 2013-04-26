@@ -44,6 +44,7 @@ GEM
       net-ssh-gateway (>= 1.1.0)
     chronic (0.9.1)
     chunky_png (1.2.8)
+    client_side_validations (3.2.5)
     coderay (1.0.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -236,6 +237,7 @@ DEPENDENCIES
   bundler
   capistrano
   chunky_png
+  client_side_validations
   coffee-rails (~> 3.2.1)
   coffee-script
   exception_notification

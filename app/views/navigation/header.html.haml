@@ -5,9 +5,9 @@
       %div{:class=>'nav-collapse collapse'}
         %ul{:class=>'nav pull-right'}
           %li
-            = link_to image_tag('flag-icon-england.gif'), set_localization_path(:en)
+            = link_to image_tag('flag-icon-england.gif'), set_localization_path({locale: :en, url: request.url})
           %li
-            = link_to image_tag('flag-russian-small.jpg'), set_localization_path(:ru)
+            = link_to image_tag('flag-russian-small.jpg'), set_localization_path({locale: :ru, url: request.url})
           %li
             = link_to t('global.games'), domino_games_path
           %li
@@ -15,10 +15,13 @@
           %li
             = link_to t('global.dashboard'), domino_dashboard_index_path
           %li
+            = link_to t('clans.header'), domino_clans_path
+          %li
             = link_to t('global.chat'), domino_chat_index_path
           - if current_user
             %li{:class=>'dropdown'}
               %a{:class=>"dropdown-toggle", :id=>"dLabel", :role=>"button", 'data-toggle'=>"dropdown", 'data-target'=>"#", :href=>"/"}
+                %i.icon-user
                 = current_user.name
                 %b{:class=>"caret"}
               %ul{:class=>"dropdown-menu"}
@@ -26,6 +29,9 @@
                   = link_to t('global.home'), domino_user_path(current_user.id)
                 %li
                   = link_to t('global.edit'), edit_domino_user_path(current_user.id)
+                - if current_user.clan
+                  %li
+                    = link_to t('clans.my_clan'), domino_clans_path(current_user.clan.id)
                 %li{:class=>"divider"}
                 %li
                   = link_to t('global.sign_out'), logout_path

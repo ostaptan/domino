@@ -14,10 +14,11 @@ class VisitorController < ApplicationController
   end
 
   def set_localization
+    callback_url = params[:url] || root_path
     locale = params[:locale] || I18n.default_locale
     #second for translating env without logging in
     current_user ? current_user.set_locale(locale) : I18n.locale = locale
-    redirect_to_with_notice root_path, t('notices.localization_changed', locale: locale)
+    redirect_to_with_notice callback_url, t('notices.localization_changed', count: locale)
   end
 
   def do_login

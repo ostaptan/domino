@@ -33,7 +33,15 @@ Domino::Application.routes.draw do
 
     resources :friendships
 
-    resources :dashboard
+    resources :dashboard do
+      collection do
+        post :create_post
+        get 'like_post/(:id)' => 'dashboard#like_post', as: :like_post
+        get 'dislike_post/(:id)' => 'dashboard#dislike_post', as: :dislike_post
+      end
+    end
+
+    resources :clans
 
     resources :games do
       collection do

@@ -1,9 +1,9 @@
 - if flash[:notice]
-  %p{:class => 'alert alert-info'}
+  %p{:class => 'alert alert-info', id: 'flash-info'}
     = flash[:notice]
 -if flash[:error]
-  %p{:class => 'alert alert-error'}
+  %p{:class => 'alert alert-error', id: 'flash-error'}
     = flash[:error]
 -if flash[:success]
-  %p{:class => 'alert alert-success'}
+  %p{:class => 'alert alert-success', id: 'flash-success'}
     = flash[:success]

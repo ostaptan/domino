@@ -6,6 +6,7 @@ ru:
     send: "Отослать"
     create: "Создать"
     join: "Присоединиться"
+    view: "Смотреть"
     save: "Сохранить"
     find: "Найти"
     users: "Игроков"
@@ -44,6 +45,59 @@ ru:
     opponents: "Оппоненты:"
     max: "Максимум:"
     min: "Минимум:"
+    title: "Заглавие"
+    content: "Содержание"
+    ago: "назад"
+  datetime:
+      distance_in_words:
+        half_a_minute: "пол минуты"
+        less_than_x_seconds:
+          one:   "менее 1 секунды"
+          other: "менее %{count} секунд"
+        x_seconds:
+          one:   "1 секунда"
+          other: "%{count} секунд"
+        less_than_x_minutes:
+          one:   "менее минуты"
+          other: "менее %{count} минут"
+        x_minutes:
+          one:   "1 минута"
+          other: "%{count} минут"
+        about_x_hours:
+          one:   "около часа"
+          other: "около %{count} часов"
+        x_days:
+          one:   "1 день"
+          other: "%{count} дней"
+        about_x_months:
+          one:   "около 1 месяца"
+          other: "около %{count} месяцев"
+        x_months:
+          one:   "1 месяц"
+          other: "%{count} месяцев"
+        about_x_years:
+          one:   "около 1 года"
+          other: "около %{count} года"
+        over_x_years:
+          one:   "больше 1 года"
+          other: "больше %{count} годов"
+        almost_x_years:
+          one:   "почти 1 год"
+          other: "почти %{count} годов"
+      prompts:
+        year:   "Год"
+        month:  "Месяц"
+        day:    "День"
+        hour:   "Час"
+        minute: "Минута"
+        second: "Секунда"
+  time:
+      am: am
+      formats:
+        default: '%H:%M:%S'
+        long: ! '%B %d, %Y %H:%M'
+        short: ! '%d %b %H:%M'
+      pm: pm
 
   about:
     description: "шграыпвшагпрвашпрвапшрвапврвпар вап рвап рв апр вапрвапр вапр вапр вып рыв ыв рпыв рваыр"
@@ -63,6 +117,9 @@ ru:
     meet_world: "Встречай игроков со всего мира!"
     train: "Качайся сам и помагай качаться другим!"
     join_now: "Присоединяйся прямо сейчас!"
+
+  notices:
+    localization_changed: "Language successfully changed to %{count} !"
 
   users:
     sidebar:
@@ -119,3 +176,19 @@ ru:
     playing: "Играет."
     players: "%{count} игроков"
     minutes_per_move: "%{count} минут на ход"
+
+  clans:
+    header: "Кланы"
+    my_clan: "Мой Клан"
+
+  dashboard:
+    news:
+      header: "Новости"
+      create_post: "Создать Новость"
+      notice:
+        cannot_like: "Ты не можешь еще раз проголосовать за!"
+        cannot_dislike: "Ты не можешь еще раз проголосовать против!"
+    forum:
+      header: "Форум"
+    events:
+      header: "События"

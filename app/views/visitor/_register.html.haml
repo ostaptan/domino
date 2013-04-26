@@ -7,7 +7,7 @@
     %h5.modal-desc
       = t('users.registration.fill_in_fields')
   %div{:class=>"modal-body"}
-    = form_for @user, :url => {:action => :process_register} do |form|
+    = form_for @user, validate: true, :url => {:action => :process_register} do |form|
       %p
         = form.email_field :email, :placeholder => t('global.email')
       %p

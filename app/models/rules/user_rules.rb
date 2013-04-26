@@ -48,7 +48,20 @@ module Rules
     end
 
     def can_join_clan?(clan)
+      true
+    end
 
+    def can_create_post?
+      true
+    end
+
+    def has_to_move_in_game?
+      true
+    end
+
+    def can_change_mood?(post)
+      return false if post.likers.include?(self.id) || post.dislikers.include?(self.id)
+      true
     end
 
   end

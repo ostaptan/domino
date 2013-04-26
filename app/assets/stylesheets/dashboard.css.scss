@@ -1,0 +1,70 @@
+.dashboard {
+  padding: 10px;height: auto;
+  a {
+    color: #071109;
+    font-size: 20px;
+  }
+}
+
+.news {
+  a {color: #fff7f6}
+
+}
+
+.popover-title {color: #002a80}
+
+.dashboard_post {
+  margin-right: 7px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 6px;
+  margin-top: 7px;
+  background: #f3f5bc;
+  color: #77767b;
+}
+
+.dsh_author {
+  display: inline-block;
+  margin-right: 7px;
+  border: 1px solid #ccc;
+  padding: 6px;
+  margin-top: 7px;
+  background: #fbfff7;
+  color: #827008;
+  max-width: 70px;
+}
+
+.dsh_header {
+  display: inline-block;
+  font-size: 20px;
+  color: #002a80;
+  position: relative;
+  top: -60px;
+}
+.dsh_likes {
+  max-width: 100px;
+  position: relative;
+  min-height: 30px;
+  bottom: 15px;
+  right: 3px;
+}
+
+.likes {display: inline-block;  bottom: 6px;position: relative;}
+.good-likes {display: inline-block;  bottom: 6px;position: relative;color: #2caf12; font-size: 20px;}
+.bad-likes {display: inline-block;  bottom: 6px;position: relative;color: #ae1109;font-size: 20px;}
+
+.flash-like-error {border: 1px solid #ae1109;position: relative;bottom: 100px;border-radius: 5px;background-color: #ae1109;color: #ffffff; padding: 4px;}
+
+.dsh_content {
+  //display: inline-block;
+  font-size: 15px;
+  color: #520801;
+}
+
+.events {
+
+}
+
+.forum {
+
+}

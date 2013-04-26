@@ -15,6 +15,9 @@
 %div.social-likes
  %a.twitter-share-button{'data-count' => 'horizontal', 'data-via' => 'fuonrails', :href => 'http://twitter.com/share', :style => 'height: 0px;important!'} Tweet
 
+%div.global-time
+ = l Time.now
+
 %div
  = t('global.online')
  = users_online
