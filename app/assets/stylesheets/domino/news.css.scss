@@ -1,0 +1,25 @@
+// Place all the styles related to the domino/dashboard controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.comment-author {border: 1px solid #006dcc; padding: 1px; max-width:30px;background-color: #ffffff;}
+.author-name {
+  display: inline-block;position: relative;top: -30px;left:40px;
+}
+
+.news-author-name {
+  display: inline-block;position: relative;top: -30px;left:10px;
+  a {
+    color: #13a323;font-size: 20px;
+  }
+}
+
+.comment-content {display: inline-block;font-size: 15px;position: relative;top: -10px;left:-95px;}
+
+.news-comments {
+  margin-left: 15px;
+  a {
+     color: #0034a3;font-size: 15px;
+  }
+}

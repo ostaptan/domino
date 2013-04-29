@@ -1,0 +1,2 @@
+$("#comment-likes-<%= @comment.id %>").empty().append("<%= @comment.likes %>");
+$("#comment-popover-<%= @comment.id %>").empty().append("<div class='popover'><h3 class='popover-title'>Disikers(<%= @comment.dislikers.size %>)</h3><div class='popover-content'><%= escape_javascript(render :partial => 'domino/dashboard/news/dislikers', locals: {dislikers: @comment.popover_dislikers})%></div></div>");

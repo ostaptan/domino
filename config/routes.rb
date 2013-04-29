@@ -36,8 +36,12 @@ Domino::Application.routes.draw do
     resources :dashboard do
       collection do
         post :create_post
+        post :create_comment
         get 'like_post/(:id)' => 'dashboard#like_post', as: :like_post
         get 'dislike_post/(:id)' => 'dashboard#dislike_post', as: :dislike_post
+        get 'like_comment/(:id)' => 'dashboard#like_comment', as: :like_comment
+        get 'dislike_comment/(:id)' => 'dashboard#dislike_comment', as: :dislike_comment
+        get 'show_more/(:id)' => 'dashboard#show_more', as: :show_more
       end
     end
 

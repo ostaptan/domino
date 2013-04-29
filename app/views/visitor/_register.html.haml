@@ -7,22 +7,15 @@
     %h5.modal-desc
       = t('users.registration.fill_in_fields')
   %div{:class=>"modal-body"}
-    = form_for @user, validate: true, :url => {:action => :process_register} do |form|
-      %p
-        = form.email_field :email, :placeholder => t('global.email')
-      %p
-        = form.text_field :surname, :placeholder => t('global.surname')
-      %p
-        = form.text_field :name, :placeholder => t('global.name')
-      %p
-        = form.select :gender, options_for_select([[t('global.male'), 'm'], [t('global.female'), 'f']])
-      %p
-        = form.password_field :password_digest, :placeholder => t('global.password')
-      %p
-        = form.password_field :confirm_password, :placeholder => t('global.confirm_password')
-      %p
+    = simple_form_for @user, validate: true, :url => {:action => :process_register}, :html => { :class => 'form-horizontal' } do |form|
+      = form.input :email
+      = form.input :surname, hint: 'No special characters, please!'
+      = form.input :name
+      = form.input :gender, collection: [[t('global.male'), 'm'], [t('global.female'), 'f']], include_blank: false, prompt: "Select your male"
+      = form.input :password_digest
+      = form.input :confirm_password
       %div{:class=>"modal-footer"}
         <button class="btn" data-dismiss="modal" aria-hidden="true">
         = t('global.close')
         </button>
-        = form.submit t('users.registration.sign_up'), :class => 'btn btn-success'
+        = form.button :submit, class: 'btn btn-success'

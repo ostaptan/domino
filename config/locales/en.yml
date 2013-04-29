@@ -16,6 +16,8 @@ en:
     users: "Users"
     user: "User"
     close: "Close"
+    comment: "Your comment"
+    do_comment: "Comment"
     male: "Male"
     female: "Female"
     email: "Email"

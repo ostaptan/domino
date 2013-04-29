@@ -1,27 +1,10 @@
 %div{:class=>"modal hide fade", :id=>'createPost', :tabindex=>"-1", :role=>"dialog", 'aria-hidden'=>"true"}
   = render 'domino/dashboard/news/create_post_modal'
 
+= javascript_include_tag :endless_page
 
-%div.news
+%div{class: 'news', id: 'news'}
   = link_to t('dashboard.news.create_post'), '#createPost', :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
 
   - @posts.each do |p|
-    %div.dashboard_post
-      %div.dsh_author
-        = avatar_tag p.author, true
-      %div.dsh_header
-        = p.header
-      %div.dsh_content
-        = p.content
-      %div.dsh_time
-        = time_ago_in_words(p.created_at) + " #{t('global.ago')}"
-
-      %div{class: 'dsh_likes pull-right'}
-        = link_to  like_post_domino_dashboard_index_path(p.id), remote: true do
-          %i.icon-thumbs-up
-        = link_to dislike_post_domino_dashboard_index_path(p.id), remote: true do
-          %i.icon-thumbs-down
-        %div{id: "likes-#{p.id}", class: p.likes_class}
-          = p.likes
-      %div{id: "flash-like-error-#{p.id}", class: 'flash-like-error pull-right'}
-      %div{id: "popover-#{p.id}"}
+    = render partial: 'domino/dashboard/news/post', locals: {p: p}

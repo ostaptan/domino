@@ -1,0 +1,1 @@
+$("#news-comments-<%= @post.id %>").empty().append("<%= render partial: 'domino/dashboard/news/comments', locals: {post: @post, comms: @post.comments} %>");

@@ -12,7 +12,7 @@ module VisitorExtensions
     def process_register
       attr = params[:user]
       attr.merge!({:ip => request.remote_ip})
-      redirect_to_with_notice :register, t(:psswd_not_match), :error if attr[:password_digest] != attr[:confirm_password]
+      redirect_to_with_notice root_path, t(:psswd_not_match), :error if attr[:password_digest] != attr[:confirm_password]
       notice = @user.register(attr)
       if notice
         redirect_to_with_notice root_path, t(notice), :error

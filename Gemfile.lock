@@ -45,6 +45,9 @@ GEM
     chronic (0.9.1)
     chunky_png (1.2.8)
     client_side_validations (3.2.5)
+    client_side_validations-simple_form (2.0.1)
+      client_side_validations (~> 3.2.0)
+      simple_form (~> 2.0.4)
     coderay (1.0.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -196,6 +199,9 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
+    simple_form (2.0.4)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
     sprite-factory (1.5.3)
     sprockets (2.2.2)
       hike (~> 1.2)
@@ -238,6 +244,7 @@ DEPENDENCIES
   capistrano
   chunky_png
   client_side_validations
+  client_side_validations-simple_form
   coffee-rails (~> 3.2.1)
   coffee-script
   exception_notification
@@ -259,6 +266,7 @@ DEPENDENCIES
   rmagick
   rpm_contrib
   sass-rails (~> 3.2.3)
+  simple_form (~> 2.0.4)
   sprite-factory (>= 1.4.0)
   therubyracer
   thin

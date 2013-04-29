@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130425232342) do
+ActiveRecord::Schema.define(:version => 20130427140732) do
 
   create_table "clans", :force => true do |t|
     t.string   "type",       :default => "small"
@@ -37,8 +37,13 @@ ActiveRecord::Schema.define(:version => 20130425232342) do
     t.integer  "user_id"
     t.string   "content"
     t.integer  "likes",      :default => 0
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.integer  "post_id"
+    t.boolean  "active",     :default => true
+    t.datetime "closed_at"
+    t.text     "likers"
+    t.text     "dislikers"
   end
 
   create_table "dashboard_news", :force => true do |t|
@@ -80,10 +85,8 @@ ActiveRecord::Schema.define(:version => 20130425232342) do
   add_index "games", ["time_per_move"], :name => "index_games_on_time_per_move"
 
   create_table "games_users", :id => false, :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "game_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer "user_id"
+    t.integer "game_id"
   end
 
   create_table "histories", :force => true do |t|
@@ -114,6 +117,7 @@ ActiveRecord::Schema.define(:version => 20130425232342) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "surname"
+    t.integer  "game_id"
     t.string   "password"
     t.string   "email"
     t.string   "phone"
@@ -146,12 +150,5 @@ ActiveRecord::Schema.define(:version => 20130425232342) do
   add_index "users", ["email"], :name => "index_users_on_email"
   add_index "users", ["g_rating"], :name => "index_users_on_g_rating"
   add_index "users", ["s_rating"], :name => "index_users_on_s_rating"
-
-  create_table "users_games", :id => false, :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "game_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
 
 end

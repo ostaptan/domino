@@ -7,7 +7,7 @@
   = form_for @post, :url => {action: :create_post}, validate: true do |form|
     %p
       = form.text_field :header, :placeholder => t('global.title')
-      = form.text_area :content, :placeholder => t('global.content')
+      = form.text_area :content, :placeholder => t('global.content'), size: '7x10'
     %div.modal-footer
       <button class="btn" data-dismiss="modal" aria-hidden="true">
       = t('global.close')

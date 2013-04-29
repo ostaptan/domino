@@ -3,6 +3,7 @@ class CreateDashboardComments < ActiveRecord::Migration
     create_table :dashboard_comments do |t|
       t.integer :user_id
       t.string :content
+      t.integer :post_id
       t.integer :likes, :default => 0
 
       t.timestamps
