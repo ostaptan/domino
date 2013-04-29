@@ -1,12 +1,12 @@
 Domino::Application.routes.draw do
+  root :to => "visitor#welcome"
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
   get "password_resets/new"
 
   get "chat/index"
-
-  root :to => "visitor#welcome"
 
   match 'auth/:provider/callback', to: 'facebook#create'
   match 'auth/failure', to: redirect('/')
