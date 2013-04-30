@@ -22,9 +22,9 @@ class ApplicationController < ActionController::Base
   # Authorized user
   def current_user
     return @current_user if defined?(@current_user)
-    return nil if session[:user_id].blank?
+    return nil if cookies[:remember_me_token].blank?
 
-    @current_user = User.find_by_id(session[:user_id])
+    @current_user = User.find_by_remember_me_token(cookies[:remember_me_token])
     if @current_user #&& @current_user.adjust_attributes
       @current_user.save!
     end
@@ -57,7 +57,8 @@ class ApplicationController < ActionController::Base
   end
 
   def reset_user_session
-    session[:user_id] = nil
+    cookies[:remember_me_token] = nil
+    cookies.permanent[:remember_me_token] = nil
   end
 
   def redirect_to_with_notice(options = { }, notice = nil, type = :notice)

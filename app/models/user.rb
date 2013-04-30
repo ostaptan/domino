@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   GENDERS = [GENDER_MALE, GENDER_FEMALE]
   ADMIN_ID = 4
 
-  attr_accessible :avatar, :latitude, :longitude
+  attr_accessible :avatar, :latitude, :longitude, :password_reset_sent_at, :password_reset_token, :password
   validates_presence_of :name, :email, :password
   validates_confirmation_of :password
   validates_length_of :password, minimum: 4
@@ -39,6 +39,8 @@ class User < ActiveRecord::Base
 
   geocoded_by :location
   after_validation :geocode
+
+  before_create { generate_token(:remember_me_token) }
 
   class << self
     include UserExt::FacebookIntegration
@@ -105,6 +107,19 @@ class User < ActiveRecord::Base
     self.save!
   end
 
+  def generate_token(column)
+    begin
+      self[column] = SecureRandom.urlsafe_base64
+    end while User.exists?(column => self[column])
+  end
+
+  def send_password_reset
+    generate_token(:password_reset_token)
+    self.password_reset_sent_at = Time.zone.now
+    save!
+    UserMailer.password_reset(self).deliver
+  end
+
   def update_avatar!(avat)
     name = "#{self.id.to_s}.jpg"
     File.open(Rails.root.join('public', 'tmp_avatars', name), 'wb') do |file|
@@ -135,6 +150,11 @@ class User < ActiveRecord::Base
 
   def recommended_min_rating
     1200
+  end
+
+  def reset_password!(attr)
+    self.password = User.encrypt_a_password(attr[:password]) if attr[:password]
+    self.save!
   end
 
   def register(attr)

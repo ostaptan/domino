@@ -4,7 +4,7 @@ module Domino::UsersHelper
     size = small ? "70x70" :"200x200"
     size = '30x30' if tiny
     if user.from_facebook?
-      link_to image_tag(user.avatar), domino_user_path(user.id)
+      link_to image_tag(user.avatar, :size => size), domino_user_path(user.id)
     else
       link_to image_tag("avatars/#{user.avatar}", :size => size), domino_user_path(user.id)
     end

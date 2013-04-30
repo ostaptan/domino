@@ -58,6 +58,8 @@ gem 'faye'
 gem 'will_paginate'
 gem 'foreman'
 
+gem 'activeadmin'
+
 gem 'exception_notification'
 gem 'omniauth-facebook'
 gem 'geocoder'

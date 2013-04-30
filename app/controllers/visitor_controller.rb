@@ -46,7 +46,11 @@ class VisitorController < ApplicationController
 
     raise "Admin can't be active" if user.is_admin?
 
-    session[:user_id] = user.id
+    if params[:remember_me]
+      cookies.permanent[:remember_me_token] = user.remember_me_token
+    else
+      cookies[:remember_me_token] = user.remember_me_token
+    end
 
     redirect_to redirect_url
     true

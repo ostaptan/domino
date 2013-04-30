@@ -5401,7 +5401,7 @@ input[type="submit"].btn.btn-mini {
 .popover {
   position: relative;
   top: 0;
-  left: 400;
+  left: 0;
   z-index: 1010;
   max-width: 276px;
   padding: 1px;

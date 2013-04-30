@@ -9,9 +9,9 @@
       %p
         = password_field_tag :password, nil, :placeholder => 'Password'
       %p
-        = link_to t('users.login.forgot'), forgot_visitor_index_path, :class => 'forgot'
-      %p{:class=>'remember'}
-        = check_box_tag :remember_me
+        = link_to t('users.login.forgot'), new_password_reset_path, class: 'forgot'
+      %div.remember
+        = check_box_tag :remember_me, 1, params[:remember_me]
         = t('users.login.remember_me')
       %p
         = submit_tag t('users.login.sign_in'), :class => 'btn btn-large btn-primary'

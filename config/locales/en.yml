@@ -53,6 +53,7 @@ en:
     title: "Title"
     content: "Content"
     ago: "ago"
+
   datetime:
       distance_in_words:
         half_a_minute: "half a minute"
@@ -104,6 +105,15 @@ en:
         short: ! '%d %b %H:%M'
       pm: pm
 
+  reset_password:
+    update_password: "Update Password"
+    reset_password: "Reset Password"
+    hint: "Be aware that you cannot change password if your user is registered from facebook."
+    email_sent_reset: "Email sent with password reset instructions."
+    pass_expired: "Password reset has expired."
+    pass_reset: "Password has been reset!"
+    confirmation_not_match: "Password confirmation do not match!"
+
   about:
     description: "dsgdfgsdfgsdf dfs gs dfg sg ert awgfsgawasd gas g asd gawegas gas ga sdg "
     header: "About Project"
@@ -114,6 +124,12 @@ en:
                   The most popular type of play are layout games, which fall into two main categories, blocking games and scoring games.
                   Most domino games are blocking games, i.e. the objective is to empty one's hand while blocking the opponent's. In the end, a score may be determined by counting the pips in the losing players' hands.
                   In scoring games the scoring is different and happens mostly during game play, making it the principal objective."
+
+  user_mailer:
+    password_reset:
+      subject: "Password Reset"
+      header: "To reset your password, click the URL below."
+      body: "If you did not request your password to be reset, just ignore this email and your password will continue to stay the same."
 
 
   advertise:

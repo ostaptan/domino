@@ -1,4 +1,9 @@
 Domino::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
+  get "password_resets/new"
+
   get "chat/index"
 
   root :to => "visitor#welcome"
@@ -22,6 +27,8 @@ Domino::Application.routes.draw do
       get :forgot
     end
   end
+
+  resources :password_resets
 
   namespace :domino do
     resources :users do
@@ -66,13 +73,13 @@ Domino::Application.routes.draw do
 
   end
 
-  match '/admin' => 'admin#index', :as => :admin_index
-  namespace :admin do
-
-    resources :users
-
-
-  end
+  # match '/admin' => 'admin#index', :as => :admin_index
+  #namespace :admin do
+  #
+  #  resources :users
+  #
+  #
+  #end
 
 
 

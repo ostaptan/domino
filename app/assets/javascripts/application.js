@@ -15,5 +15,5 @@
 //= require_tree .
 //= /public/javascripts/application.js
 //= require validate_helper
-//= require rails.validations.js
+//= require rails.validations
 //= require rails.validations.simple_form

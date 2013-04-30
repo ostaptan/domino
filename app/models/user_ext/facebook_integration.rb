@@ -20,7 +20,7 @@ module UserExt
           user.surname = auth.info.last_name
           user.oauth_token = auth.credentials.token
           user.avatar = auth.info.image
-          user.password = '1'
+          user.password = "facebook_pass#{rand(1000000)}_#{rand(1000000)}"
           user.email = auth.info.email
           user.oauth_expires_at = Time.at(auth.credentials.expires_at)
           user.save!
