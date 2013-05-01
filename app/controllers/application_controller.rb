@@ -31,19 +31,30 @@ class ApplicationController < ActionController::Base
     @current_user
   end
 
+  def send_sms!
+    @nexmo = Nexmo::Client.new(NEXMO_CONFIG[:api_key], NEXMO_CONFIG[:api_secret])
+    response = @nexmo.send_message({:to => current_user.phone, :from => 'Domino', :text => 'Hello world from Domino'})
+
+    if response.ok?
+      puts 'SMS SENT!!!!!!'
+    else
+      # handle the error
+    end
+  end
+
   helper_method :current_user
 
   # Anonymous user
   def visitor_user
     return @visitor_user if defined?(@visitor_user)
 
-    @visitor_user = Visitor::User.find(session[:session_id])
+    @visitor_user = User.find_by_remember_me_token(cookies[:remember_me_token]) unless cookies[:remember_me_token].blank?
   end
 
   helper_method :visitor_user
 
   def logged_in?
-    current_user.present?
+    current_user.present? || visitor_user.present?
   end
 
   helper_method :logged_in?

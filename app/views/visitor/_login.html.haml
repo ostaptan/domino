@@ -15,6 +15,7 @@
         = t('users.login.remember_me')
       %p
         = submit_tag t('users.login.sign_in'), :class => 'btn btn-large btn-primary'
-        = link_to t('users.login.register'), "#myModal", :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
+        = link_to t('users.login.register'), "#registerModal", :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
 
-= render :partial => 'register'
+    = link_to 'Or try it free', action: :create_guest
+= render :partial => 'register_modal'

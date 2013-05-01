@@ -1,0 +1,699 @@
+<!DOCTYPE HTML SYSTEM>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Brakeman Report</title>
+  <script>
+    function toggle(context) {
+      var elem = document.getElementById(context);
+
+      if (elem.style.display != "block")
+        elem.style.display = "block";
+      else
+        elem.style.display = "none";
+
+      elem.parentNode.scrollIntoView();
+    }
+  </script>
+  <style>
+    /* CSS style used for HTML reports */
+
+body {
+  font-family: sans-serif;
+  color: #161616;
+}
+
+a {
+  color: #161616;
+}
+
+p {
+  font-weight: bold;
+  font-size: 11pt;
+  color: #2D0200;
+ }
+
+ th {
+   background-color: #980905;
+   border-bottom: 5px solid #530200;
+   color: white;
+   font-size: 11pt;
+   padding: 1px 8px 1px 8px;
+ }
+
+ td {
+   border-bottom: 2px solid white;
+   font-family: monospace;
+   padding: 5px 8px 1px 8px;
+ }
+
+ table {
+   background-color: #FCF4D4;
+   border-collapse: collapse;
+ }
+
+ h1 {
+   color: #2D0200;
+   font-size: 14pt;
+ }
+
+ h2 {
+   color: #2D0200;
+   font-size: 12pt;
+ }
+
+ span.high-confidence {
+   font-weight:bold;
+   color: red;
+ }
+
+ span.med-confidence {
+ }
+
+ span.weak-confidence {
+   color:gray;
+ }
+
+ div.warning_message {
+   cursor: pointer;
+ }
+
+ div.warning_message:hover {
+   background-color: white;
+ }
+
+ table caption {
+   background-color: #FFE;
+   padding: 2px;
+ }
+
+ table.context {
+   margin-top: 5px;
+   margin-bottom: 5px;
+   border-left: 1px solid #90e960;
+   color: #212121;
+ }
+
+ tr.context {
+   background-color: white;
+ }
+
+ tr.first {
+   border-top: 1px solid #7ecc54;
+   padding-top: 2px;
+ }
+
+ tr.error {
+  background-color: #f4c1c1 !important
+ }
+
+ tr.near_error {
+  background-color: #f4d4d4 !important
+ }
+
+ tr.alt {
+   background-color: #e8f4d4;
+ }
+
+ td.context {
+   padding: 2px 10px 0px 6px;
+   border-bottom: none;
+ }
+
+ td.context_line {
+   padding: 2px 8px 0px 7px;
+   border-right: 1px solid #b3bda4;
+   border-bottom: none;
+   color: #6e7465;
+ }
+
+ pre.context {
+   margin-bottom: 1px;
+ }
+
+ .user_input {
+   background-color: #fcecab;
+ }
+
+ div.render_path {
+   display: none;
+   background-color: #ffe;
+   padding: 5px;
+   margin: 2px 0px 2px 0px;
+ }
+
+ div.template_name {
+   cursor: pointer;
+ }
+
+ div.template_name:hover {
+   background-color: white;
+ }
+
+  </style>
+</head>
+<body>
+
+<h1>Brakeman Report</h1>
+<table>
+  <tr>
+    <th>Application Path</th>
+    <th>Rails Version</th>
+    <th>Brakeman Version</th>
+    <th>Report Time</th>
+    <th>Checks Performed</th>
+  </tr>
+  <tr>
+    <td>/home/ostap/RubymineProjects/domino</td>
+    <td>3.2.13</td>
+    <td>1.9.5
+    <td>
+      2013-04-30 12:26:36 -0700<br><br>
+      3.379216686 seconds
+    </td>
+    <td>BasicAuth, ContentTag, CrossSiteScripting, DefaultRoutes, DigestDoS, EscapeFunction, Evaluation, Execute, FileAccess, FilterSkipping, ForgerySetting, JRubyXML, JSONParsing, LinkTo, LinkToHref, MailTo, MassAssignment, ModelAttributes, ModelSerialize, NestedAttributes, QuoteTableName, Redirect, Render, ResponseSplitting, SQL, SafeBufferManipulation, SanitizeMethods, SelectTag, SelectVulnerability, Send, SendFile, SessionSettings, SingleQuotes, SkipBeforeFilter, StripTags, SymbolDoS, TranslateBug, UnsafeReflection, ValidationRegex, WithoutProtection, YAMLLoad, YAMLParsing</td>
+  </tr>
+</table>
+<br>
+<h2 id='summary'>Summary</h2>
+<table>
+  <tr>
+    <th>Scanned/Reported</th>
+    <th>Total</th>
+  </tr>
+  <tr>
+    <td>Controllers</td>
+    <td>11</td>
+  </tr>
+  <tr>
+    <td>Models</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>Templates</td>
+    <td>59</td>
+  </tr>
+  <tr>
+    <td>Errors</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>Security Warnings</td>
+    <td>6 <span class='high-confidence'>(0)</span></td>
+  </tr>
+</table>
+<br>
+<table>
+  <tr>
+    <th>Warning Type</th>
+    <th>Total</th>
+  </tr>
+  
+  <tr>
+    <td>Remote Code Execution</td>
+    <td>6</td>
+  </tr>
+  
+</table>
+<br>
+<p>View Warnings</p>
+<table>
+  <tr>
+    <th>Confidence</th>
+    <th>Template</th>
+    <th>Warning Type</th>
+    <th>Message</th>
+  </tr>
+
+  <tr>
+    <td><span class='med-confidence'>Medium</span></td>
+    <td>
+      
+        <div class="template_name" onClick="toggle('callers0')" >
+          <div>
+            domino/games/online/_battle-field (Template:domino/games/show)
+          </div>
+          <div class="render_path" id="callers0" >
+            Domino::GamesController#show &rarr; Template:domino/games/show &rarr; domino/games/online/_battle-field
+          </div>
+        </div>
+      
+    </td>
+    <td><a rel="no-referrer" href="http://brakemanscanner.org/docs/warning_types/remote_code_execution/">Remote Code Execution</a></td>
+    <td><div class='warning_message' onClick="toggle('context1');toggle('message1');toggle('full_message1')" ><span id='message1' style='display:block' >Unsafe Reflection method const_get called with model attribute near line 3: DominoGame.const_get(Game...</span><span id='full_message1' style='display:none'>Unsafe Reflection method const_get called with model attribute near line 3: DominoGame.const_get(<span class="user_input">Game.find_by_id(params[:id])</span>.game_type.camelize)</span><table id='context1' class='context' style='display:none'><caption>app/views/domino/games/online/_battle-field.html.haml</caption>        <tr class='context first'>
+          <td class='context_line'>
+            <pre class='context'>1</pre>
+          </td>
+          <td class='context'>
+            <pre class='context'>%div#battle-field</pre>
+          </td>
+        </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>2</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  - #{@domino_game.battle_field.first_bone}</pre>
+            </td>
+          </tr>
+          <tr class='context error'>
+            <td class='context_line'>
+              <pre class='context'>3</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  - drop = &quot;##{@domino_game.first_bone}&quot;</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>4</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  - can_drop = 'true'</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>5</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  - if @domino_game.battle_field.bones.blank?</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>6</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    %div{:id=&gt;&quot;firstPlace&quot;,:class=&gt;&quot;firstPlace&quot;, 'data-can-drop'=&gt; can_drop,'data-which-drop'=&gt; drop}</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>7</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      Drop here to move!</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>8</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  - else</pre>
+            </td>
+          </tr>
+</table></div></td>
+  </tr>
+
+  <tr>
+    <td><span class='med-confidence'>Medium</span></td>
+    <td>
+      
+        <div class="template_name" onClick="toggle('callers1')" >
+          <div>
+            domino/games/online/_h_player_bones (Template:domino/games/show)
+          </div>
+          <div class="render_path" id="callers1" >
+            Domino::GamesController#show &rarr; Template:domino/games/show &rarr; domino/games/online/_h_player_bones
+          </div>
+        </div>
+      
+    </td>
+    <td><a rel="no-referrer" href="http://brakemanscanner.org/docs/warning_types/remote_code_execution/">Remote Code Execution</a></td>
+    <td><div class='warning_message' onClick="toggle('context2');toggle('message2');toggle('full_message2')" ><span id='message2' style='display:block' >Unsafe Reflection method const_get called with model attribute near line 4: DominoGame.const_get(Game...</span><span id='full_message2' style='display:none'>Unsafe Reflection method const_get called with model attribute near line 4: DominoGame.const_get(<span class="user_input">Game.find_by_id(params[:id])</span>.game_type.camelize)</span><table id='context2' class='context' style='display:none'><caption>app/views/domino/games/online/_h_player_bones.html.haml</caption>        <tr class='context first'>
+          <td class='context_line'>
+            <pre class='context'>1</pre>
+          </td>
+          <td class='context'>
+            <pre class='context'>&lt;!-- Here player is NOT a user(instance of model User) but a DominoGame::Player instance --&gt;</pre>
+          </td>
+        </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>2</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>%h3#player_desc</pre>
+            </td>
+          </tr>
+          <tr class='context near_error'>
+            <td class='context_line'>
+              <pre class='context'>3</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  = player.description</pre>
+            </td>
+          </tr>
+          <tr class='context alt error'>
+            <td class='context_line'>
+              <pre class='context'>4</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>- if current_user.can_do_move?(@domino_game)</pre>
+            </td>
+          </tr>
+          <tr class='context near_error'>
+            <td class='context_line'>
+              <pre class='context'>5</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  -if current_user.can_do_move?(@domino_game)</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>6</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    - player.bones.each do |bone|</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>7</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      = content_tag :div, nil, :class =&gt; bone_h_class(bone), :id =&gt; &quot;#{bone}&quot;</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>8</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  - else</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>9</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    - player.bones.each do |bone|</pre>
+            </td>
+          </tr>
+</table></div></td>
+  </tr>
+
+  <tr>
+    <td><span class='med-confidence'>Medium</span></td>
+    <td>
+      
+        <div class="template_name" onClick="toggle('callers2')" >
+          <div>
+            domino/games/online/_market (Template:domino/games/show)
+          </div>
+          <div class="render_path" id="callers2" >
+            Domino::GamesController#show &rarr; Template:domino/games/show &rarr; domino/games/online/_market
+          </div>
+        </div>
+      
+    </td>
+    <td><a rel="no-referrer" href="http://brakemanscanner.org/docs/warning_types/remote_code_execution/">Remote Code Execution</a></td>
+    <td><div class='warning_message' onClick="toggle('context3');toggle('message3');toggle('full_message3')" ><span id='message3' style='display:block' >Unsafe Reflection method const_get called with model attribute near line 1: DominoGame.const_get(Game...</span><span id='full_message3' style='display:none'>Unsafe Reflection method const_get called with model attribute near line 1: DominoGame.const_get(<span class="user_input">Game.find_by_id(params[:id])</span>.game_type.camelize)</span><table id='context3' class='context' style='display:none'><caption>app/views/domino/games/online/_market.html.haml</caption>        <tr class='context first error'>
+          <td class='context_line'>
+            <pre class='context'>1</pre>
+          </td>
+          <td class='context'>
+            <pre class='context'>- unless @domino_game.market.blank?</pre>
+          </td>
+        </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>2</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  %div#market</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>3</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    - if current_user.can_do_move?(@domino_game)</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>4</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      = link_to content_tag(:div, nil, :class =&gt; bone_v_class_hidden), take_from_market_domino_games_path(@game_db.id), :remote =&gt;true, :id=&gt;'market_link'</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>5</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    - else</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>6</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      = content_tag(:div, nil, :class =&gt; bone_v_class_hidden)</pre>
+            </td>
+          </tr>
+</table></div></td>
+  </tr>
+
+  <tr>
+    <td><span class='med-confidence'>Medium</span></td>
+    <td>
+      
+        <div class="template_name" onClick="toggle('callers3')" >
+          <div>
+            domino/games/online/_v_player_bones (Template:domino/games/show)
+          </div>
+          <div class="render_path" id="callers3" >
+            Domino::GamesController#show &rarr; Template:domino/games/show &rarr; domino/games/online/_v_player_bones
+          </div>
+        </div>
+      
+    </td>
+    <td><a rel="no-referrer" href="http://brakemanscanner.org/docs/warning_types/remote_code_execution/">Remote Code Execution</a></td>
+    <td><div class='warning_message' onClick="toggle('context4');toggle('message4');toggle('full_message4')" ><span id='message4' style='display:block' >Unsafe Reflection method const_get called with model attribute near line 5: DominoGame.const_get(Game...</span><span id='full_message4' style='display:none'>Unsafe Reflection method const_get called with model attribute near line 5: DominoGame.const_get(<span class="user_input">Game.find_by_id(params[:id])</span>.game_type.camelize)</span><table id='context4' class='context' style='display:none'><caption>app/views/domino/games/online/_v_player_bones.html.haml</caption>        <tr class='context first'>
+          <td class='context_line'>
+            <pre class='context'>1</pre>
+          </td>
+          <td class='context'>
+            <pre class='context'>&lt;!-- Here player is NOT a user(instance of model User) but a DominoGame::Player instance --&gt;</pre>
+          </td>
+        </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>2</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>%h3</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>3</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  = player.description</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>4</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>- if player.player_id == current_user.id</pre>
+            </td>
+          </tr>
+          <tr class='context error'>
+            <td class='context_line'>
+              <pre class='context'>5</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  -if current_user.can_do_move?(@domino_game)</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>6</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    - player.bones.each do |bone|</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>7</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      = content_tag :div, nil, :class =&gt; bone_v_class(bone), :id =&gt; &quot;#{bone}&quot;</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>8</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  - else</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>9</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    - player.bones.each do |bone|</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>10</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      = content_tag :div, nil, :class =&gt; bone_v_class(bone)</pre>
+            </td>
+          </tr>
+</table></div></td>
+  </tr>
+
+  <tr>
+    <td><span class='med-confidence'>Medium</span></td>
+    <td>
+      
+        domino/games/show (Domino::GamesController#show)
+      
+    </td>
+    <td><a rel="no-referrer" href="http://brakemanscanner.org/docs/warning_types/remote_code_execution/">Remote Code Execution</a></td>
+    <td><div class='warning_message' onClick="toggle('context5');toggle('message5');toggle('full_message5')" ><span id='message5' style='display:block' >Unsafe Reflection method const_get called with model attribute near line 13: DominoGame.const_get(Gam...</span><span id='full_message5' style='display:none'>Unsafe Reflection method const_get called with model attribute near line 13: DominoGame.const_get(<span class="user_input">Game.find_by_id(params[:id])</span>.game_type.camelize)</span><table id='context5' class='context' style='display:none'><caption>app/views/domino/games/show.html.haml</caption>        <tr class='context first'>
+          <td class='context_line'>
+            <pre class='context'>8</pre>
+          </td>
+          <td class='context'>
+            <pre class='context'>    = render :partial =&gt; 'domino/games/online/market'</pre>
+          </td>
+        </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>10</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    = render :partial =&gt; 'domino/games/online/battle-field'</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>11</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    = render :partial =&gt; 'domino/games/online/rotation_box'</pre>
+            </td>
+          </tr>
+          <tr class='context alt error'>
+            <td class='context_line'>
+              <pre class='context'>13</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    - @domino_game.players.each do |player|</pre>
+            </td>
+          </tr>
+          <tr class='context near_error'>
+            <td class='context_line'>
+              <pre class='context'>14</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      %div{:id =&gt; &quot;player-#{player.position}&quot;}</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>15</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>        - if player.position%2 != 0</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>16</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>          = render(:partial =&gt; 'domino/games/online/h_player_bones', :locals =&gt; {:player =&gt; player})</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>17</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>        -else</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>18</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>          = render(:partial =&gt; 'domino/games/online/v_player_bones', :locals =&gt; {:player =&gt; player})</pre>
+            </td>
+          </tr>
+</table></div></td>
+  </tr>
+
+  <tr>
+    <td><span class='med-confidence'>Medium</span></td>
+    <td>
+      
+        domino/games/take_from_market (Domino::GamesController#take_from_market)
+      
+    </td>
+    <td><a rel="no-referrer" href="http://brakemanscanner.org/docs/warning_types/remote_code_execution/">Remote Code Execution</a></td>
+    <td><div class='warning_message' onClick="toggle('context6');toggle('message6');toggle('full_message6')" ><span id='message6' style='display:block' >Unsafe Reflection method const_get called with model attribute near line 2: DominoGame.const_get(Game...</span><span id='full_message6' style='display:none'>Unsafe Reflection method const_get called with model attribute near line 2: DominoGame.const_get(<span class="user_input">Game.find_by_id(params[:id])</span>.game_type.camelize)</span><table id='context6' class='context' style='display:none'><caption>app/views/domino/games/take_from_market.js.erb</caption>        <tr class='context first near_error'>
+          <td class='context_line'>
+            <pre class='context'>1</pre>
+          </td>
+          <td class='context'>
+            <pre class='context'>&lt;% broadcast &quot;/online_game/#{@game_db.id}&quot; do %&gt;</pre>
+          </td>
+        </tr>
+          <tr class='context alt error'>
+            <td class='context_line'>
+              <pre class='context'>2</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    $(&quot;#market_desc&quot;).html(&quot;&lt;%= j @domino_game.market.description %&gt;&quot;);</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>4</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    $(&quot;#player-&lt;%= @domino_game.players.current.position %&gt;&quot;).html(&quot;&lt;%= j render(:partial =&gt; 'domino/games/online/h_player_bones', :locals =&gt; {:player =&gt; @domino_game.players.current}) %&gt;&quot;);</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>5</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    $(&quot;#player_desc&quot;).html(&quot;&lt;%= j @domino_game.players.current.description %&gt;&quot;);</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>6</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>&lt;% end %&gt;</pre>
+            </td>
+          </tr>
+</table></div></td>
+  </tr>
+
+</table>
+</body></html>

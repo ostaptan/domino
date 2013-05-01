@@ -1,4 +1,4 @@
-%div{:class=>"modal hide fade", :id=>'myModal', :tabindex=>"-1", :role=>"dialog", 'aria-hidden'=>"true"}
+%div{:class=>"modal hide fade", :id=>'registerModal', :tabindex=>"-1", :role=>"dialog", 'aria-hidden'=>"true"}
   %div.modal-header
     %button{:type=>"button", :class=>"close", 'data-dismiss'=>"modal", 'aria-hidden'=>"true"}
       ×
@@ -11,7 +11,7 @@
       = form.input :email
       = form.input :surname, hint: 'No special characters, please!'
       = form.input :name
-      = form.input :gender, collection: [[t('global.male'), 'm'], [t('global.female'), 'f']], include_blank: false, prompt: "Select your male"
+      = form.input :gender, collection: [[t('global.male'), 'm'], [t('global.female'), 'f']], include_blank: false, prompt: "Select your gender"
       = form.input :password_digest
       = form.input :confirm_password
       %div{:class=>"modal-footer"}

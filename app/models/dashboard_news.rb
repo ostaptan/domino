@@ -12,5 +12,7 @@ class DashboardNews < ActiveRecord::Base
   validates_presence_of :header, :content
 
   include DashboardExt::Likes
+  include Tire::Model::Search
+  include Tire::Model::Callbacks
 
 end

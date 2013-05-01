@@ -5,6 +5,10 @@ class Game < ActiveRecord::Base
 
   include Rules::GameRules
   include Helpers::TranslateHelper
+  include Tire::Model::Search
+  include Tire::Model::Callbacks
+
+
   has_and_belongs_to_many :players, :class_name => User
 
   GAME_TYPES = %w(goat spider)

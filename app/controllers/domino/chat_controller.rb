@@ -2,7 +2,7 @@ class Domino::ChatController < DominoController
 
   def index
     @user = current_user
-    @messages = Message.all
+    @messages = Message.includes(:user).all
     @message = Message.new
   end
 

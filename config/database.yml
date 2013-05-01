@@ -28,15 +28,16 @@ test:
   database: domino_test
   pool: 5
   username: root
-  password:
+  password: root
   host: localhost
 
 production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
+  host: localhost
   database: domino_dev
   pool: 5
   username: root
   password: root
-  host: localhost
+  socket: /var/lib/mysql/mysql.sock

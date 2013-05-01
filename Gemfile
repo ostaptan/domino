@@ -41,39 +41,58 @@ group :production do
   gem 'newrelic-redis'
   gem 'rpm_contrib'
   gem 'newrelic_rpm', "~> 3.5.3"
+  gem 'exception_notification'
 end
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'brakeman'
+  gem 'bullet'
 end
 
+# For client side Javasctipt validations
 gem 'simple_form', '~> 2.0.4'
 gem 'client_side_validations'
 gem 'client_side_validations-simple_form'
+
+
 gem 'heroku'
+# Server
 gem 'thin'
+
+# NOSQL database
 gem 'redis'
+
+# Cometd server
 gem 'faye'
+
+# For Pagination
 gem 'will_paginate'
+
+# Daemonize faye, redis, elasticsearch
 gem 'foreman'
 
+# Cron Jobs
+gem 'whenever', :require => false
+
+# Active Admin extension for countries updating
+gem 'country-select'
+
+# To comunicate with elasticsearch
+gem 'tire'
+
+# Admin Panel helpers
 gem 'activeadmin'
 
-gem 'exception_notification'
+# To authorize with facebook
 gem 'omniauth-facebook'
+
+# To find by location
 gem 'geocoder'
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
 
 # Deploy with Capistrano
 gem 'capistrano'
 
-# To use debugger
-# gem 'debugger'
+# To send sms
+gem 'nexmo'

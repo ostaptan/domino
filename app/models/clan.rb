@@ -2,6 +2,8 @@ class Clan < ActiveRecord::Base
   # attr_accessible :title, :body
 
   include Rules::ClanRules
+  include Tire::Model::Search
+  include Tire::Model::Callbacks
 
   has_many :users
 

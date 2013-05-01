@@ -13,17 +13,20 @@ class User < ActiveRecord::Base
   include Rules::UserRules
   include GamesExt::GamesMethods
   include UserExt::Settings
+  include UserExt::Registration
+  include Tire::Model::Search
+  include Tire::Model::Callbacks
 
   GENDER_MALE = "m"
   GENDER_FEMALE = "f"
   GENDERS = [GENDER_MALE, GENDER_FEMALE]
   ADMIN_ID = 4
 
-  attr_accessible :avatar, :latitude, :longitude, :password_reset_sent_at, :password_reset_token, :password
-  validates_presence_of :name, :email, :password
-  validates_confirmation_of :password
-  validates_length_of :password, minimum: 4
-  validates_uniqueness_of :email
+  attr_accessible :avatar, :latitude, :longitude, :password_reset_sent_at, :password_reset_token, :password, :is_admin, :active, :clan_id
+  validates_presence_of :name, :email, :password, unless: :guest?
+  validates_confirmation_of :password, unless: :guest?
+  validates_length_of :password, minimum: 4, unless: :guest?
+  validates_uniqueness_of :email, unless: :guest?
 
   has_one :history
   has_many :messages
@@ -48,6 +51,10 @@ class User < ActiveRecord::Base
 
   def welcome_phrase
     "Welcome #{self.name}!"
+  end
+
+  def guest?
+    self.guest
   end
 
   def nick_name
@@ -83,6 +90,8 @@ class User < ActiveRecord::Base
     false
   end
 
+  alias_method  :moderator?, :is_admin?
+
   def super_admin?
     self.id == ADMIN_ID
   end
@@ -113,12 +122,6 @@ class User < ActiveRecord::Base
     end while User.exists?(column => self[column])
   end
 
-  def send_password_reset
-    generate_token(:password_reset_token)
-    self.password_reset_sent_at = Time.zone.now
-    save!
-    UserMailer.password_reset(self).deliver
-  end
 
   def update_avatar!(avat)
     name = "#{self.id.to_s}.jpg"
@@ -143,7 +146,6 @@ class User < ActiveRecord::Base
     end
   end
 
-
   def recommended_max_rating
     1300
   end
@@ -157,26 +159,6 @@ class User < ActiveRecord::Base
     self.save!
   end
 
-  def register(attr)
-    #TODO set false unless user confirmed email
-    self.active = true
-    if can_register_user?(attr)
-      self.ip_address = attr[:ip]
-      self.last_ip = attr[:ip]
-      self.name = attr[:name]
-      self.surname = attr[:surname]
-      self.email = attr[:email]
-      self.gender = attr[:gender]
-      self.avatar = 'no_avatar.jpg'
-      self.password = User.encrypt_a_password(attr[:password_digest]) if attr[:password_digest]
-      self.save!
-    else
-      return :attributes_incorrect
-    end
-    @history = History.new.create_for_user!(self.id)
-    #create_history!(self.id)
-    nil
-  end
 
   def authenticate(user_mail, user_password)
     encrypted_password = User.encrypt_a_password(user_password)
@@ -198,10 +180,6 @@ class User < ActiveRecord::Base
     @history = History.new.create_for_user!(id)
   end
 
-  #def create_history!(id)
-  #  @history = History.new
-  #  @history.create_for_user!(id)
-  #end
 
   def online?
     self.last_seen_at < 15.minutes.ago

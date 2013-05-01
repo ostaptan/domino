@@ -13,6 +13,14 @@ class VisitorController < ApplicationController
   def login
   end
 
+  def activate
+    @user = User.find_by_remember_me_token! params[:token] if params[:token]
+    if @user
+      @user.activate_account!
+      @activated = true
+    end
+  end
+
   def set_localization
     callback_url = params[:url] || root_path
     locale = params[:locale] || I18n.default_locale
@@ -31,10 +39,16 @@ class VisitorController < ApplicationController
       if users_array && !users_array.blank?
         url = domino_index_path
         #send_mail(user)
-        return if login_user(users_array.first, url)
+        return if login_user(users_array.first, domino_index_path)
       end
     end
     redirect_to_with_notice root_path, t(:invalid_login_or_password), :error
+  end
+
+  protected
+
+  def register_user
+    @user = User.new
   end
 
   private
@@ -56,15 +70,4 @@ class VisitorController < ApplicationController
     true
   end
 
-  def send_mail(user)
-    m = TMail::Mail.new
-
-    m.subject = "Welcome to Domino"
-    m.to, m.from = user.mail, 'domino'
-    m.date = Time.now
-    m.body = "Thank you for registering in Domino. Your username is #{user.name} and
-              your password is not available to see even for us))"
-
-    ActionMailer::Base.deliver(m)
-  end
 end

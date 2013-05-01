@@ -9,7 +9,7 @@ class DominoController < ApplicationController
 
   def authorize_access
     unless logged_in?
-      redirect_to_with_notice root_path, t(:authorization_required), :error
+      redirect_to_with_notice root_path, t('notices.authorization_required'), :error
     end
   end
 

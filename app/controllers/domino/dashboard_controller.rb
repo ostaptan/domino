@@ -7,7 +7,7 @@ class Domino::DashboardController < DominoController
   def index
     @post = DashboardNews.new
     @comment = DashboardComment.new
-    @posts = DashboardNews.active.order('created_at desc').paginate(page: params[:page], per_page: 5)
+    @posts = DashboardNews.order('created_at desc').paginate(page: params[:page], per_page: 5).includes(:comments, :author)
   end
 
   def show_more

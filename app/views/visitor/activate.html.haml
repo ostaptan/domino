@@ -1,0 +1,8 @@
+%div.password-reset
+  - if @activated
+    %h2
+      = t('notices.account_activated')
+      = link_to t('notices.log_in'), root_path
+  - else
+    %h2{class: 'not-activated'}
+      = t('notices.account_cannot_be_activated')

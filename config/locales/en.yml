@@ -45,6 +45,7 @@ en:
     total: "Total:"
     date: "Date"
     friends: "Friends"
+    comment: "Comment"
     from: "From"
     to: "To"
     opponents: "Opponents:"
@@ -130,6 +131,10 @@ en:
       subject: "Password Reset"
       header: "To reset your password, click the URL below."
       body: "If you did not request your password to be reset, just ignore this email and your password will continue to stay the same."
+    account_activation:
+      subject: "Domino Player Activation Instructions"
+      header: "To activate your account, please click the URL below."
+      body: "If there were troubles with activation of your account, please be quick in informing our support team otan256@gmail.com."
 
 
   advertise:
@@ -143,7 +148,16 @@ en:
 
   notices:
     localization_changed: "Язык успешно изменен на %{count} !"
-
+    you_are_guest: "You logged in as guest. You must first to register in game to have access to this page!"
+    cant_create_guest: "Sorry we cannot create guest user. Try to register!"
+    created_guest_successfully: "Guest user created successfully! Try it out!"
+    passwd_not_match: "Password confirmation do not match!"
+    success_register: "You successfully registered in the game! Check your mail, the email with your player activation instructions must be there!"
+    authorization_required: "Authorization or activating required! To activate your account, please check your mail!"
+    account_activated: "Your account was successfully activated!"
+    log_in: "Log in to start playing!"
+    account_cannot_be_activated: "Your account cannot be activated! Maybe you need to register once more."
+    must_be_moderator: "You must be a moderator to have access to this functionality!!!"
   users:
     sidebar:
       my_games: "My Games"

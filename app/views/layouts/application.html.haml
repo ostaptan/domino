@@ -18,7 +18,8 @@
           = yield
 
         %div.right-container
-          = current_user ? render('navigation/sidebar') : render('navigation/advertise')
+          = render('navigation/sidebar') if current_user && !current_user.guest?
+          = render('navigation/advertise') if !current_user || current_user.guest?
       %div.footer
         = render :template => 'navigation/footer'
 

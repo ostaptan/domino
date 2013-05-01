@@ -9,7 +9,9 @@
     = p.content
   %div.dsh_time
     = time_ago_in_words(p.created_at) + " #{t('global.ago')}"
-
+    (
+    = pluralize p.comments.size, t('global.comment')
+    )
   %div{class: 'dsh_likes pull-right'}
     = link_to  like_post_domino_dashboard_index_path(p.id), remote: true do
       %i.icon-thumbs-up

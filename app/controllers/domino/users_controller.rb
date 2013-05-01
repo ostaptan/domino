@@ -1,10 +1,13 @@
+require 'nexmo'
 class Domino::UsersController < DominoController
 
   include Domino::UsersHelper
 
+  before_filter :ensure_not_guest
+
   def show
     @user = User.find_by_id params[:id]
-    @games = Game.available_games
+    @games = Game.includes(:players).available_games
     @my_current_games = current_user.games.paginate(:page => params[:page], :per_page => 10).order('id ASC')
     @my_finished_games = current_user.finished_games(params[:page]).paginate(:page => params[:page], :per_page => 10).order('id ASC')
   end
@@ -28,6 +31,12 @@ class Domino::UsersController < DominoController
       render :edit
     end
 
+  end
+
+  private
+
+  def ensure_not_guest
+    redirect_to_with_notice domino_games_path, t('notices.you_are_guest') if current_user.guest?
   end
 
 

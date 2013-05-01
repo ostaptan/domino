@@ -1,4 +1,8 @@
 Domino::Application.routes.draw do
+
+  #subdomaining for online games has to be implemented further
+  #match '/' => 'domino/games#show', :constraints => { :subdomain => /.+/ }
+
   root :to => "visitor#welcome"
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -24,11 +28,15 @@ Domino::Application.routes.draw do
       get :about
       post :do_login
       post :process_register
+      get :create_guest
       get :forgot
+      get 'activate/(:token)' => 'visitor#activate', as: :activate
     end
   end
 
   resources :password_resets
+
+  resources :translations
 
   namespace :domino do
     resources :users do

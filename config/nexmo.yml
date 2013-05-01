@@ -1,0 +1,11 @@
+development:
+  api_key: 9f16ff27
+  api_secret: b79737f6
+
+test:
+  api_key: 9f16ff27
+  api_secret: b79737f6
+
+production:
+  api_key: 9f16ff27
+  api_secret: b79737f6
