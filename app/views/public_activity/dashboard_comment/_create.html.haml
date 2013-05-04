@@ -1,0 +1,8 @@
+.activity-tlt
+  = t('activity.comments.created_comment')
+
+- if a.trackable
+  .activity-content
+    = a.trackable.content
+- else
+  = t('activity.global.was_removed')

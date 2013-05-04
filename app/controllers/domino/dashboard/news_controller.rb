@@ -6,6 +6,7 @@ module Domino
         attr = params[:dashboard_news].merge!({author: current_user})
         @post = DashboardNews.create!(attr)
         if @post
+          @post.create_activity :create, owner: current_user
           respond_to do |format|
             format.html { redirect_to domino_dashboard_index_path }
           end
@@ -18,6 +19,7 @@ module Domino
         attr = params[:dashboard_comment].merge!({user_id: current_user.id})
         @comment = DashboardComment.create!(attr)
         if @comment
+          @comment.create_activity :create, owner: current_user
           respond_to do |format|
             format.html { redirect_to domino_dashboard_index_path }
           end

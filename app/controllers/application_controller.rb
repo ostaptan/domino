@@ -54,7 +54,7 @@ class ApplicationController < ActionController::Base
   helper_method :visitor_user
 
   def logged_in?
-    current_user.present? || visitor_user.present?
+    current_user.present?
   end
 
   helper_method :logged_in?

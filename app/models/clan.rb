@@ -4,6 +4,7 @@ class Clan < ActiveRecord::Base
   include Rules::ClanRules
   include Tire::Model::Search
   include Tire::Model::Callbacks
+  include PublicActivity::Common
 
   has_many :users
 

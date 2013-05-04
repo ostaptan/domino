@@ -1,0 +1,5 @@
+%h2
+  = t('notices.no_events') if @events.blank?
+
+- @events.each do |event|
+  = render_activity event, layout: 'layouts/activity_wrapper'

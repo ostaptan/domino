@@ -5,6 +5,8 @@
     = link_to p.author.full_name, domino_user_path(p.author.id)
   %div.dsh_header
     = p.header
+  %button{:type=>"button", :class=>"close", 'data-dismiss'=>"modal", 'aria-hidden'=>"true"}
+    = link_to '×', domino_dashboard_path(p.id), method: :delete, class: 'delete-post', confirm: 'Do you really want to remove this post?'
   %div.dsh_content
     = p.content
   %div.dsh_time

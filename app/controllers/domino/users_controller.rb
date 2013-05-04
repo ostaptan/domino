@@ -5,6 +5,10 @@ class Domino::UsersController < DominoController
 
   before_filter :ensure_not_guest
 
+  def index
+    @users = User.online
+  end
+
   def show
     @user = User.find_by_id params[:id]
     @games = Game.includes(:players).available_games

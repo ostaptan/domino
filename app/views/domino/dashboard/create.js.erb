@@ -1,5 +1,5 @@
 <% broadcast "/general-chat-channel" do %>
-    $("#chat").append("<%= escape_javascript render :partial => 'message', :locals => {:m => @message} %>");
+    $("#chat").append("<%= escape_javascript render :partial => 'domino/dashboard/forum/message', :locals => {:m => @message} %>");
 <% end %>
 $("#input").val('');
 var objDiv = document.getElementById("chat");

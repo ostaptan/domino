@@ -12,6 +12,7 @@
       = link_to friendship.friend.nick_name, domino_user_path(friendship.friend.id)
       %br
       = avatar_tag(friendship.friend, true)
+  = link_to t('users.show.add_to_friends'), domino_friendships_path(:friend_id => @user), :method => :post, class: "btn btn-large btn-success"  if current_user.can_follow?(@user)
 %div{:class=>'framed followers'}
   %p
     = link_to t('users.show.followers', :count => @user.inverse_friends.size), '#yourFollowers', 'data-toggle'=>"modal"
@@ -20,4 +21,3 @@
       = link_to user.nick_name, domino_user_path(user.id)
       %br
       = avatar_tag(user, true)
-= link_to t('users.show.add_to_friends'), domino_friendships_path(:friend_id => @user), :method => :post if current_user.can_follow?(@user)

@@ -7,6 +7,7 @@ class Game < ActiveRecord::Base
   include Helpers::TranslateHelper
   include Tire::Model::Search
   include Tire::Model::Callbacks
+  include PublicActivity::Common
 
 
   has_and_belongs_to_many :players, :class_name => User

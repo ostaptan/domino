@@ -7,6 +7,7 @@ en:
     goat_domino: "Goat domino"
     spider_domino: "Spider domino"
     send: "Send"
+    send_message: "Send message"
     create: "Create"
     join: "Join"
     view: "View"
@@ -136,6 +137,19 @@ en:
       header: "To activate your account, please click the URL below."
       body: "If there were troubles with activation of your account, please be quick in informing our support team otan256@gmail.com."
 
+  activity:
+    dashboard:
+      created_post: "created post"
+      deleted_post: "deleted post"
+    global:
+      was_removed: "which has since been removed"
+    comments:
+      created_comment: "commented"
+    clans:
+      created_clan: "born clan"
+      deleted_clan: "destroyed clan"
+    games:
+      created_game: "created table"
 
   advertise:
     not_member: "Not a member yet??"
@@ -158,6 +172,11 @@ en:
     log_in: "Log in to start playing!"
     account_cannot_be_activated: "Your account cannot be activated! Maybe you need to register once more."
     must_be_moderator: "You must be a moderator to have access to this functionality!!!"
+    post_deleted: "Post successfully deleted!"
+    cannot_post_delete: "This post cannot be deleted!"
+    no_events: "There is no events you can suspect. To see events of other players, you must follow them."
+
+
   users:
     sidebar:
       my_games: "My Games"

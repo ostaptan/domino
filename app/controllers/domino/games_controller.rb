@@ -23,6 +23,7 @@ class Domino::GamesController < DominoController
 
   def create
     if @game.create_one!(params[:game], current_user)
+      @game.create_activity :create, owner: current_user
       respond_to do |format|
         format.html { redirect_to domino_game_path(@game.id) }
       end
