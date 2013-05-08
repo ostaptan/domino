@@ -1,0 +1,15 @@
+%div.modal-header
+  %button{:type=>"button", :class=>"close", 'data-dismiss'=>"modal", 'aria-hidden'=>"true"}
+    ×
+  %h4.modal-hd
+    = t('users.show.you_followed', :count => @user.friendships.size)
+%div.modal-body
+  - for friendship in @user.friendships
+    %div.players-description
+      = link_to friendship.friend.nick_name, dd_user_path(friendship.friend.id)
+      %br
+      = avatar_tag(friendship.friend, true)
+  %div.modal-footer
+    <button class="btn" data-dismiss="modal" aria-hidden="true">
+    = t('global.close')
+    </button>

@@ -1,0 +1,28 @@
+%div.search_box
+  = render 'search_box'
+
+%div.users-list
+  - @users.each do |u|
+    %div.user
+      .avatar
+        = avatar_tag u, true
+      .desc-box
+        .title
+          = link_to u.full_name, dd_user_path(u.id)
+        %br
+        .description
+          %p
+            = u.online_status
+          .rating
+            = t('global.goat_domino')
+            = u.g_rating
+          .rating
+            = t('global.spider_domino')
+            = u.s_rating
+      .action-box
+        %p
+          = link_to t('users.show.add_to_friends'), '#',:class => "btn btn-block btn-primary disabled"
+        %p
+          = link_to t('global.send_message'), '#',:class => "btn  btn-block btn-primary disabled"
+        %p
+          = link_to t('global.play'), '#',:class => "btn btn-block btn-primary disabled"

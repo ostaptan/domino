@@ -4,6 +4,7 @@
 en:
   global:
     domino: "Domino"
+    dynamic_games: 'Dynamic Games'
     goat_domino: "Goat domino"
     spider_domino: "Spider domino"
     send: "Send"
@@ -205,10 +206,10 @@ en:
       register: "Register"
       forgot: "Forgot your password? Click here!"
       remember_me: "Remember me"
-      domino_description: "Magnificent game for playing simple domino of spider domino!"
+      domino_description: "Magnificent game portal with all social aspects!"
       please_sign_in: "Please sign in, or"
       sign_in: "Sign in >"
-      playing_domino_now: "Playing domino now:"
+      playing_domino_now: "Playing games on portal now:"
 
 
   games:
@@ -235,6 +236,7 @@ en:
     playing: "Playing"
     players: "%{count} players"
     minutes_per_move: "%{count} minutes per move"
+    view: "View"
 
   clans:
     header: "Clans"

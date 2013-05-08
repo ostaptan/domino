@@ -9,7 +9,7 @@
         - else
           = image_tag 'avatars/no_avatar.jpg', width: "70", height: "70"
       - if a.owner
-        = link_to a.owner.full_name, domino_user_path(a.owner.id)
+        = link_to a.owner.full_name, dd_user_path(a.owner.id)
       - else
         Someone
     .details

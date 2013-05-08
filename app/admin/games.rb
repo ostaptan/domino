@@ -1,3 +1,3 @@
-ActiveAdmin.register Game do
+ActiveAdmin.register DominoGame do
   
 end

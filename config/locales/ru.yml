@@ -1,6 +1,7 @@
 ru:
   global:
     domino: "Домино"
+    dynamic_games: 'Dynamic Games'
     goat_domino: "На козла"
     spider_domino: "Паук"
     send: "Отослать"
@@ -227,6 +228,7 @@ ru:
     playing: "Играет."
     players: "%{count} игроков"
     minutes_per_move: "%{count} минут на ход"
+    view: "Смотреть"
 
   clans:
     header: "Кланы"

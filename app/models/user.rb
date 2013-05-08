@@ -34,7 +34,7 @@ class User < ActiveRecord::Base
   has_many :friends, :through => :friendships
   has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
   has_many :inverse_friends, :through => :inverse_friendships, :source => :user
-  has_and_belongs_to_many :games
+  has_and_belongs_to_many :domino_games
   has_many :news, :class_name => DashboardNews
   has_many :comments, :class_name => DashboardComment
 
@@ -42,6 +42,8 @@ class User < ActiveRecord::Base
 
   geocoded_by :location
   after_validation :geocode
+
+  scope :active, where(active: true)
 
   before_create { generate_token(:remember_me_token) }
 
@@ -180,9 +182,16 @@ class User < ActiveRecord::Base
     @history = History.new.create_for_user!(id)
   end
 
+  def online_status
+    'Online' if self.online?
+  end
 
   def online?
-    self.last_seen_at < 15.minutes.ago
+    self.last_seen_at > 15.minutes.ago
+  end
+
+  def self.online
+    active.select {|u| u.online?}
   end
 
   def self.exists_email?(email)

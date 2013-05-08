@@ -54,7 +54,7 @@ class VisitorController < ApplicationController
   private
 
   def login_user(user, redirect_url = nil)
-    redirect_url ||= { :controller => 'domino' }
+    redirect_url ||= { :controller => 'dd' }
 
     return false unless user.active?
 

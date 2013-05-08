@@ -1,57 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/lib/domino_game/players_list.rb" line="59" />
+    <bookmark url="file://$PROJECT_DIR$/lib/dominos_game/players_list.rb" line="59" />
     <bookmark url="file://$PROJECT_DIR$/app/assets/javascripts/domino/online_games.js.coffee" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d126bee-43f7-48cb-924e-adb6ee91b6c8" name="Default" comment="moderator translations added. inspection code and database injuries added. sms sending plugin configured. cron jobs added and configured. guest user implemented &amp; bugfixed. registration mails sending for activating player and validating email implemented.elascticsearch began to be implemented. clan_id column bug fixed.deploy configurations added.scheduler implemented.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/_activity_wrapper.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/public_activity/clans/_create.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/public_activity/dashboard_comment/_create.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/public_activity/dashboard_news/_create.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/public_activity/game/_create.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/public_activity/clans/_delete.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/public_activity/dashboard_news/_delete.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/domino/users/_search_box.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/activity.css.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/icons/dashboard_comment.create.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/icons/dashboard_news.create.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/icons/dashboard_news.delete.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/icons/game.create.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/domino/users/index.html.haml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/domino/chat.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/domino/chat_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/domino/chat_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/domino/chat/index.html.haml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/chat/_message.html.haml" afterPath="$PROJECT_DIR$/app/views/domino/dashboard/forum/_message.html.haml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/chat/_messages.html.haml" afterPath="$PROJECT_DIR$/app/views/domino/dashboard/forum/_messages.html.haml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/chat/create.js.erb" afterPath="$PROJECT_DIR$/app/views/domino/dashboard/create.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/domino/dashboard/_events.html.haml" afterPath="$PROJECT_DIR$/app/views/domino/dashboard/_events.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/domino/dashboard/_forum.html.haml" afterPath="$PROJECT_DIR$/app/views/domino/dashboard/_forum.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/domino/friendships/_friends.html.haml" afterPath="$PROJECT_DIR$/app/views/domino/friendships/_friends.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/domino/dashboard/news/_post.html.haml" afterPath="$PROJECT_DIR$/app/views/domino/dashboard/news/_post.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+    <list default="true" id="9d126bee-43f7-48cb-924e-adb6ee91b6c8" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130503200833_create_activities.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130507234146_rename_games_users_table.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/dd.css.scss" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/domino.css.scss" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/domino/clans_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dd/clans_controller.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/domino/dashboard/news_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dd/dashboard/news_controller.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/domino/dashboard_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dd/dashboard_controller.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/domino/friendships_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dd/friendships_controller.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/domino/games_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dd/games_controller.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/domino/online_ext/ajax_handle_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dd/online_ext/ajax_handle_controller.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/domino/online_ext/common_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dd/online_ext/common_controller.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/domino/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dd/users_controller.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/domino_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dd_controller.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/helpers/domino/dashboard_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/dd/dashboard_helper.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/helpers/domino/games_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/dd/games_helper.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/helpers/domino/users_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/dd/users_helper.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/models/game.rb" afterPath="$PROJECT_DIR$/app/models/domino_game.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/clans/index.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/clans/index.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/dashboard/_events.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/dashboard/_events.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/dashboard/_forum.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/dashboard/_forum.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/dashboard/_news.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/dashboard/_news.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/dashboard/create.js.erb" afterPath="$PROJECT_DIR$/app/views/dd/dashboard/create.js.erb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/dashboard/dislike_comment.js.erb" afterPath="$PROJECT_DIR$/app/views/dd/dashboard/dislike_comment.js.erb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/dashboard/dislike_post.js.erb" afterPath="$PROJECT_DIR$/app/views/dd/dashboard/dislike_post.js.erb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/dashboard/forum/_message.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/dashboard/forum/_message.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/dashboard/forum/_messages.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/dashboard/forum/_messages.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/dashboard/index.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/dashboard/index.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/dashboard/index.js.erb" afterPath="$PROJECT_DIR$/app/views/dd/dashboard/index.js.erb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/dashboard/like_comment.js.erb" afterPath="$PROJECT_DIR$/app/views/dd/dashboard/like_comment.js.erb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/dashboard/like_post.js.erb" afterPath="$PROJECT_DIR$/app/views/dd/dashboard/like_post.js.erb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/dashboard/news/_comments.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/dashboard/news/_comments.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/dashboard/news/_create_post_modal.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/dashboard/news/_create_post_modal.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/dashboard/news/_dislikers.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/dashboard/news/_dislikers.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/dashboard/news/_likers.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/dashboard/news/_likers.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/dashboard/news/_post.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/dashboard/news/_post.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/dashboard/news/_show_post_model.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/dashboard/news/_show_post_model.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/dashboard/show_more.js.erb" afterPath="$PROJECT_DIR$/app/views/dd/dashboard/show_more.js.erb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/friendships/_friends.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/friendships/_friends.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/friendships/_you_followed_modal.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/friendships/_you_followed_modal.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/friendships/_your_followers_modal.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/friendships/_your_followers_modal.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/games/_current_games.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/games/_current_games.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/games/_find_game_modal.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/games/_find_game_modal.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/games/_finished_games.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/games/_finished_games.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/games/_game_description.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/games/_game_description.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/games/_list_of_games_modal.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/games/_list_of_games_modal.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/games/_new_game_modal.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/games/_new_game_modal.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/games/handle_move.js.erb" afterPath="$PROJECT_DIR$/app/views/dd/games/handle_move.js.erb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/games/index.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/games/index.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/games/index.js.erb" afterPath="$PROJECT_DIR$/app/views/dd/games/index.js.erb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/games/online/_battle-field.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/games/online/_battle-field.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/games/online/_h_player_bones.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/games/online/_h_player_bones.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/games/online/_market.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/games/online/_market.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/games/online/_right_panel.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/games/online/_right_panel.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/games/online/_rotation_box.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/games/online/_rotation_box.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/games/online/_v_player_bones.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/games/online/_v_player_bones.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/games/show.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/games/show.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/games/take_from_market.js.erb" afterPath="$PROJECT_DIR$/app/views/dd/games/take_from_market.js.erb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/users/_friends.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/users/_friends.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/users/_list.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/users/_list.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/users/_search_box.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/users/_search_box.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/users/_statistic.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/users/_statistic.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/users/edit.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/users/edit.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/users/index.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/users/index.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/users/show.html.haml" afterPath="$PROJECT_DIR$/app/views/dd/users/show.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/domino/users/show.js.erb" afterPath="$PROJECT_DIR$/app/views/dd/users/show.js.erb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/domino_game/abstract_bone.rb" afterPath="$PROJECT_DIR$/lib/dominos_game/abstract_bone.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/domino_game/abstract_game.rb" afterPath="$PROJECT_DIR$/lib/dominos_game/abstract_game.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/domino_game/goat/battle_field.rb" afterPath="$PROJECT_DIR$/lib/dominos_game/goat/battle_field.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/domino_game/goat/bone.rb" afterPath="$PROJECT_DIR$/lib/dominos_game/goat/bone.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/domino_game/goat/game.rb" afterPath="$PROJECT_DIR$/lib/dominos_game/goat/game.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/domino_game/goat/move.rb" afterPath="$PROJECT_DIR$/lib/dominos_game/goat/move.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/domino_game/market.rb" afterPath="$PROJECT_DIR$/lib/dominos_game/market.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/domino_game/player.rb" afterPath="$PROJECT_DIR$/lib/dominos_game/player.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/domino_game/player_bones.rb" afterPath="$PROJECT_DIR$/lib/dominos_game/player_bones.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/domino_game/players_list.rb" afterPath="$PROJECT_DIR$/lib/dominos_game/players_list.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/domino_game/spider/game.rb" afterPath="$PROJECT_DIR$/lib/dominos_game/spider/game.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130327211675_create_games.rb" afterPath="$PROJECT_DIR$/db/migrate/20130327211675_create_games.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130409013327_games_users.rb" afterPath="$PROJECT_DIR$/db/migrate/20130409013327_games_users.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130410181227_add_game_rating.rb" afterPath="$PROJECT_DIR$/db/migrate/20130410181227_add_game_rating.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130411021022_refactor_games.rb" afterPath="$PROJECT_DIR$/db/migrate/20130411021022_refactor_games.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130412024416_remove_from_games.rb" afterPath="$PROJECT_DIR$/db/migrate/20130412024416_remove_from_games.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_activity_wrapper.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/_activity_wrapper.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/navigation/_sidebar.html.haml" afterPath="$PROJECT_DIR$/app/views/navigation/_sidebar.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/clan.rb" afterPath="$PROJECT_DIR$/app/models/clan.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboard.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/dashboard.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/dashboard_comment.rb" afterPath="$PROJECT_DIR$/app/models/dashboard_comment.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/domino/dashboard_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/domino/dashboard_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/dashboard_news.rb" afterPath="$PROJECT_DIR$/app/models/dashboard_news.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/en.yml" afterPath="$PROJECT_DIR$/config/locales/en.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/game.rb" afterPath="$PROJECT_DIR$/app/models/game.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/domino/games_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/domino/games_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/navigation/footer.html.haml" afterPath="$PROJECT_DIR$/app/views/navigation/footer.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/games.rb" afterPath="$PROJECT_DIR$/app/admin/games.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/games_ext/games_methods.rb" afterPath="$PROJECT_DIR$/app/models/games_ext/games_methods.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/navigation/header.html.haml" afterPath="$PROJECT_DIR$/app/views/navigation/header.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/domino/dashboard/news_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/domino/dashboard/news_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/online_game.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/online_game.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/visitor_extensions/register.rb" afterPath="$PROJECT_DIR$/app/controllers/visitor_extensions/register.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/ru.yml" afterPath="$PROJECT_DIR$/config/locales/ru.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/rules/user_rules.rb" afterPath="$PROJECT_DIR$/app/models/rules/user_rules.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/domino/users.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/domino/users.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/domino/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/domino/users_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/visitor_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/visitor_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="03455075-c626-4a5b-94ef-db86d65f6751" name="Not to commit" comment="" />
@@ -59,130 +111,130 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/database.yml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367348746500" ignored="false" />
     <file path="/Gemfile" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367610401322" ignored="false" />
-    <file path="/Dummy.txt" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367607339078" ignored="false" />
+    <file path="/Dummy.txt" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367969394798" ignored="false" />
     <file path="/application.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366654138863" ignored="false" />
-    <file path="/routes.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367612412998" ignored="false" />
-    <file path="/application.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367361357840" ignored="false" />
-    <file path="/footer.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366938863786" ignored="false" />
-    <file path="/header.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367623712518" ignored="false" />
-    <file path="/domino.css.scss" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367358630604" ignored="false" />
+    <file path="/routes.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367978541677" ignored="false" />
+    <file path="/application.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367978357944" ignored="false" />
+    <file path="/footer.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367969061598" ignored="false" />
+    <file path="/header.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367972034108" ignored="false" />
+    <file path="/domino.css.scss" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367969048527" ignored="false" />
     <file path="/welcome.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366823104880" ignored="false" />
     <file path="/application.css" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367153948683" ignored="false" />
-    <file path="/application_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367371591336" ignored="false" />
+    <file path="/application_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367971752278" ignored="false" />
     <file path="/domino_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367356584062" ignored="false" />
-    <file path="/user.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367627540971" ignored="false" />
-    <file path="/_sidebar.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366824951838" ignored="false" />
+    <file path="/user.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367969660857" ignored="false" />
+    <file path="/_sidebar.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367972394643" ignored="false" />
     <file path="/20130327211645_create_users.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365246664218" ignored="false" />
     <file path="/20130327211730_create_messages.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1364499450514" ignored="false" />
     <file path="/20130327211659_create_games.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365206204040" ignored="false" />
     <file path="/login.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365339680313" ignored="false" />
     <file path="/20130330091543_add_user_columns.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1364635368181" ignored="false" />
-    <file path="/visitor_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367357564598" ignored="false" />
+    <file path="/visitor_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367971777560" ignored="false" />
     <file path="/register.html.erb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367149794532" ignored="false" />
     <file path="/register.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365456396789" ignored="false" />
     <file path="/fragment.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367354070228" ignored="false" />
-    <file path="/register.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367356348746" ignored="false" />
+    <file path="/register.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367971718999" ignored="false" />
     <file path="/login.html.erb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1364636630034" ignored="false" />
-    <file path="/en.yml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367627193228" ignored="false" />
+    <file path="/en.yml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367978435676" ignored="false" />
     <file path="/bootstrap.css" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367153789587" ignored="false" />
     <file path="/_flash.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366933335412" ignored="false" />
     <file path="/20130330091545_add_user_columns.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365205911092" ignored="false" />
     <file path="/user_rules.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367619104732" ignored="false" />
-    <file path="/show.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366825721063" ignored="false" />
-    <file path="/users_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367627426024" ignored="false" />
+    <file path="/show.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367972219511" ignored="false" />
+    <file path="/users_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367971789241" ignored="false" />
     <file path="/domino.css" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365202094050" ignored="false" />
-    <file path="/games_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367613414639" ignored="false" />
-    <file path="/games_helper.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365205037023" ignored="false" />
-    <file path="/index.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367627116388" ignored="false" />
-    <file path="/game.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367613419462" ignored="false" />
-    <file path="/_statistic.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366826953064" ignored="false" />
+    <file path="/games_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367978213748" ignored="false" />
+    <file path="/games_helper.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367971232033" ignored="false" />
+    <file path="/index.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367972227994" ignored="false" />
+    <file path="/game.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367978263448" ignored="false" />
+    <file path="/_statistic.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367972197928" ignored="false" />
     <file path="/20130330091546_add_user_columns.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365207827595" ignored="false" />
     <file path="/20130327211720_create_histories.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365209444175" ignored="false" />
     <file path="/_list.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366826845042" ignored="false" />
     <file path="/20130330091547_add_user_columns.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365240907715" ignored="false" />
     <file path="/20130327211733_create_histories.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365210741769" ignored="false" />
     <file path="/bones.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365451909520" ignored="false" />
-    <file path="/market.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366661293979" ignored="false" />
-    <file path="/player.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366661783153" ignored="false" />
+    <file path="/market.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367969869138" ignored="false" />
+    <file path="/player.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367978269716" ignored="false" />
     <file path="/README.rdoc" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366674566951" ignored="false" />
     <file path="/Ruby Console" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367628304412" ignored="false" />
     <file path="/history.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365245426669" ignored="false" />
     <file path="/application.js" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365460608296" ignored="false" />
     <file path="/chat_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367351000440" ignored="false" />
     <file path="/message.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366830948542" ignored="false" />
-    <file path="/_messages.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367623290798" ignored="false" />
-    <file path="/create.js.erb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367623532307" ignored="false" />
+    <file path="/_messages.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367977932914" ignored="false" />
+    <file path="/create.js.erb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367978011842" ignored="false" />
     <file path="$PROJECT_DIR$/../chat_sandbox/config/database.yml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365448852608" ignored="false" />
     <file path="/_message.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366830842816" ignored="false" />
     <file path="/_login.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367359411671" ignored="false" />
     <file path="/_register.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367355715046" ignored="false" />
     <file path="/new.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367283162987" ignored="false" />
-    <file path="/temp.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365576952399" ignored="false" />
+    <file path="/temp.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367971105123" ignored="false" />
     <file path="/games.js.coffee" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365462051353" ignored="false" />
     <file path="/_modal.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365465360639" ignored="false" />
     <file path="/20130408235315_add_game_columns.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365472661252" ignored="false" />
-    <file path="/_list_of_games_modal.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366913117628" ignored="false" />
+    <file path="/_list_of_games_modal.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367971930927" ignored="false" />
     <file path="/20130327211661_create_games.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365454473175" ignored="false" />
     <file path="/20130409002218_refactor_game_columns.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365577271753" ignored="false" />
-    <file path="/_new_game_modal.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366849178592" ignored="false" />
+    <file path="/_new_game_modal.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367970260499" ignored="false" />
     <file path="/20130409012012_users_games.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365470467400" ignored="false" />
     <file path="/20130409013327_games_users.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365577344411" ignored="false" />
     <file path="/20130409013328_sdfsdfsd.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365450981822" ignored="false" />
-    <file path="/_current_games.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366836719946" ignored="false" />
+    <file path="/_current_games.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367978418548" ignored="false" />
     <file path="/table.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365452332184" ignored="false" />
     <file path="/game_rules.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365451127766" ignored="false" />
-    <file path="/bone.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366243398407" ignored="false" />
+    <file path="/bone.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367969902761" ignored="false" />
     <file path="/20130409013329_sdfsdfsd.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365454146029" ignored="false" />
     <file path="/20130408235317_add_game_columns.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365577275241" ignored="false" />
     <file path="/20130330091549_add_user_columns.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365848416259" ignored="false" />
     <file path="/20130409013330_sdfsdfsd.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365577363266" ignored="false" />
-    <file path="/_find_game_modal.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366913218594" ignored="false" />
-    <file path="/20130410181227_add_game_rating.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365617565368" ignored="false" />
-    <file path="/abstract_game.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366228113906" ignored="false" />
+    <file path="/_find_game_modal.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367972446691" ignored="false" />
+    <file path="/20130410181227_add_game_rating.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367969974857" ignored="false" />
+    <file path="/abstract_game.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367969875838" ignored="false" />
     <file path="/20130410200925_add_user_indexes_and_last_seen_at.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365624731810" ignored="false" />
     <file path="/redis_support.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365701944719" ignored="false" />
     <file path="/game_properties.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365644929330" ignored="false" />
-    <file path="/common_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366400586633" ignored="false" />
-    <file path="/20130411021022_refactor_games.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365716977759" ignored="false" />
-    <file path="/players_list.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366661645561" ignored="false" />
-    <file path="/player_bones.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366319036036" ignored="false" />
-    <file path="/_game_description.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366849601966" ignored="false" />
+    <file path="/common_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367971175099" ignored="false" />
+    <file path="/20130411021022_refactor_games.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367969983904" ignored="false" />
+    <file path="/players_list.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367978274306" ignored="false" />
+    <file path="/player_bones.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367969841872" ignored="false" />
+    <file path="/_game_description.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367971946380" ignored="false" />
     <file path="/20130412024416_remove_from_games.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365734688872" ignored="false" />
     <file path="/update.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365735484659" ignored="false" />
     <file path="/20130413092901_add_birth.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365850527994" ignored="false" />
     <file path="/edit.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367282267267" ignored="false" />
     <file path="/schema.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365848437309" ignored="false" />
-    <file path="/users_helper.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366937887241" ignored="false" />
+    <file path="/users_helper.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367972158344" ignored="false" />
     <file path="/countries.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365853650765" ignored="false" />
     <file path="/country.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365854313500" ignored="false" />
     <file path="/20130413115116_create_countries.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365854373376" ignored="false" />
     <file path="/20130413121225_add_ips.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1365855180012" ignored="false" />
     <file path="/20130415205354_add_geocode.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366059269281" ignored="false" />
     <file path="/_advertise.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367358985294" ignored="false" />
-    <file path="/index.js.erb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367147708705" ignored="false" />
-    <file path="/_friends.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367622533575" ignored="false" />
-    <file path="/friendships_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366066069006" ignored="false" />
+    <file path="/index.js.erb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367978007651" ignored="false" />
+    <file path="/_friends.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367972295068" ignored="false" />
+    <file path="/friendships_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367971827356" ignored="false" />
     <file path="/friendship.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366064842628" ignored="false" />
     <file path="/_your_followers.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366069349470" ignored="false" />
     <file path="/games.css.scss" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366659204129" ignored="false" />
-    <file path="/_right_panel.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366142363861" ignored="false" />
+    <file path="/_right_panel.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367972256722" ignored="false" />
     <file path="/_player_bones.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366328999645" ignored="false" />
     <file path="/_market.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366662024037" ignored="false" />
     <file path="/games.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366147118042" ignored="false" />
     <file path="/domino_helper.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366331990313" ignored="false" />
     <file path="/bones-default.css.scss" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366392127772" ignored="false" />
     <file path="/games.js" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366396218398" ignored="false" />
-    <file path="/battle_field.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366323877696" ignored="false" />
+    <file path="/battle_field.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367969895714" ignored="false" />
     <file path="/_battle-field.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366391372759" ignored="false" />
     <file path="/move.js.erb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366227247714" ignored="false" />
     <file path="/online_game_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366249152159" ignored="false" />
     <file path="/handle_move.js.erb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366310413750" ignored="false" />
-    <file path="/move.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366403776222" ignored="false" />
-    <file path="/online_game.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366413515838" ignored="false" />
+    <file path="/move.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367969918125" ignored="false" />
+    <file path="/online_game.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367978171620" ignored="false" />
     <file path="/_h_player_bones.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366662824678" ignored="false" />
     <file path="/_v_player_bones.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366662724784" ignored="false" />
     <file path="/market.js" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366657998124" ignored="false" />
-    <file path="/ajax_handle_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366662369960" ignored="false" />
+    <file path="/ajax_handle_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367971858751" ignored="false" />
     <file path="/take_from_market.js.erb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366672317649" ignored="false" />
     <file path="/rules.js" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366406316686" ignored="false" />
     <file path="/pagination.js" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366656553021" ignored="false" />
@@ -198,14 +250,14 @@
     <file path="/20130423184356_users_add_facebook_integration.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366742741219" ignored="false" />
     <file path="/facebook_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367284027039" ignored="false" />
     <file path="/facebook_integration.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367261205614" ignored="false" />
-    <file path="/games_methods.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366762118449" ignored="false" />
+    <file path="/games_methods.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367970230969" ignored="false" />
     <file path="/application_helper.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366752987894" ignored="false" />
     <file path="/admin_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366764042313" ignored="false" />
     <file path="/admin.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366763344916" ignored="false" />
     <file path="/admin_permissions.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366764185225" ignored="false" />
-    <file path="/ru.yml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367627208226" ignored="false" />
-    <file path="/_you_followed_modal.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366826148554" ignored="false" />
-    <file path="/_your_followers_modal.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366826120156" ignored="false" />
+    <file path="/ru.yml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367978450363" ignored="false" />
+    <file path="/_you_followed_modal.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367972363268" ignored="false" />
+    <file path="/_your_followers_modal.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367972368686" ignored="false" />
     <file path="/settings.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366834442173" ignored="false" />
     <file path="/about.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366836060706" ignored="false" />
     <file path="/_about.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366836040107" ignored="false" />
@@ -218,28 +270,28 @@
     <file path="/20130425000027_create_dashboard_comments.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367066257771" ignored="false" />
     <file path="/dashboard_news.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367619448877" ignored="false" />
     <file path="/dashboard_comment.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367613433349" ignored="false" />
-    <file path="/clans_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366913746018" ignored="false" />
+    <file path="/clans_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367971170304" ignored="false" />
     <file path="/dashboard.css.scss" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367623481599" ignored="false" />
-    <file path="/_news.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367147560910" ignored="false" />
+    <file path="/_news.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367977819767" ignored="false" />
     <file path="/_create_post_modal.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367146327045" ignored="false" />
-    <file path="/dashboard_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367623178916" ignored="false" />
-    <file path="/news_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367613377742" ignored="false" />
+    <file path="/dashboard_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367971837658" ignored="false" />
+    <file path="/news_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367971882514" ignored="false" />
     <file path="/20130425205540_add_news_columns.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366932338272" ignored="false" />
-    <file path="/like_post.js.erb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367070934403" ignored="false" />
-    <file path="/dislike_post.js.erb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367070990539" ignored="false" />
+    <file path="/like_post.js.erb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367977998069" ignored="false" />
+    <file path="/dislike_post.js.erb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367977977854" ignored="false" />
     <file path="/20130425232342_add_news_columnsasdasdfgdfd.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366932328117" ignored="false" />
     <file path="/_dislikers.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1366937898866" ignored="false" />
-    <file path="/_comments.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367136186159" ignored="false" />
+    <file path="/_comments.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367977882157" ignored="false" />
     <file path="/20130427123726_sdfsdfsdf.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367066293721" ignored="false" />
     <file path="/likes.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367069532098" ignored="false" />
-    <file path="/like_comment.js.erb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367072000254" ignored="false" />
-    <file path="/dislike_comment.js.erb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367070985481" ignored="false" />
+    <file path="/like_comment.js.erb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367977992144" ignored="false" />
+    <file path="/dislike_comment.js.erb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367977984578" ignored="false" />
     <file path="/20130427140732_sdfsdfsdfggg.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367071671461" ignored="false" />
     <file path="/dashboard.js.coffee" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367074575831" ignored="false" />
-    <file path="/show_more.js.erb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367136212579" ignored="false" />
+    <file path="/show_more.js.erb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367978002417" ignored="false" />
     <file path="/endless_page.js" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367146711409" ignored="false" />
     <file path="/index.js.rjs" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367138651272" ignored="false" />
-    <file path="/_post.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367618956557" ignored="false" />
+    <file path="/_post.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367977848909" ignored="false" />
     <file path="$PROJECT_DIR$/../gold_dust/app/assets/stylesheets/application.scss" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367149302430" ignored="false" />
     <file path="$PROJECT_DIR$/../gold_dust/Gemfile" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367149328240" ignored="false" />
     <file path="$PROJECT_DIR$/../gold_dust/config/initializers/client_side_validations.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367149693310" ignored="false" />
@@ -273,12 +325,27 @@
     <file path="/activities_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367612573470" ignored="false" />
     <file path="/index.html.erb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367612363834" ignored="false" />
     <file path="/_events.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367622816016" ignored="false" />
-    <file path="/_activity_wrapper.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367616377198" ignored="false" />
+    <file path="/_activity_wrapper.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367971990750" ignored="false" />
     <file path="/_create.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367618411956" ignored="false" />
     <file path="/activity.css.scss" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367617525105" ignored="false" />
     <file path="/_delete.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367618130261" ignored="false" />
-    <file path="/_forum.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367623466802" ignored="false" />
+    <file path="/_forum.html.haml" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367977910514" ignored="false" />
     <file path="/users.css.scss" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367626731090" ignored="false" />
+    <file path="$USER_HOME$/Portal/spec/lib/automation/general/amazon_create_server_spec.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367967344345" ignored="false" />
+    <file path="/amazon_create_server_spec.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367967126305" ignored="false" />
+    <file path="$USER_HOME$/Portal/spec/lib/automation/general/bbda_create_sqlserver_spec.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367964417015" ignored="false" />
+    <file path="/bbda_create_sqlserver_spec.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367964384799" ignored="false" />
+    <file path="$USER_HOME$/Portal/lib/script_support/LIBRARY/automation/General/bbda_create_sqlserver.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367964405772" ignored="false" />
+    <file path="/bbda_create_sqlserver.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367962381978" ignored="false" />
+    <file path="/20130507233109_sdfsdf.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367969547677" ignored="false" />
+    <file path="/domino_game.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367970478915" ignored="false" />
+    <file path="/abstract_bone.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367969828311" ignored="false" />
+    <file path="/20130327211675_create_games.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367970063093" ignored="false" />
+    <file path="/games.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367970087556" ignored="false" />
+    <file path="/20130507234146_sdfsdfsdfsdf.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367970135549" ignored="false" />
+    <file path="/dd_controller.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367971699082" ignored="false" />
+    <file path="/dashboard_helper.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367971228822" ignored="false" />
+    <file path="/20130507234146_rename_games_users_table.rb" changelist="9d126bee-43f7-48cb-924e-adb6ee91b6c8" time="1367978749455" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,19 +365,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/domino/users/index.html.haml">
+      <file leaf-file-name="application.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="5" column="29" selection-start="134" selection-end="134" vertical-scroll-proportion="-3.125">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/domino/users_controller.rb">
+      <file leaf-file-name="_current_games.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/dd/games/_current_games.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="15" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
+            <state line="25" column="13" selection-start="540" selection-end="540" vertical-scroll-proportion="-9.5">
               <folding />
             </state>
           </provider>
@@ -319,7 +386,7 @@
       <file leaf-file-name="en.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="40" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
+            <state line="238" column="4" selection-start="8105" selection-end="8117" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -328,16 +395,16 @@
       <file leaf-file-name="ru.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/locales/ru.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="34" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0">
+            <state line="230" column="19" selection-start="9160" selection-end="9160" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="183" column="41" selection-start="4190" selection-end="4190" vertical-scroll-proportion="0.43392858">
+            <state line="20" column="0" selection-start="600" selection-end="600" vertical-scroll-proportion="18.6">
               <folding />
             </state>
           </provider>
@@ -346,23 +413,14 @@
       <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="25" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="domino_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/domino_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="22" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <file leaf-file-name="dd_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/dd_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -370,19 +428,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/domino/users/show.html.haml">
+      <file leaf-file-name="visitor_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/visitor_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="45" selection-start="697" selection-end="697" vertical-scroll-proportion="-12.5">
+            <state line="24" column="0" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_friends.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/domino/friendships/_friends.html.haml">
+      <file leaf-file-name="20130507234146_rename_games_users_table.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20130507234146_rename_games_users_table.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="15" selection-start="739" selection-end="764" vertical-scroll-proportion="-8.75">
+            <state line="11" column="25" selection-start="261" selection-end="261" vertical-scroll-proportion="0.29464287">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/navigation/header.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -409,22 +476,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/domino/dashboard/_events.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/domino/friendships/_friends.html.haml" />
-        <option value="$PROJECT_DIR$/app/controllers/domino/dashboard_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/domino/dashboard/forum/_messages.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/domino/dashboard/_forum.html.haml" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/dashboard.css.scss" />
-        <option value="$PROJECT_DIR$/app/views/domino/dashboard/create.js.erb" />
-        <option value="$PROJECT_DIR$/app/views/navigation/header.html.haml" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/bootstrap.css" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/domino/users.css.scss" />
-        <option value="$PROJECT_DIR$/app/views/domino/users/index.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/dd/dashboard/like_post.js.erb" />
+        <option value="$PROJECT_DIR$/app/views/dd/dashboard/show_more.js.erb" />
+        <option value="$PROJECT_DIR$/app/views/dd/dashboard/index.js.erb" />
+        <option value="$PROJECT_DIR$/app/views/dd/dashboard/create.js.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/online_game.html.haml" />
+        <option value="$PROJECT_DIR$/app/controllers/dd/games_controller.rb" />
+        <option value="$PROJECT_DIR$/lib/dominos_game/goat/game.rb" />
+        <option value="$PROJECT_DIR$/lib/dominos_game/spider/game.rb" />
+        <option value="$PROJECT_DIR$/lib/dominos_game/player.rb" />
+        <option value="$PROJECT_DIR$/lib/dominos_game/players_list.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/dd/games/_current_games.html.haml" />
         <option value="$PROJECT_DIR$/config/locales/en.yml" />
         <option value="$PROJECT_DIR$/config/locales/ru.yml" />
-        <option value="$PROJECT_DIR$/app/controllers/domino/users_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20130507234146_rename_games_users_table.rb" />
       </list>
     </option>
   </component>
@@ -467,7 +534,16 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="RailsProjectView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domino" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -510,7 +586,87 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dominos_game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dominos_game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dominos_game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="goat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -604,6 +760,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="public_activity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="password_resets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -670,7 +848,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="domino" />
+              <option name="myItemId" value="dd" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -696,7 +874,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="domino" />
+              <option name="myItemId" value="dd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="games" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -718,7 +900,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="dd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="games" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="online" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dd" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -744,7 +956,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="domino" />
+              <option name="myItemId" value="dd" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -766,7 +978,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="news" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -784,11 +1008,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="user_ext" />
+              <option name="myItemId" value="dd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forum" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -806,11 +1038,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="rules" />
+              <option name="myItemId" value="dd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clans" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -864,7 +1100,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="domino" />
+              <option name="myItemId" value="dd" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -926,7 +1162,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="domino" />
+              <option name="myItemId" value="dd" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -948,7 +1184,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="dd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="online_ext" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="domino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dd" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1022,36 +1284,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Domino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Domino" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1065,10 +1300,10 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
+    <property name="dynamic.classpath" value="false" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.haml" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1079,14 +1314,14 @@
       <recent name="$PROJECT_DIR$/app/views/domino/dashboard" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/assets/stylesheets" />
+      <recent name="$PROJECT_DIR$/app/assets/stylesheets/domino" />
       <recent name="$PROJECT_DIR$/app/views/domino/dashboard" />
       <recent name="$PROJECT_DIR$/app/views/domino/dashboard/forum" />
       <recent name="$PROJECT_DIR$/app/views" />
-      <recent name="$PROJECT_DIR$/app/views/domino/dashboard/news" />
-      <recent name="$PROJECT_DIR$/app/controllers/domino/dashboard" />
     </key>
   </component>
-  <component name="RunManager" selected="IRB console.Rails console: Domino">
+  <component name="RunManager" selected="Rails.Development: Domino">
     <configuration default="false" name="db:migrate" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="Domino" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -1701,7 +1936,11 @@
       <created>1367371834717</created>
       <updated>1367371834717</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="user lists added. events and forum implemented.">
+      <created>1367628556426</created>
+      <updated>1367628556426</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1728,12 +1967,12 @@
     <frame x="-1" y="24" width="1922" height="1037" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31644145" sideWeight="0.9947761" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995495" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32545045" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14705883" sideWeight="0.6996149" order="4" side_tool="false" content_ui="tabs" x="1142" y="131" width="225" height="240" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26093918" sideWeight="0.6835586" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26414087" sideWeight="0.6835586" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4099099" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277027" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1742,7 +1981,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32545045" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1786,7 +2025,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="moderator translations added. inspection code and database injuries added. sms sending plugin configured. cron jobs added and configured. guest user implemented &amp; bugfixed. registration mails sending for activating player and validating email implemented.elascticsearch began to be implemented. clan_id column bug fixed.deploy configurations added.scheduler implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="user lists added. events and forum implemented." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1818,98 +2057,92 @@
     <MESSAGE value="admin panel added. layouts added. facebook refactored &amp; bug fixed. permissions and extensions improved" />
     <MESSAGE value="localizations added. clans began to develop. dashboard and forum began to develop. rules added. localizations refactored." />
     <MESSAGE value="moderator translations added. inspection code and database injuries added. sms sending plugin configured. cron jobs added and configured. guest user implemented &amp; bugfixed. registration mails sending for activating player and validating email implemented.elascticsearch began to be implemented. clan_id column bug fixed.deploy configurations added.scheduler implemented." />
+    <MESSAGE value="user lists added. events and forum implemented." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="192" />
+      <option name="time" value="193" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/domino/clans_controller.rb">
+    <entry file="file://$PROJECT_DIR$/lib/dominos_game/abstract_bone.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/password_resets.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="36" selection-start="278" selection-end="297" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/navigation/_sidebar.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="62" selection-start="86" selection-end="142" vertical-scroll-proportion="-1.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3344" column="14" selection-start="60873" selection-end="60873" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/domino/users.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="0" selection-start="1079" selection-end="1079" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/domino/users/_search_box.html.haml">
+    <entry file="file://$PROJECT_DIR$/lib/dominos_game/abstract_game.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/domino/users/show.html.haml">
+    <entry file="file://$PROJECT_DIR$/lib/dominos_game/market.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="45" selection-start="697" selection-end="697" vertical-scroll-proportion="-12.5">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/dominos_game/player.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="22" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/dominos_game/player_bones.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/dominos_game/players_list.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="44" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="29" selection-start="134" selection-end="134" vertical-scroll-proportion="-3.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dd/games/_current_games.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="13" selection-start="540" selection-end="540" vertical-scroll-proportion="-9.5">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="40" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
+        <state line="238" column="4" selection-start="8105" selection-end="8117" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/locales/ru.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="34" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0">
+        <state line="230" column="19" selection-start="9160" selection-end="9160" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/domino/friendships/_friends.html.haml">
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="15" selection-start="739" selection-end="764" vertical-scroll-proportion="-8.75">
+        <state line="20" column="0" selection-start="600" selection-end="600" vertical-scroll-proportion="18.6">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/domino/users/index.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/domino/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="15" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/navigation/header.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -1918,21 +2151,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="25" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/domino_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/dd_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="22" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/visitor_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="183" column="41" selection-start="4190" selection-end="4190" vertical-scroll-proportion="0.43392858">
+        <state line="24" column="0" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130507234146_rename_games_users_table.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="25" selection-start="261" selection-end="261" vertical-scroll-proportion="0.29464287">
           <folding />
         </state>
       </provider>

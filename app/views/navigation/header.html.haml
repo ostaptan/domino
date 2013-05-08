@@ -1,7 +1,7 @@
 %div#header
   %div{:class => 'navbar navbar-inverse navbar-fixed-top'}
     %div.navbar-inner
-      = link_to t('global.domino'), root_path, :class => 'brand'
+      = link_to t('global.dynamic_games'), root_path, :class => 'brand'
       %div{:class=>'nav-collapse collapse'}
         %ul{:class=>'nav pull-right'}
           - if current_user
@@ -10,15 +10,15 @@
             %li
               = link_to image_tag('flag-russian-small.jpg'), set_localization_path({locale: :ru, url: request.url})
             %li
-              = link_to t('global.games'), domino_games_path
+              = link_to t('global.games'), dd_games_path
             %li
               = link_to t('global.tournament'), '#'
             %li
-              = link_to t('global.dashboard'), domino_dashboard_index_path
+              = link_to t('global.dashboard'), dd_dashboard_index_path
             %li
-              = link_to t('clans.header'), domino_clans_path
+              = link_to t('clans.header'), dd_clans_path
             %li
-              = link_to t('global.users'), domino_users_path
+              = link_to t('global.users'), dd_users_path
             %li{:class=>'dropdown'}
               %a{:class=>"dropdown-toggle", :id=>"dLabel", :role=>"button", 'data-toggle'=>"dropdown", 'data-target'=>"#", :href=>"/"}
                 %i.icon-user
@@ -26,12 +26,12 @@
                 %b{:class=>"caret"}
               %ul{:class=>"dropdown-menu"}
                 %li
-                  = link_to t('global.home'), domino_user_path(current_user.id) unless current_user.guest?
+                  = link_to t('global.home'), dd_user_path(current_user.id) unless current_user.guest?
                 %li
-                  = current_user.guest? ? link_to(t('users.login.register'), "#registerModal", 'data-toggle'=>"modal") : link_to(t('global.edit'), edit_domino_user_path(current_user.id))
+                  = current_user.guest? ? link_to(t('users.login.register'), "#registerModal", 'data-toggle'=>"modal") : link_to(t('global.edit'), edit_dd_user_path(current_user.id))
                 - if current_user.clan
                   %li
-                    = link_to t('clans.my_clan'), domino_clans_path(current_user.clan.id)
+                    = link_to t('clans.my_clan'), dd_clans_path(current_user.clan.id)
                 %li{:class=>"divider"}
                 %li
                   = link_to t('global.sign_out'), logout_path

@@ -1,0 +1,2 @@
+$("#likes-<%= @post.id %>").empty().append("<%= @post.likes %>");
+$("#popover-<%= @post.id %>").empty().append("<div class='popover'><h3 class='popover-title'>Disikers(<%= @post.dislikers.size %>)</h3><div class='popover-content'><%= escape_javascript(render :partial => 'dd/dashboard/news/dislikers', locals: {dislikers: @post.popover_dislikers})%></div></div>");
