@@ -1,6 +1,6 @@
 %div{:class=>'framed grey'}
   %h4
-    %div{:class=>'left'}
+    %div.left
       = t('global.goat_domino')
     %div{:class=>'right'}
       = current_user.g_rating
@@ -9,7 +9,7 @@
   = render :partial => 'dd/users/list', :locals => {:type => :goat}
 %div{:class=>'framed grey'}
   %h4
-    %div{:class=>'left'}
+    %div.left
       = t('global.spider_domino')
     %div{:class=>'right'}
       = current_user.s_rating

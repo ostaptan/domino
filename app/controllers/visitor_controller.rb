@@ -3,7 +3,7 @@ class VisitorController < ApplicationController
   include VisitorExtensions::Register
 
   def welcome
-    redirect_to domino_index_path if logged_in?
+    redirect_to dd_index_path if logged_in?
     @user = User.new
   end
 

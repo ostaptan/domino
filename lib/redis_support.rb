@@ -1,7 +1,5 @@
 module RedisSupport
 
-  PROJECT_KEY = "#domino#"
-
 #  class RedisLogger < Logger
 #    def initialize
 #      logfile = File.open(RAILS_ROOT + '/log/redis.log', 'a')   # create log file

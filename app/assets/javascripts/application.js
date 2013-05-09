@@ -16,5 +16,4 @@
 //= /public/javascripts/application.js
 //= require validate_helper
 //= require rails.validations
-//= require turbolinks
 //= require rails.validations.simple_form
