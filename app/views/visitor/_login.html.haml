@@ -1,21 +1,20 @@
-%div{:class=>'container'}
-  %h2.form-signin-heading
-    = t('users.login.please_sign_in')
-    = link_to image_tag('facebook_login_button2.png'), "/auth/facebook", id: "sign_in"
-  %h2.form-signin
+%div.login-form
+  %div.text
+    %div.heading
+      = link_to 'Try it free', action: :create_guest
+    %div.subheading
+      = link_to image_tag('facebook_login_button2.png'), "/auth/facebook", id: "sign_in"
+  %div.forgot-pass
+    = link_to t('users.login.forgot'), new_password_reset_path
+  %div.form-signin
     = form_tag :action => :do_login do
-      %p
-        = text_field_tag :email, nil, :placeholder => 'Email'
-      %p
-        = password_field_tag :password, nil, :placeholder => 'Password'
-      %p
-        = link_to t('users.login.forgot'), new_password_reset_path, class: 'forgot'
-      %div.remember
+      = text_field_tag :email, nil, :placeholder => 'Email'
+      = password_field_tag :password, nil, :placeholder => 'Password'
+      = submit_tag t('users.login.sign_in'), :class => 'btn btn-large btn-primary'
+      = link_to t('users.login.register'), "#registerModal", :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
+      %div.remember-me
         = check_box_tag :remember_me, 1, params[:remember_me]
-        = t('users.login.remember_me')
-      %p
-        = submit_tag t('users.login.sign_in'), :class => 'btn btn-large btn-primary'
-        = link_to t('users.login.register'), "#registerModal", :class => 'btn btn-large btn-success', 'data-toggle'=>"modal"
+        %div.small-text
+          = t('users.login.remember_me')
 
-    = link_to 'Or try it free', action: :create_guest
 = render :partial => 'register_modal'

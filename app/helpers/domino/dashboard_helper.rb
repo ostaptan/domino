@@ -1,2 +1,0 @@
-module Domino::DashboardHelper
-end

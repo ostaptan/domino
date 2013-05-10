@@ -28,7 +28,7 @@ module UserExt
         self.email = attr[:email]
         self.gender = attr[:gender]
         self.avatar = 'no_avatar.jpg'
-        self.password = User.encrypt_a_password(attr[:password_digest]) if attr[:password_digest]
+        self.password = User.encrypt_a_password(attr[:password]) if attr[:password]
         self.save!
       else
         return :attributes_incorrect

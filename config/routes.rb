@@ -17,9 +17,9 @@ Domino::Application.routes.draw do
 
   match '/login' => 'visitor#login', :as => :login
   match '/register' => 'visitor#register', :as => :register
-  match '/logout' => 'domino#logout', :as => :logout
+  match '/logout' => 'dd#logout', :as => :logout
 
-  match '/domino' => 'domino#index', :as => :domino_index
+  match '/dd' => 'dd#index', :as => :dd_index
 
   match '/set_localization/(:locale)' => 'visitor#set_localization', as: :set_localization
 
@@ -38,7 +38,7 @@ Domino::Application.routes.draw do
 
   resources :translations
 
-  namespace :domino do
+  namespace :dd do
     resources :users do
       collection do
         get :index

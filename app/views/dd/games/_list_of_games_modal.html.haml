@@ -1,0 +1,39 @@
+%div{:class=>"modal-header"}
+  %button{:type=>"button", :class=>"close", 'data-dismiss'=>"modal", 'aria-hidden'=>"true"}
+    ×
+  %h4{:class=>'modal-hd'}
+    = t('games.select_game')
+%div{:class=>"modal-body"}
+  %p
+    %table{:class=>"table table-striped"}
+      %caption
+        = t('games.list_of_games')
+      %thead
+        %tr
+          %th
+            id
+          %th
+            = t('games.type')
+          %th
+            = t('games.time_per_move')
+          %th
+            = t('games.available_sits')
+      %tbody
+        - @games.each do |game|
+          %tr
+            %td
+              = game.id
+            %td
+              = game.game_type
+            %td
+              = game.time_per_move
+            %td
+              = game.available_sits
+            %td
+              = link_to t('global.view'), dd_game_path(game.id)
+            %td
+              = link_to t('global.join'), dd_game_path(game.id), :method => :put
+  %div{:class=>"modal-footer"}
+    <button class="btn" data-dismiss="modal" aria-hidden="true">
+    = t('global.close')
+    </button>

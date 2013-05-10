@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   end
 
   def online_game?
-    params[:controller] == 'domino/games' && params[:action] == 'show'
+    params[:controller] == 'dd/games' && params[:action] == 'show'
   end
 
   helper_method :online_game?
@@ -33,7 +33,7 @@ class ApplicationController < ActionController::Base
 
   def send_sms!
     @nexmo = Nexmo::Client.new(NEXMO_CONFIG[:api_key], NEXMO_CONFIG[:api_secret])
-    response = @nexmo.send_message({:to => current_user.phone, :from => 'Domino', :text => 'Hello world from Domino'})
+    response = @nexmo.send_message({:to => current_user.phone, :from => 'Dynamic Games ', :text => 'Hello world from Dd'})
 
     if response.ok?
       puts 'SMS SENT!!!!!!'
@@ -54,7 +54,7 @@ class ApplicationController < ActionController::Base
   helper_method :visitor_user
 
   def logged_in?
-    current_user.present? || visitor_user.present?
+    current_user.present?
   end
 
   helper_method :logged_in?

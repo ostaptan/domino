@@ -1,7 +1,7 @@
 class CreateGames < ActiveRecord::Migration
   def change
-    drop_table :games
-    create_table :games do |t|
+    drop_table :domino_games
+    create_table :domino_games do |t|
       t.text :bones
       t.string :game_type, nil => false
       t.integer :time_per_move, :default => 1

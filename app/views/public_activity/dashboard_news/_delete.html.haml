@@ -1,0 +1,8 @@
+.activity-tlt
+  = t('activity.dashboard.deleted_post')
+
+- if a.trackable
+  .activity-content
+    = a.trackable.header
+- else
+  = t('activity.global.was_removed')

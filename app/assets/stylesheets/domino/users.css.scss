@@ -1,3 +1,63 @@
 // Place all the styles related to the domino/users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.users-list {
+  padding: 5px;
+  margin-left: 50px;
+}
+
+.user {
+  border: solid 1px #444444;
+  background-color: #528564;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  min-height: 150px;
+
+  .avatar {
+    border: solid 2px;
+    max-width: 70px;
+    display: inline-block;
+    margin-left: 6px;
+    margin-top: 6px;
+  }
+
+  .desc-box {
+    display: inline-block;
+
+    .title {
+      display: inline-block;
+      text-align: left;
+      font-size: 15px;
+      padding-left: 10px;
+      a {
+        color: #000000;
+      }
+    }
+
+    .description {
+      display: inline-block;
+      text-align: left;
+      font-size: 10px;
+      padding-left: 10px;
+
+      .rating{
+        margin-bottom: 0px;
+        font-style: italic;
+      }
+    }
+  }
+
+  .action-box {
+    float: right;
+    text-align: left;
+    padding: 7px;
+    margin-right: 7px;
+    margin-top: 7px;
+  }
+}
+
+.search_box {
+
+}

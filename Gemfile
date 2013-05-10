@@ -96,3 +96,5 @@ gem 'capistrano'
 
 # To send sms
 gem 'nexmo'
+
+gem 'public_activity'

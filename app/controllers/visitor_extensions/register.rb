@@ -10,14 +10,14 @@ module VisitorExtensions
       if notice
         redirect_to_with_notice root_path, t(notice), :error
       else
-        redirect_to_with_notice domino_index_path, t('notices.success_register'), :success
+        redirect_to_with_notice dd_index_path, t('notices.success_register'), :success
       end
     end
 
     def create_guest
       register_user
       if @user.new_guest
-        redirect_to_with_notice domino_games_path, t('notices.created_guest_successfully') if login_user(@user)
+        redirect_to_with_notice dd_games_path, t('notices.created_guest_successfully') if login_user(@user)
       else
         redirect_to_with_notice root_path, t('notices.cant_create_guest'), :error
       end

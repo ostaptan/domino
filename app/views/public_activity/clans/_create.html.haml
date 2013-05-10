@@ -1,0 +1,8 @@
+.activity-tlt
+  = t('activity.clans.created_clan')
+
+- if a.trackable
+  .activity-content
+    = a.trackable.header
+- else
+  = t('activity.global.was_removed')

@@ -1,0 +1,8 @@
+.activity-tlt
+  = t('activity.games.created_game')
+
+- if a.trackable
+  .activity-content
+    = a.trackable.game_type
+- else
+  = t('activity.global.was_removed')

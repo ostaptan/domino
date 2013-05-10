@@ -13,7 +13,7 @@ module GamesExt
     end
 
     def finished_games(page)
-      Game.where("finished_at is not ?", nil)
+      DominoGame.where("finished_at is not ?", nil)
     end
 
     def won_games_count(type)

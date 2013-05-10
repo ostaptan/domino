@@ -14,5 +14,11 @@ class DashboardNews < ActiveRecord::Base
   include DashboardExt::Likes
   include Tire::Model::Search
   include Tire::Model::Callbacks
+  include PublicActivity::Common
 
+
+  def delete_me!
+    self.delete
+    true
+  end
 end

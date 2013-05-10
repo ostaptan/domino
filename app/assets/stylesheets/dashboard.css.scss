@@ -2,7 +2,7 @@
   padding: 10px;height: auto;
   a {
     color: #071109;
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 
@@ -10,6 +10,8 @@
   a {color: #fff7f6}
 
 }
+
+.delete-post {color: #ae1109}
 
 .popover-title {color: #002a80}
 
@@ -21,6 +23,7 @@
   margin-top: 7px;
   background: #f3f5bc;
   color: #77767b;
+  a {color: #ae1109}
 }
 
 .dsh_author {
@@ -67,5 +70,5 @@
 }
 
 .forum {
-
+  text-align: center;
 }

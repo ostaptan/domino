@@ -8,6 +8,7 @@ class DashboardComment < ActiveRecord::Base
   belongs_to :author, :class_name => User
 
   include DashboardExt::Likes
+  include PublicActivity::Common
 
   def get_author
     User.find_by_id self.user_id

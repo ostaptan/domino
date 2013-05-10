@@ -64,6 +64,11 @@ module Rules
       true
     end
 
+    def can_delete_post?(post)
+      #TODO
+      true
+    end
+
   end
 
 end

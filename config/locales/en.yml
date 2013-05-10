@@ -4,10 +4,15 @@
 en:
   global:
     domino: "Domino"
+    chess: "Chess"
+    cards: "Card Games"
+    dynamic_games: 'Dynamic Games'
     goat_domino: "Goat domino"
     spider_domino: "Spider domino"
     send: "Send"
+    send_message: "Send message"
     create: "Create"
+    or: 'Or'
     join: "Join"
     view: "View"
     save: "Save"
@@ -34,7 +39,7 @@ en:
     copyright: "Copyright. This game is a private property of Dynamic Games Company. All rights reserved."
     online: "Online:"
     games: "Games"
-    tournament: "Tournament"
+    tournaments: "Tournaments"
     dashboard: "Dashboard"
     chat: "Chat"
     home: "Home"
@@ -119,9 +124,12 @@ en:
     description: "dsgdfgsdfgsdf dfs gs dfg sg ert awgfsgawasd gas g asd gawegas gas ga sdg "
     header: "About Project"
 
-  how_to_play:
-    header: "Domino game rules:"
-    description: "Basic rules
+  domino:
+    tournaments:
+
+    how_to_play:
+      header: "Domino game rules:"
+      description: "Basic rules
                   The most popular type of play are layout games, which fall into two main categories, blocking games and scoring games.
                   Most domino games are blocking games, i.e. the objective is to empty one's hand while blocking the opponent's. In the end, a score may be determined by counting the pips in the losing players' hands.
                   In scoring games the scoring is different and happens mostly during game play, making it the principal objective."
@@ -136,6 +144,19 @@ en:
       header: "To activate your account, please click the URL below."
       body: "If there were troubles with activation of your account, please be quick in informing our support team otan256@gmail.com."
 
+  activity:
+    dashboard:
+      created_post: "created post"
+      deleted_post: "deleted post"
+    global:
+      was_removed: "which has since been removed"
+    comments:
+      created_comment: "commented"
+    clans:
+      created_clan: "born clan"
+      deleted_clan: "destroyed clan"
+    games:
+      created_game: "created table"
 
   advertise:
     not_member: "Not a member yet??"
@@ -158,6 +179,11 @@ en:
     log_in: "Log in to start playing!"
     account_cannot_be_activated: "Your account cannot be activated! Maybe you need to register once more."
     must_be_moderator: "You must be a moderator to have access to this functionality!!!"
+    post_deleted: "Post successfully deleted!"
+    cannot_post_delete: "This post cannot be deleted!"
+    no_events: "There is no events you can suspect. To see events of other players, you must follow them."
+
+
   users:
     sidebar:
       my_games: "My Games"
@@ -173,6 +199,7 @@ en:
       followers: "Followers (%{count})"
       add_to_friends: "Add to friends"
       friends_list: "My friends list"
+      ban_list: "Black list"
       highest: "Highest:"
       best_win: "Best Win:"
       avg_opp: "Avg. Opp.:"
@@ -181,15 +208,15 @@ en:
       fill_in_fields: "Please fill in all next fields."
       sign_up: "Register!"
     login:
-      welcome: "Welcome!!"
+      welcome: "Welcome to games portal!"
       sign_up: "Sign Up"
       register: "Register"
       forgot: "Forgot your password? Click here!"
       remember_me: "Remember me"
-      domino_description: "Magnificent game for playing simple domino of spider domino!"
+      domino_description: "Magnificent game portal with all social aspects!"
       please_sign_in: "Please sign in, or"
       sign_in: "Sign in >"
-      playing_domino_now: "Playing domino now:"
+      playing_domino_now: "Playing games on portal now:"
 
 
   games:
@@ -216,10 +243,14 @@ en:
     playing: "Playing"
     players: "%{count} players"
     minutes_per_move: "%{count} minutes per move"
+    view: "View"
 
   clans:
     header: "Clans"
     my_clan: "My Clan"
+    friends: "Friends"
+    enemy: "Enemy"
+    tournaments: "Tournaments"
 
 
   dashboard:

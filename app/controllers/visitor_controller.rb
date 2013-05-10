@@ -3,7 +3,7 @@ class VisitorController < ApplicationController
   include VisitorExtensions::Register
 
   def welcome
-    redirect_to domino_index_path if logged_in?
+    redirect_to dd_index_path if logged_in?
     @user = User.new
   end
 
@@ -54,7 +54,7 @@ class VisitorController < ApplicationController
   private
 
   def login_user(user, redirect_url = nil)
-    redirect_url ||= { :controller => 'domino' }
+    redirect_url ||= { :controller => 'dd' }
 
     return false unless user.active?
 

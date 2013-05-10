@@ -1,0 +1,2 @@
+module Dd::GamesHelper
+end
