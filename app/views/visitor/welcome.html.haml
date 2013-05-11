@@ -1,12 +1,12 @@
-%div{:class=>'page-header login'}
-  %h1
-    %welcome
-      = current_user ? current_user.welcome_phrase : t('users.login.welcome')
-    %br
-    %small
-      = t('users.login.domino_description')
-  %h2
+%div.title
+  = current_user ? current_user.welcome_phrase : t('users.login.welcome')
+%div.subtitle
+  = t('users.login.domino_description')
+  %p
     = t('users.login.playing_domino_now')
     = users_online
     = t('global.users')
-  = render :partial => 'login' unless current_user
+= image_tag 'https://www.digitalocean.com/assets/homepage/homepage-ssd-cloud-hosting-graphic.png'
+
+= render :partial => 'login' unless current_user
+

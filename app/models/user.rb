@@ -14,6 +14,7 @@ class User < ActiveRecord::Base
   include GamesExt::GamesMethods
   include UserExt::Settings
   include UserExt::Registration
+  include UserExt::Notifications
   include Tire::Model::Search
   include Tire::Model::Callbacks
 

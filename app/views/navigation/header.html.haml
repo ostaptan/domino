@@ -1,25 +1,113 @@
 %div#header
   %div{:class => 'navbar navbar-inverse navbar-fixed-top'}
     %div.navbar-inner
-      = link_to t('global.dynamic_games'), root_path, :class => 'brand'
+      - clazz = logged_in? ? 'moved brand' : 'brand'
+      = link_to t('global.dynamic_games'), root_path, :class => clazz
       %div{:class=>'nav-collapse collapse'}
-        %ul{:class=>'nav pull-right'}
+        %ul{:class=>'nav pull-right upped'}
           - if current_user
-            %li
+            %li.language
               = link_to image_tag('flag-icon-england.gif'), set_localization_path({locale: :en, url: request.url})
-            %li
+            %li.language
               = link_to image_tag('flag-russian-small.jpg'), set_localization_path({locale: :ru, url: request.url})
-            %li
-              = link_to t('global.games'), dd_games_path
-            %li
-              = link_to t('global.tournament'), '#'
-            %li
-              = link_to t('global.dashboard'), dd_dashboard_index_path
-            %li
-              = link_to t('clans.header'), dd_clans_path
-            %li
-              = link_to t('global.users'), dd_users_path
-            %li{:class=>'dropdown'}
+            %li.dropdown
+              %a{:class=>"dropdown-toggle", :id=>"dLabel", :role=>"button", 'data-toggle'=>"dropdown", 'data-target'=>"#", :href=>"/"}
+                %i.icon-th
+                = t('global.games')
+                - if current_user.has_games_no?
+                  %i.icon-exclamation-sign
+                %b{:class=>"caret"}
+              %ul.dropdown-menu
+                %li.with-icon
+                  -if current_user.has_domino_no?
+                    %i{class: 'inline-icon icon-exclamation-sign'}
+                  = link_to t('global.domino'), dd_games_path
+                %li.with-icon
+                  -if current_user.has_chess_no?
+                    %i{class: 'inline-icon icon-exclamation-sign'}
+                  = link_to t('global.chess'), dd_games_path
+                %li.with-icon
+                  -if current_user.has_cards_no?
+                    %i{class: 'inline-icon icon-exclamation-sign'}
+                  = link_to t('global.cards'), dd_games_path
+            %li.dropdown
+              %a{:class=>"dropdown-toggle", :id=>"dLabel", :role=>"button", 'data-toggle'=>"dropdown", 'data-target'=>"#", :href=>"/"}
+                %i.icon-random
+                = t('global.tournaments')
+                - if current_user.has_tournaments_no?
+                  %i.icon-exclamation-sign
+                %b{:class=>"caret"}
+              %ul.dropdown-menu
+                %li.with-icon
+                  -if current_user.has_domino_tournament_no?
+                    %i{class: 'inline-icon icon-exclamation-sign'}
+                  = link_to t('global.domino'), '#'
+                %li.with-icon
+                  -if current_user.has_chess_tournament_no?
+                    %i{class: 'inline-icon icon-exclamation-sign'}
+                  = link_to t('global.chess'), '#'
+                %li.with-icon
+                  -if current_user.has_cards_tournament_no?
+                    %i{class: 'inline-icon icon-exclamation-sign'}
+                  = link_to t('global.cards'), '#'
+            %li.dropdown
+              %a{:class=>"dropdown-toggle", :id=>"dLabel", :role=>"button", 'data-toggle'=>"dropdown", 'data-target'=>"#", :href=>"/"}
+                %i.icon-list
+                = t('global.dashboard')
+                - if current_user.has_dashboard_no?
+                  %i.icon-exclamation-sign
+                %b{:class=>"caret"}
+              %ul.dropdown-menu
+                %li.with-icon
+                  -if current_user.has_news_no?
+                    %i{class: 'inline-icon icon-exclamation-sign'}
+                  = link_to t('dashboard.news.header'), dd_dashboard_index_path
+                %li.with-icon
+                  -if current_user.has_forum_no?
+                    %i{class: 'inline-icon icon-exclamation-sign'}
+                  = link_to t('dashboard.forum.header'), dd_dashboard_index_path
+                %li.with-icon
+                  -if current_user.has_events_no?
+                    %i{class: 'inline-icon icon-exclamation-sign'}
+                  = link_to t('dashboard.events.header'), dd_dashboard_index_path
+            %li.dropdown
+              %a{:class=>"dropdown-toggle", :id=>"dLabel", :role=>"button", 'data-toggle'=>"dropdown", 'data-target'=>"#", :href=>"/"}
+                %i.icon-bullhorn
+                = t('clans.header')
+                - if current_user.has_clans_no?
+                  %i.icon-exclamation-sign
+                %b{:class=>"caret"}
+              %ul.dropdown-menu
+                %li.with-icon
+                  -if current_user.has_clans_friends_no?
+                    %i{class: 'inline-icon icon-exclamation-sign'}
+                  = link_to t('clans.friends'), dd_clans_path
+                %li.with-icon
+                  -if current_user.has_clans_enemy_no?
+                    %i{class: 'inline-icon icon-exclamation-sign'}
+                  = link_to t('clans.enemy'), dd_clans_path
+                %li.with-icon
+                  -if current_user.has_clans_tournaments_no?
+                    %i{class: 'inline-icon icon-exclamation-sign'}
+                  = link_to t('clans.tournaments'), dd_clans_path
+            %li.dropdown
+              %a{:class=>"dropdown-toggle", :id=>"dLabel", :role=>"button", 'data-toggle'=>"dropdown", 'data-target'=>"#", :href=>"/"}
+                %i.icon-list-alt
+                = t('global.users')
+                - if current_user.has_users_no?
+                  %i.icon-exclamation-sign
+                %b{:class=>"caret"}
+              %ul.dropdown-menu
+                %li
+                  = link_to t('users.show.friends_list'), dd_users_path
+                %li
+                  = link_to t('users.show.ban_list'), dd_users_path
+                %li.with-icon
+                  -if current_user.has_friend_request?
+                    %i{class: 'inline-icon icon-exclamation-sign'}
+                  = link_to t('users.show.followers', count: current_user.inverse_friends.size), dd_users_path
+
+            %li.dropdown
               %a{:class=>"dropdown-toggle", :id=>"dLabel", :role=>"button", 'data-toggle'=>"dropdown", 'data-target'=>"#", :href=>"/"}
                 %i.icon-user
                 = current_user.name
@@ -33,7 +121,7 @@
                   %li
                     = link_to t('clans.my_clan'), dd_clans_path(current_user.clan.id)
                 %li{:class=>"divider"}
-                %li
-                  = link_to t('global.sign_out'), logout_path
+                %li.log-out
+                  = button_to t('global.sign_out'), logout_path, class: 'btn btn-danger'
 
 = render :partial => 'visitor/register_modal' if current_user && current_user.guest?

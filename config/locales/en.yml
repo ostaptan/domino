@@ -4,12 +4,15 @@
 en:
   global:
     domino: "Domino"
+    chess: "Chess"
+    cards: "Card Games"
     dynamic_games: 'Dynamic Games'
     goat_domino: "Goat domino"
     spider_domino: "Spider domino"
     send: "Send"
     send_message: "Send message"
     create: "Create"
+    or: 'Or'
     join: "Join"
     view: "View"
     save: "Save"
@@ -36,7 +39,7 @@ en:
     copyright: "Copyright. This game is a private property of Dynamic Games Company. All rights reserved."
     online: "Online:"
     games: "Games"
-    tournament: "Tournament"
+    tournaments: "Tournaments"
     dashboard: "Dashboard"
     chat: "Chat"
     home: "Home"
@@ -121,9 +124,12 @@ en:
     description: "dsgdfgsdfgsdf dfs gs dfg sg ert awgfsgawasd gas g asd gawegas gas ga sdg "
     header: "About Project"
 
-  how_to_play:
-    header: "Domino game rules:"
-    description: "Basic rules
+  domino:
+    tournaments:
+
+    how_to_play:
+      header: "Domino game rules:"
+      description: "Basic rules
                   The most popular type of play are layout games, which fall into two main categories, blocking games and scoring games.
                   Most domino games are blocking games, i.e. the objective is to empty one's hand while blocking the opponent's. In the end, a score may be determined by counting the pips in the losing players' hands.
                   In scoring games the scoring is different and happens mostly during game play, making it the principal objective."
@@ -193,6 +199,7 @@ en:
       followers: "Followers (%{count})"
       add_to_friends: "Add to friends"
       friends_list: "My friends list"
+      ban_list: "Black list"
       highest: "Highest:"
       best_win: "Best Win:"
       avg_opp: "Avg. Opp.:"
@@ -201,7 +208,7 @@ en:
       fill_in_fields: "Please fill in all next fields."
       sign_up: "Register!"
     login:
-      welcome: "Welcome!!"
+      welcome: "Welcome to games portal!"
       sign_up: "Sign Up"
       register: "Register"
       forgot: "Forgot your password? Click here!"
@@ -241,6 +248,9 @@ en:
   clans:
     header: "Clans"
     my_clan: "My Clan"
+    friends: "Friends"
+    enemy: "Enemy"
+    tournaments: "Tournaments"
 
 
   dashboard:

@@ -18,9 +18,46 @@
   height: 100%;
 }
 
-.forgot {font-size: 15px; margin-top: -10px; color: #b52a2e;}
+.moved {
+  position: relative;
+  left: -460px;
+  top: 12px;
+}
+
+.upped {
+  top: -5px;
+}
+
+.heading {
+  text-align: center;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 8px;
+}
+
+.subheading {
+  color: #999;
+  text-align: center;
+  width: auto;
+  font-weight: 500;
+  text-shadow: 0px 1px 1px #fff;
+  filter: dropshadow(color=#fff, offx=0, offy=1);
+  margin-top: 15px;
+  letter-spacing: -1px;
+}
+
 .remember {font-size: 15px; margin-top: -20px; color: #fff; margin-bottom: 7px;}
-.inline {display: inline-block;}
+.inline-icon {
+  position: relative;
+  left: -60px;
+  top: 20px;
+}
+
+.language {
+  margin-top: 10px ;
+}
+
+.with-icon {margin-top: -14px}
 
 
 h1 {
@@ -207,18 +244,29 @@ div#chat-time {
 }
 
 .footer {
-  color: #d2d2d2;
-  text-align: center;
-  max-height: 300px;
-  margin-top: -10px;
-  padding-bottom: 10px;
+  display: block;
+  background-color: #4aa3e0;
+  background-image: url(https://www.digitalocean.com/assets/footer_top_bg.png);
+  background-repeat: repeat-x;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  height: 100%;
+  max-height: 360px;
+  .container {
+    width: 960px;
+    margin: auto;
+    text-align: center;
+    line-height: 35px;
+  }
 }
 
 .modal-hd {
-  color: #474efd;
+  font-size: 45px;
+  margin-top: 10px;
+  font-family: "museo-slab";
 }
 
-.modal-desc {color: #218036}
+.modal-desc {color: #218036;font-size: 25px;margin-top: 18px;padding-top: 8px}
 
 .white-tabs {
   color: #ffffff;
@@ -243,6 +291,8 @@ input#min_rating, input#max_rating {
   width: 100px;
 }
 
+.statistic {margin-top: 30px}
+
 .pagination { padding: 3px; margin: 3px; font-size: 20px}
 .pagination a { padding: 2px 5px 2px 5px; margin: 2px; text-decoration: none; color: #f6f9ff}
 .pagination a:hover,
@@ -250,15 +300,15 @@ input#min_rating, input#max_rating {
 .pagination span.current { padding: 2px 5px 2px 5px; margin: 2px; font-weight: bold; background-color: #0088cc; color: #f41a39; }
 .pagination span.disabled { padding: 2px 5px 2px 5px; margin: 2px; color: #171717; }
 
-.u-header {width: 1000px;background-color:#28272c;height:40px;}
-.page {width: 1000px; clear: both; content: '.'; position:center; margin: 50px auto;background-color:#2ba6cb;border: none;border-radius: 10px;}
-.main-container {width: 760px; float: left; display: inline-block;}
-.right-container {width: 210px;float: right; display: inline-block;margin-right:15px;}
+.u-header {background-color:#28272c;height:40px;}
+.page {clear: both; content: '.'; position:center; margin: 50px auto;background-color:#2ba6cb;border: none;border-radius: 10px;}
+.main-container {width: 77%; float: left; display: block;}
+.right-container {width: 410px;float: right; display: inline-block;margin-right:15px;}
 .border {border-bottom: 1px solid #eeeeee;}
 .left-menu{width: 220px;margin-right: 15px;float: left;margin-left: 15px;margin-top: 20px;}
 .middle-menu{width: 470px;margin: 20px;float: left;margin-top:27px}
 .players-description { display: inline-block; margin-right: 7px; border: 1px solid #ccc; border-radius: 10px;padding: 6px;margin-top: 7px;background: #f3f596;color: #77767b;width: auto;height: auto;}
-.player-info {display: inline-block; border: 2px solid #ccc;width: 450px;float: left;border-radius: 10px;padding: 5px;}
+.player-info {display: inline-block; border: 2px solid #ccc;width: 1155px;float: left;border-radius: 10px;padding: 5px;}
 .edit-user {color: #f3f596; font-family: "trebuchet ms", arial, sans-serif;}
 .font-description {font-family: "trebuchet ms", arial, sans-serif; margin-bottom: 7px}
 .edit-fields {color: #f3f596; display: inline-block; margin-right: 12px;text-align: right;}
@@ -267,4 +317,102 @@ input#min_rating, input#max_rating {
 .birth-date {width: auto !important;}
 .games, .login {padding: 20px;}
 .form-signin-heading {margin-left: 10px;margin-bottom: 10px}
-.form-signin {margin-left: 10px;}
+.form-signin {margin-left: 10px; padding: 20px;}
+
+.full {
+  width: 100%;
+}
+
+.forgot-pass{
+  width: auto;
+  float: right;
+  padding-right: 26px;
+  padding: 20;
+  a {color: #333333;}
+}
+
+.remember-me {
+  position: relative;
+  left: -425px;
+}
+
+.bottom-container {
+  background-color: #fafafa;
+  min-height: 175px;
+}
+
+.homepage {
+  background: -webkit-linear-gradient(top, #8fcef1 0%, #46abe3 57%, #2b9ede 100%);
+  background: -moz-linear-gradient(top, #8fcef1 0%, #46abe3 57%, #2b9ede 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8fcef1), color-stop(57%, #46abe3), color-stop(100%, #2b9ede));
+  background: -o-linear-gradient(top, #8fcef1 0%, #46abe3 57%, #2b9ede 100%);
+  background: -ms-linear-gradient(top, #8fcef1 0%, #46abe3 57%, #2b9ede 100%);
+  background: linear-gradient(top, #8fcef1 0%, #46abe3 57%, #2b9ede 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8fcef1', endColorstr='#2b9ede',GradientType=0 );
+  height: 100%;
+  display: block;
+  width: 100%;
+  padding-top: 100px;
+  text-align: center;
+  .title {
+    margin-top: 15px;
+    color: #fff;
+    text-shadow: 0px 1px 2px #005791;
+    font-size: 55pt;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: -2px;
+    line-height: 75px;
+    margin-bottom: 10px;
+    font-family: "museo-slab";
+    font-weight: 400;
+    letter-spacing: -4px;
+  }
+
+  .subtitle {
+    color: #005791;
+    font-size: 20pt;
+    font-weight: 300;
+    text-shadow: 0px 1px 1px #fff;
+    text-align: center;
+    line-height: 28px;
+  }
+
+}
+
+.small-text {
+  color: #005791;
+  font-size: 15pt;
+  font-weight: 300;
+  text-shadow: 0px 1px 1px #fff;
+  text-align: center;
+  line-height: 28px;
+  display: inline-block;
+}
+
+.login-form {
+  height: 110;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #ccc;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #e4e4e4));
+  background: -webkit-linear-gradient(top, #fff 0%, #e4e4e4 100%);
+  background: -moz-linear-gradient(top, #fff 0%, #e4e4e4 100%);
+  background: -o-linear-gradient(top, #fff 0%, #e4e4e4 100%);
+  background: -ms-linear-gradient(top, #fff 0%, #e4e4e4 100%);
+  background: linear-gradient(top, #fff 0%, #e4e4e4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e4e4e4',GradientType=0 );
+
+  .text {
+    width: 250px;
+    float: left;
+    padding-right: 16px;
+    font-size: 40;
+    padding: 20;
+  }
+}
+
+.modal-body label {
+  color: #fff;
+  font-size: 22px;
+  font-family: "museo-slab";
+}

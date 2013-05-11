@@ -2,9 +2,9 @@
   %div.modal-header
     %button{:type=>"button", :class=>"close", 'data-dismiss'=>"modal", 'aria-hidden'=>"true"}
       ×
-    %h4.modal-hd
+    %div.modal-hd
       = t('users.registration.register_form')
-    %h5.modal-desc
+    %div.modal-desc
       = t('users.registration.fill_in_fields')
   %div{:class=>"modal-body"}
     = simple_form_for @user, validate: true, :url => {:action => :process_register}, :html => { :class => 'form-horizontal' } do |form|
@@ -12,10 +12,10 @@
       = form.input :surname, hint: 'No special characters, please!'
       = form.input :name
       = form.input :gender, collection: [[t('global.male'), 'm'], [t('global.female'), 'f']], include_blank: false, prompt: "Select your gender"
-      = form.input :password_digest
+      = form.input :password
       = form.input :confirm_password
       %div{:class=>"modal-footer"}
-        <button class="btn" data-dismiss="modal" aria-hidden="true">
+        <button class="btn btn-large" data-dismiss="modal" aria-hidden="true">
         = t('global.close')
         </button>
-        = form.button :submit, class: 'btn btn-success'
+        = form.button :submit, class: 'btn btn-large btn-success'

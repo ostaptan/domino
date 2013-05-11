@@ -11,15 +11,22 @@
 
   %body
     %div.container-fluid
-      %div{class: 'row-fluid page'}
-        %div.main-container
-          = render :template => 'navigation/header'
-          = render :partial => 'navigation/flash', :locals => {flash: flash}
+      %div.homepage
+        = render :template => 'navigation/header'
+        = render :partial => 'navigation/flash', :locals => {flash: flash}
+        - clazz = logged_in? ? 'main-container' : 'full main-container'
+        %div{class: clazz}
+
           = yield
 
-        %div.right-container
-          = render('navigation/sidebar') if current_user && !current_user.guest?
-          = render('navigation/advertise') if !current_user || current_user.guest?
+        - if current_user && !current_user.guest?
+          %div.right-container
+            = render('navigation/sidebar')
+      - if logged_in?
+        %div.bottom-container
+          = yield :bottom_c
+
       %div.footer
-        = render :template => 'navigation/footer'
+        %div.container
+          = render :template => 'navigation/footer'
 
